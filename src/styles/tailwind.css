@@ -49,7 +49,7 @@
   --color-secondary-950: #3b100f;
 
   /*Typografi */
-  --font-display: "Lato", monospace; /* overskrifter */
+  --font-display: "Lato", sans-serif; /* overskrifter */
   --font-sans: "Roboto", sans-serif; /* brødtekst */
   --font-serif: "Lato Italic", serif; /* andet */
 }
