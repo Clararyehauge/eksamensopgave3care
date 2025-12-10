@@ -19,24 +19,25 @@ const sizeClasses = {
 };
 ---
 
-<!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list -->
-<button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}><slot /></button>
-
-<section class="grid grid-cols-3">
-  <h2>GIV DIN STØTTE</h2>
-  <div>
-    <img src="" alt="" />
-    <h5>Støt via MobilPay</h5>
-    <p>via 18 29 63 (valgfrit beløb)</p>
-  </div>
-  <div>
-    <img src="" alt="" />
-    <h5>Støt via SMS</h5>
-    <p>“CARE” til 12 17 (50 kr.)</p>
-  </div>
-  <div>
-    <img src="" alt="" />
-    <h5>Støt via Bank</h5>
-    <p>4183 9515151 (valgfrit beløb)</p>
+<section>
+  <div class="bg-secondary-support">
+    <h2 class="text-center pb-10 text-white">GIV DIN STØTTE</h2>
+    <div class="grid grid-cols-3 flex items-center justify-center gap-2 text-white">
+      <div class="flex flex-col items-center text-center">
+        <img src="/MobilePay.webp" alt="mobilpay" class="pb-5" />
+        <h5>Støt via MobilPay</h5>
+        <p>via 18 29 63 (valgfrit beløb)</p>
+      </div>
+      <div class="flex flex-col items-center text-center">
+        <img src="/SMS.webp" alt="sms" class="pb-5" />
+        <h5>Støt via SMS</h5>
+        <p>“CARE” til 12 17 (50 kr.)</p>
+      </div>
+      <div class="flex flex-col items-center text-center">
+        <img src="/Bank.webp" alt="bank" class="pb-5" />
+        <h5>Støt via Bank</h5>
+        <p>4183 9515151 (valgfrit beløb)</p>
+      </div>
+    </div>
   </div>
 </section>
