@@ -24,6 +24,7 @@
   /* Her tilføjes theme variable // tokens */
 
   /*Farver */
+  /* Orange */
   --color-primary-50: #fdf6ef;
   --color-primary-100: #f4e8da; /* Baggrund */
   --color-primary-200: #f5d3b4;
@@ -35,7 +36,7 @@
   --color-primary-800: #8a3721;
   --color-primary-900: #702f1e;
   --color-primary-950: #3c160e;
-
+  /* Rød */
   --color-secondary-50: #fdf4ef;
   --color-secondary-100: #fae6da;
   --color-secondary-200: #f3cab5;
@@ -48,8 +49,12 @@
   --color-secondary-900: #6f251f;
   --color-secondary-950: #3b100f;
 
+  /* Blå */
+  --color-blue-900: #243346; /* Support section / læs mere */
+  --color-blue-800: #2d445f; /* Læs mere hover */
+  --color-blue-600: #3d628b; /* Læs mere click */
+
   --color-secondary-search: #e7b081; /* Søgefelt */
-  --color-secondary-support: #243346; /* Support section */
 
   /*Typografi */
   --font-display: "Lato", sans-serif; /* overskrifter */
