@@ -4,6 +4,7 @@ import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
 import Link from "../components/Link.astro";
 import Button from "../components/Button.astro";
+import Searchbar from "../components/Searchbar.astro";
 ---
 
 <MainLayout title="Titel">
@@ -13,42 +14,29 @@ import Button from "../components/Button.astro";
     <hr class="my-4" />
     <!-- start på typografi -->
     <section>
-      <Heading htmlheading="h2" size="h2">Typografi & ovesrkrifter</Heading>
+      <Heading htmlheading="h2" size="medium">Typografi & ovesrkrifter</Heading>
       <Text>Her kan du finde alle de komponenter, der er brugt i dette projekt.</Text>
-      <Heading htmlheading="h1" size="h1">h1 - large - sans</Heading>
-      <Heading htmlheading="h2" size="h2">h2 - medium - sans</Heading>
-      <Heading htmlheading="h3" size="h3">h3 - small - sans</Heading>
-      <Heading htmlheading="h4" size="h4" font="serif">h4 - h4 - serif</Heading>
-      <Heading htmlheading="h5" size="h5">h5 - h5 - serif</Heading>
-      <Heading htmlheading="button" size="button">Button - small - Knapper</Heading>
-      <Heading htmlheading="body" size="body" font="display">Body - large - display</Heading>
-      <Heading htmlheading="paragraphItalic" size="paragraphItalic" font="serif">P - paragraphItalic - italic</Heading>
-      <Heading htmlheading="numbers" size="numbers">Tal - numbers</Heading>
+      <Heading htmlheading="h1" size="xlarge" font="display">h1 - xlarge - Display</Heading>
+      <Heading htmlheading="h2" size="large" font="display">h2 - large - Display</Heading>
+      <Heading htmlheading="h3" size="medium" font="display">h3 - medium - Display</Heading>
+      <Heading htmlheading="h4" size="small" font="serif">h4 - small - Display</Heading>
+      <Heading htmlheading="h5" size="xsmall" font="display">h5 - xsmall - Display</Heading><br />
+      <Heading htmlheading="button" size="button" font="display">Button - small - Display</Heading><br />
+      <Heading htmlheading="paragraphItalic" size="paragraphItalic" font="serif">P - paragraphItalic - Serif</Heading><br />
+      <Heading htmlheading="numbers" size="numbers" font="sans">Tal - Sans</Heading>
 
       <Text teksttype="brødtekst">
         Her er en sektion brødtekst: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem doloremque commodi eaque quisquam quasi recusandae veniam. Corporis totam <Link href="#">Default link: </Link> reiciendis quibusdam ratione iure aut, numquam tenetur voluptatem exercitationem sequi enim!
       </Text>
       <Text teksttype="konsultativ"> Her en sektion konsultativ tekst: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem doloremque commodi eaque quisquam quasi recusandae veniam. Corporis totam reiciendis quibusdam ratione iure aut, numquam tenetur voluptatem exercitationem sequi enim! </Text>
-      <Text teksttype="brødtekst" stylingclasses="italic">
-        Her er en sektion brødtekst med ekstra css: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam dolorem doloremque commodi eaque quisquam quasi recusandae veniam. Corporis totam <Link href="#">Default link: </Link> reiciendis quibusdam ratione iure aut, numquam tenetur voluptatem exercitationem sequi enim!
-      </Text>
     </section>
     <!-- slut på typografi -->
     <hr class="my-4" />
-    <!-- Link komponent instanser -->
-    <section>
-      <Heading htmlheading="h2" size="medium">Links</Heading>
-      <Text teksttype="brødtekst"><Link href="#">Default link: </Link>Default linket er en del af en tekst, og burde gerne fungere som et <Link href="#">link</Link> i en paragraf.</Text>
-      <Text><Link href="#" variant="primary">Link variant: primary</Link></Text>
-      <Text><Link href="#" variant="primary" size="small">Link variant: primary size small</Link></Text>
-      <Text><Link href="#" variant="primary" size="medium">Link variant: primary size medium</Link></Text>
-      <Text><Link href="#" variant="primary" size="large">Link variant: primary size large</Link></Text>
-      <Text><Link href="#" variant="secondary" size="small">Link variant: secondary size small</Link></Text>
-      <Text><Link href="#" variant="secondary" size="medium">Link variant: secondary size medium</Link></Text>
-      <Text><Link href="#" variant="secondary" size="large">Link variant: secondary size large</Link></Text>
-    </section>
-    <!-- Slut på Link komponent instanser -->
+    <!-- start på søgefelt -->
+    <Searchbar />
+    <!-- slut på søgefelt -->
     <hr class="my-4" />
+
     <!-- Buttons komponent instanser -->
     <section>
       <Heading htmlheading="h2" size="medium">Buttons</Heading>

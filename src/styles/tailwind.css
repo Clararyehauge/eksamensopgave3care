@@ -48,6 +48,9 @@
   --color-secondary-900: #6f251f;
   --color-secondary-950: #3b100f;
 
+  --color-secondary-search: #e7b081; /* Søgefelt */
+  --color-secondary-support: #243346; /* Support section */
+
   /*Typografi */
   --font-display: "Lato", sans-serif; /* overskrifter */
   --font-sans: "Roboto", sans-serif; /* brødtekst */
