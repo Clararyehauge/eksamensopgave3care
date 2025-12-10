@@ -1,0 +1,27 @@
+---
+const { position = "right", visibleAt = "sm" } = Astro.props;
+
+const icons = [
+  { id: "call", href: "tel:+182963", src: "/MobilePay.webp", label: "Ring til os" },
+  { id: "chat", href: "tel:+1217", src: "/SMS.webp", label: "Send besked" },
+  { id: "donate", href: "/4183 9515151", src: "/Bank.webp", label: "Støt os" },
+];
+
+const posClass = position === "right" ? "right-0" : "left-0";
+const visibleClass = visibleAt === "sm" ? "hidden sm:flex" : "flex";
+---
+<div class={`${visibleClass} fixed ${posClass} top-3/4 z-40 -translate-y-1/2`}>
+  <nav class="flex flex-col items-center bg-blue-900 rounded-l-xl p-5 gap-3 shadow-2xl">
+    {icons.map(icon => (
+      <a
+        href={icon.href}
+        class="w-12 h-12 flex items-center justify-center rounded-md bg-transparent transition transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
+        aria-label={icon.label}
+      >
+        <!-- brug img hvis du har SVG som fil -->
+        <img src={icon.src} alt={icon.label} class="w-10 h-10" loading="lazy" />
+      </a>
+    ))}
+  </nav>
+</div>
+
