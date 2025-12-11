@@ -6,10 +6,11 @@ import Footer from "../components/Footer.astro";
 import Text from "../components/Text.astro";
 import Heading from "../components/Heading.astro";
 import Stickey from "../components/Stickey.astro";
+import Button from "../components/Button.astro";
 ---
 
 <MainLayout title="Titel">
-  <main class="container mx-auto p-4">
+  <main>
     <!-- START på sektion 1 - Titel -->
     <section>
       <div class="items-center text-center">
@@ -48,14 +49,37 @@ import Stickey from "../components/Stickey.astro";
     <!-- SLUT på sektion 2 - Card -->
 
     <!-- START på sektion 3 - Sådan bruger vi penge -->
-    <section>
-      <div></div>
+    <section class="bg-primary-300">
+      <div class="mx-auto p-10 md:p-20 grid grid-cols-1 md:grid-cols-2">
+        <div class="bg-primary-100 p-10">
+          <Heading htmlheading="h2" size="medium">SÅDAN BRUGER VI PENGENE</Heading>
+          <Text>CARE havde i 2022 en administrationsomkostning på 10 procent af omsætningen. Én procent af omsætningen bruger vi på kommunikation og engagement, så vi kan sikre flere midler og samtidigt udbrede kendskabet til vores arbejde med at skabe løsninger til verdens mest klimaudsatte mennesker. De resterende 89 procent går til vores projekter. Tallene kan variere alt efter det konkrete års indtægter.</Text>
+          <Button variant="secondary" size="medium" icon="arrow" font-style="font-light">Få indblik i vores regnskab</Button>
+        </div>
+        <div>
+          <img src="/omcare/o_sektion3.webp" alt="" />
+        </div>
+      </div>
     </section>
     <!-- SLUT på sektion 3 - Sådan bruger vi penge -->
 
     <!-- START på sektion 4 - Carousel -->
-    <section>
-      <div class="billede"></div>
+    <section class="mb-10 md:mb-20">
+      <div class="loop overflow-hidden relative">
+        <div class="loop-track flex w-[200%] animate-scroll gap-0">
+          <img src="/omcare/o_sektion4_1.webp" alt="billede" class="w-1/4 object-contain" />
+          <img src="/omcare/o_sektion4_2.webp" alt="billede" class="w-1/4 object-contain" />
+          <img src="/omcare/o_sektion4_3.webp" alt="billede" class="w-1/4 object-contain" />
+          <img src="/omcare/o_sektion4_4.webp" alt="billede" class="w-1/4 object-contain" />
+          <img src="/omcare/o_sektion4_5.webp" alt="billede" class="w-1/4 object-contain" />
+          <img src="/omcare/o_sektion4_6.webp" alt="billede" class="w-1/4 object-contain" />
+          <img src="/omcare/o_sektion4_7.webp" alt="billede" class="w-1/4 object-contain" />
+          <img src="/omcare/o_sektion4_8.webp" alt="billede" class="w-1/4 object-contain" />
+          <img src="/omcare/o_sektion4_9.webp" alt="billede" class="w-1/4 object-contain" />
+          <img src="/omcare/o_sektion4_10.webp" alt="billede" class="w-1/4 object-contain" />
+          <img src="/omcare/o_sektion4_11.webp" alt="billede" class="w-1/4 object-contain" />
+        </div>
+      </div>
     </section>
     <!-- SLUT på sektion 4 - Carousel -->
   </main>
@@ -66,3 +90,25 @@ import Stickey from "../components/Stickey.astro";
   <!-- SLUT på FOOTER -->
   <Stickey position="right" visibleAt="sm" />
 </MainLayout>
+
+<style>
+  .loop {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .loop-track {
+    display: flex;
+    width: 200%;
+    animation: scroll 30s linear infinite;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+</style>
