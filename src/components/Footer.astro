@@ -1,57 +1,60 @@
 ---
 import Heading from "./Heading.astro";
 import Text from "./Text.astro";
+import Stickey from "./Stickey.astro";
 ---
 
 <footer class="bg-primary-300">
-  <div class="container mx-auto p-10 md:p-20 grid grid-cols-1 md:grid-cols-3 gap-10">
-    <!-- Kontakt -->
-    <div class="md:order-1">
-      <div class="flex flex-row md:flex-col items-start md:items-start">
-        <div>
-          <Heading htmlheading="h3" size="small" font="display">KONTAKT</Heading>
-          <Text>care@care.dk</Text>
-          <Text>20 22 20 92</Text><br />
-          <Text>CARE Danmark</Text>
-          <Text>Jemtelandsgade 1</Text>
-          <Text>2300 København S</Text><br />
-          <Text>CVR: 12921047</Text>
-        </div>
-
-        <!-- Logo i mobil -->
-        <div class="ml-4 md:ml-0 md:mt-4 md:hidden">
-          <img src="/logo.webp" alt="logo" class="w-50 h-auto md:w-100" />
-        </div>
-      </div>
-    </div>
-
-    <!-- Om os + Følg os på -->
-    <div class="md:order-2 md:mt-0">
-      <Heading htmlheading="h3" size="small" font="display">OM OS</Heading>
-      <Text>Job</Text>
-      <Text>Etik</Text>
-      <Text>Historie</Text>
-      <Text>Vision & Mission</Text>
-      <Text>Whistleblowerordning</Text><br />
-
-      <Text>Følg os på</Text>
-      <div class="flex space-x-2 pt-2">
-        <img src="/facebook.webp" alt="facebook" />
-        <img src="/instagram.webp" alt="instagram" />
-        <img src="/linkedin.webp" alt="linkedin" />
-      </div>
-    </div>
-
-    <!-- Logo i desktop -->
-    <div class="hidden md:flex md:justify-center md:order-3">
-      <img src="/logo.webp" alt="logo" />
-    </div>
-  </div>
-
   <div>
-    <Text>C 2025 CARE Danmark</Text>
-    <Text>Cookiepolitik</Text>
-    <Text>Privatpolitik</Text>
-    <Text>Sitemap</Text>
+    <div class="container mx-auto p-4 grid grid-cols-1 md:grid-cols-3 gap-10">
+      <!-- Kontakt -->
+      <div class="md:order-1">
+        <div class="flex flex-row md:flex-col items-start md:items-start">
+          <div>
+            <Heading htmlheading="h3" size="small" font="display">KONTAKT</Heading>
+            <Text>care@care.dk</Text>
+            <Text>20 22 20 92</Text><br />
+            <Text>CARE Danmark</Text>
+            <Text>Jemtelandsgade 1</Text>
+            <Text>2300 København S</Text><br />
+            <Text>CVR: 12921047</Text>
+          </div>
+
+          <!-- Logo i mobil -->
+          <div class="ml-4 md:ml-0 md:mt-4 md:hidden">
+            <img src="/logo.webp" alt="logo" class="w-50 h-auto md:w-100" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Om os + Følg os på -->
+      <div class="md:order-2 md:mt-0">
+        <Heading htmlheading="h3" size="small" font="display">OM OS</Heading>
+        <Text>Job</Text>
+        <Text>Etik</Text>
+        <Text>Historie</Text>
+        <Text>Vision & Mission</Text>
+        <Text>Whistleblowerordning</Text><br />
+
+        <Text>Følg os på</Text>
+        <div class="flex space-x-2 pt-2">
+          <a href="https://www.linkedin.com/company/care-danmark/"><img src="/linkedin.svg" alt="linkedin" /></a>
+          <a href="https://www.instagram.com/caredanmark/#"><img src="/insta.svg" alt="instagram" /></a>
+          <a href="https://www.facebook.com/caredanmark#"><img src="/facebook.svg" alt="facebook" /></a>
+        </div>
+      </div>
+
+      <!-- Logo i desktop -->
+      <div class="hidden md:flex md:justify-center md:order-3">
+        <img src="/logo.webp" alt="logo" />
+      </div>
+    </div>
+
+    <div class="container mx-auto p-4 grid grid-cols-4 md:grid-cols-4">
+      <Text>C 2025 CARE Danmark</Text>
+      <Text>Cookiepolitik</Text>
+      <Text>Privatpolitik</Text>
+      <Text>Sitemap</Text>
+    </div>
   </div>
 </footer>
