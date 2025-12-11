@@ -10,40 +10,17 @@ import Support from "../components/Support.astro";
 <MainLayout title="Titel">
   <main>
     <!-- START på sektion 1 - Hero -->
-    <section class="relative w-full">
+    <section class="relative w-full mb-20">
       <img src="/public/forside/hero.webp" alt="Billede af kvinde i Afrika" class="w-full h-auto" />
-      <div class="absolute left-6 top-6 z-20 text-white">
-        <Heading htmlheading="h1" size="xlarge" font="display">CARE</Heading>
-        <Heading htmlheading="h2" size="medium" font="display"> Sammen bekæmper vi ulighed og fattigdom </Heading>
-        <Heading htmlheading="paragraphItalic" size="paragraphItalic" font="serif"> Støt piger og kvinder i klimakampen i verdens fattigste lande </Heading>
-        <Text>
-          <Button variant="primary" size="medium" icon="heart" font-style="font-light"> Støt nu </Button>
-        </Text>
-      </div>
-
-      <!-- Ikoner -->
-      <div class="absolute left-6 bottom-6 z-20 flex flex-row gap-4 text-white">
-        <div class="flex items-center gap-3">
-          <img src="/public/forside/hero_mennesker.svg" alt="mennesker illustration" class="w-12 h-12" />
-          <div>
-            <Heading htmlheading="numbers" size="numbers" font="sans">53,4 mio</Heading>
-            <Heading htmlheading="h4" size="small" font="serif">Mennesker</Heading>
-          </div>
-        </div>
-
-        <div class="flex items-center gap-3">
-          <img src="/public/forside/hero_lande.svg" alt="lande illustration" class="w-12 h-12" />
-          <div>
-            <Heading htmlheading="numbers" size="numbers" font="sans">121</Heading>
-            <Heading htmlheading="h4" size="small" font="serif">Lande</Heading>
-          </div>
-        </div>
-
-        <div class="flex items-center gap-3">
-          <img src="/public/forside/hero_projekter.svg" alt="projekter illustration" class="w-12 h-12" />
-          <div>
-            <Heading htmlheading="numbers" size="numbers" font="sans">1450</Heading>
-            <Heading htmlheading="h4" size="small" font="serif">Projekter</Heading>
+      <div class="absolute left-3 top-1 md:left-10 md:top-35 p-2 md:p-12 max-w-70 md:max-w-230 bg-primary-100 boxshadowright_hero">
+        <div class="flex flex-col gap-1 md:gap-2">
+          <Heading htmlheading="h1" size="xlarge" font="display">CARE</Heading>
+          <Heading htmlheading="h2" size="medium" font="display"> Sammen bekæmper vi ulighed og fattigdom </Heading>
+          <Heading htmlheading="paragraphItalic" size="paragraphItalic" font="serif" stylingclasses="font-light"> Støt piger og kvinder i klimakampen i verdens fattigste lande </Heading>
+          <div class="flex justify-end">
+            <Text>
+              <Button variant="primary" size="medium" icon="heart"> Støt nu </Button>
+            </Text>
           </div>
         </div>
       </div>
@@ -51,6 +28,26 @@ import Support from "../components/Support.astro";
     <!-- SLUT på sektion 1 - Hero -->
 
     <!-- START på sektion 2 - Forms -->
+    <!-- Ikoner -->
+    <div class="flex flex-row justify-center gap-5 md:gap-25">
+      <div class="flex flex-col gap-2">
+        <img src="/public/forside/hero_mennesker.svg" alt="mennesker illustration" class="w-18 h-18" />
+        <Heading htmlheading="numbers" size="numbers" font="sans">53,4 mio</Heading>
+        <Heading htmlheading="h4" size="small" font="serif">Mennesker</Heading>
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <img src="/public/forside/hero_lande.svg" alt="lande illustration" class="w-18 h-18" />
+        <Heading htmlheading="numbers" size="numbers" font="sans">121</Heading>
+        <Heading htmlheading="h4" size="small" font="serif">Lande</Heading>
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <img src="/public/forside/hero_projekter.svg" alt="projekter illustration" class="w-18 h-18" />
+        <Heading htmlheading="numbers" size="numbers" font="sans">1450</Heading>
+        <Heading htmlheading="h4" size="small" font="serif">Projekter</Heading>
+      </div>
+    </div>
     <section>
       <div class="#Forms"></div>
       <div class="#Eksempel"></div>
@@ -106,12 +103,12 @@ import Support from "../components/Support.astro";
           </div>
 
           <div class="">
-            <Button variant="primary" size="medium" icon="heart" font-style="font-light"> Støt nu </Button>
+            <Button variant="primary" size="medium" icon="heart"> Støt nu </Button>
           </div>
         </div>
       </div>
       <div>
-        <img src="/public/forside/f_sektion3.webp" alt="kvinde der arbejder med cashewtræer" />
+        <img class="boxshadowright_orange" src="/public/forside/f_sektion3.webp" alt="kvinde der arbejder med cashewtræer" />
       </div>
     </section>
     <!-- SLUT på sektion 3 - Kampagne -->
@@ -163,9 +160,9 @@ import Support from "../components/Support.astro";
         Verden er i øjeblikket vidne til en række forfærdelige krige, konflikter og klima-katastrofer. For millioner af mennesker handler hver dag om ren og skær overlevelse. <br />
         Uskyldige familier har mistet alt. Deres hjem, deres ejendele, deres nærmeste. Der er akut brug for helt basale ting som mad, vand, medicin, telte og brændstof. Du kan hjælpe mennesker i akut nød!
       </Text>
-      <Button variant="primary" size="medium" icon="heart" font-style="font-light"> Støt nu </Button>
+      <Button variant="primary" size="medium" icon="heart"> Støt nu </Button>
     </div>
-    <div class="billede">
+    <div class="boxshadowleft_orange">
       <img src="/public/forside/f_sektion6.webp" alt="" />
     </div>
   </section>
@@ -181,8 +178,8 @@ import Support from "../components/Support.astro";
       <Text teksttype="brødtekst"> Hos CARE arbejder vi for at give mennesker i verdens mest sårbare områder – især kvinder og piger – et værdigt liv trods klimaforandringer, kriser og fattigdom. Vi fokuserer på klimaindsats, ligestilling, innovation og nødhjælp. Ved at kombinere langsigtet udvikling med hurtig hjælp og tæt samarbejde med lokalsamfund skaber vi varige løsninger. Gennem uddannelse, bæredygtige projekter og støtte til selvhjælp ruster vi de mest udsatte til at stå stærkere i fremtiden. </Text>
       <Text><Button variant="secondary" size="medium" icon="arrow">Læs mere</Button></Text>
     </div>
-    <div class="">
-      <img src="/public/forside/f_sektion7.webp" alt="" />
+    <div>
+      <img class="boxshadowright_orange" src="/public/forside/f_sektion7.webp" alt="" />
     </div>
   </section>
   <!-- SLUT på sektion 7 - Vores indsatser -->

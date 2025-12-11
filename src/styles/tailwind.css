@@ -66,6 +66,17 @@
 }
 
 @layer base {
+  .boxshadowleft_orange{
+    @apply shadow-[-13px_14px_0px_0px_#DC6940]
+  } /*tekstbokse*/
+  .boxshadowright_orange{
+    @apply shadow-[13px_14px_0px_0px_#DC6940]
+  } /*billeder*/
+
+    .boxshadowright_hero{
+    @apply shadow-[-13px_14px_0px_0px_#AC312A]
+  } /*Hero*/
+  
 }
 
 @layer components {
