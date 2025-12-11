@@ -12,7 +12,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
       <ul class="flex flex-row gap-4">
         <li class=""><a href="/" class={currentPath === "" ? "italic font-bold" : "italic"}>Forside</a></li><!-- alternativt: lav et <a href="">Link</a>, hvis du ikke vil bruge Link.astro komponenten -->
         <li class=""><a href="/omcare/" class={currentPath === "omcare/" ? "italic font-bold" : "italic"}>Om CARE</a></li>
-        <li class=""><a href="/voresindsatser/" class={currentPath === "voresindsatser/" ? "italic font-bold" : "italic"}>Vores indsætninger</a></li>
+        <li class=""><a href="/voresindsatser/" class={currentPath === "voresindsatser/" ? "italic font-bold" : "italic"}>Vores indsatser</a></li>
         <li class=""><a href="/komponentbibliotek/" class={currentPath === "komponentbibliotek/" ? "italic font-bold" : "italic"}>Komponentbibliotek</a></li>
       </ul>
     </nav>
