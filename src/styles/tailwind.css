@@ -60,6 +60,9 @@
   --font-display: "Lato", sans-serif; /* overskrifter */
   --font-sans: "Roboto", sans-serif; /* brødtekst */
   --font-serif: "Lato Italic", serif; /* andet */
+
+  --font-normal: @apply text-[13px] lg:text-[16px];
+
 }
 
 @layer base {
