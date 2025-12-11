@@ -1,26 +1,33 @@
 ---
-
+import Heading from "./Heading.astro";
+import Text from "./Text.astro";
 ---
 
-<section class="">
-  <div class="bg-secondary-support">
-    <h2 class="text-center pb-10 text-white">GIV DIN STØTTE</h2>
-    <div class="grid grid-cols-3 flex items-center justify-center text-white">
-      <div class="flex flex-col items-center text-center">
-        <img src="/MobilePay.webp" alt="mobilpay" class="pb-5" />
-        <h5>Støt via MobilPay</h5>
-        <p>via 18 29 63 (valgfrit beløb)</p>
-      </div>
-      <div class="flex flex-col items-center text-center">
-        <img src="/SMS.webp" alt="sms" class="pb-5" />
-        <h5>Støt via SMS</h5>
-        <p>“CARE” til 12 17 (50 kr.)</p>
-      </div>
-      <div class="flex flex-col items-center text-center">
-        <img src="/Bank.webp" alt="bank" class="pb-5" />
-        <h5>Støt via Bank</h5>
-        <p>4183 9515151 (valgfrit beløb)</p>
-      </div>
+<section class="bg-blue-900 py-5 pb-12">
+  <div class="text-center pt-6 pb-5 md:pb-10 text-white">
+    <Heading htmlheading="h3" size="small" font="display">GIV DIN STØTTE </Heading>
+  </div>
+  <div class="flex flex-col md:flex-row justify-center gap-10 md:gap-40 text-white">
+    <div class="flex flex-col items-center text-center">
+      <img src="/MobilePay.webp" alt="mobilpay" class="w-12 h-auto md:w-22 pb-2 md:pb-5" />
+      <Text>
+        Støt via MobilPay<br />
+        via 18 29 63 (valgfrit beløb)
+      </Text>
+    </div>
+    <div class="flex flex-col items-center text-center">
+      <img src="/SMS.webp" alt="sms" class="w-12 h-auto md:w-auto pb-2 md:pb-5 ml-6 md:ml-15" />
+      <Text>
+        Støt via SMS<br />
+        “CARE” til 12 17 (50 kr.)
+      </Text>
+    </div>
+    <div class="flex flex-col items-center text-center">
+      <img src="/Bank.webp" alt="bank" class="w-12 h-auto md:w-auto pb-2 md:pb-5" />
+      <Text>
+        Støt via Bank<br />
+        4183 9515151 (valgfrit beløb)
+      </Text>
     </div>
   </div>
 </section>
