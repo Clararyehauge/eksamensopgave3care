@@ -5,17 +5,16 @@ import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
 import Button from "../components/Button.astro";
 import Support from "../components/Support.astro";
-import Carousel from "../components/Carousel.astro";
 ---
 
 <MainLayout title="Titel">
-  <main class="container md:mx-auto p-4">
+  <main>
     <!-- START på sektion 1 - Hero -->
     <section class="relative w-full">
       <img src="/public/forside/hero.webp" alt="Billede af kvinde i Afrika" class="w-full h-auto" />
       <div class="absolute left-6 top-6 z-20 text-white">
         <Heading htmlheading="h1" size="xlarge" font="display">CARE</Heading>
-        <Heading htmlheading="h3" size="medium" font="display"> Sammen bekæmper vi ulighed og fattigdom </Heading>
+        <Heading htmlheading="h2" size="medium" font="display"> Sammen bekæmper vi ulighed og fattigdom </Heading>
         <Heading htmlheading="paragraphItalic" size="paragraphItalic" font="serif"> Støt piger og kvinder i klimakampen i verdens fattigste lande </Heading>
         <Text>
           <Button variant="primary" size="medium" icon="heart" font-style="font-light"> Støt nu </Button>
@@ -91,7 +90,7 @@ import Carousel from "../components/Carousel.astro";
     <!-- SLUT på sektion 2 - Forms -->
 
     <!-- START på sektion 3 - Kampagne -->
-    <section class="mb-10 md:mb-20 grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-10">
+    <section class="mb-10 md:mb-20 grid grid-cols-1 md:grid-cols-2">
       <div class="max-w-130">
         <Heading htmlheading="h2" size="large" font="display"> CASHEWTRÆER SKABER HÅB OG INDKOMST </Heading>
 
@@ -99,12 +98,13 @@ import Carousel from "../components/Carousel.astro";
 
         <Text teksttype="brødtekst"> Med et cashewtræ kan kvinder sikre mad på bordet og skabe sig en indkomst, der sikrer deres børns fremtid. Når du giver et cashewtræ, hjælper du en kvinde med at starte en plantage. Cashewtræer er tørkeresistente og kan overleve i meget varme og tørre klimaer. Nødderne kan spises, opbevares længe og sælges på markedet, hvilket giver en pålidelig indtægtskilde. Et cashewtræ betyder mad på bordet og en vej ud af fattigdom for hendes familie. </Text>
 
-        <div class="grid grid-cols-2 md:grid-cols-3">
-          <img src="/public/forside/section2_træ.svg" alt="træ" />
-          <div>
+        <div class="flex md:flex-row">
+          <img src="/public/forside/section2_træ.svg" alt="træ" class="w-16 h-16" />
+          <div class="">
             <Heading htmlheading="numbers" size="numbers" font="sans">510 kr.</Heading>
             <Text teksttype="brødtekst">Kan give en familie to cashewtræer</Text>
           </div>
+
           <div class="">
             <Button variant="primary" size="medium" icon="heart" font-style="font-light"> Støt nu </Button>
           </div>
@@ -210,8 +210,7 @@ import Carousel from "../components/Carousel.astro";
 
   <!-- START på FOOTER -->
   <section>
-    <div class="Donation"></div>
-    <div class="Footer"></div>
+    <Support />
   </section>
   <!-- SLUT på FOOTER -->
 </MainLayout>
