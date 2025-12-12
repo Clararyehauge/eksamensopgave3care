@@ -15,35 +15,42 @@ import Button from "../components/Button.astro";
     <section>
       <div class="items-center text-center">
         <Heading htmlheading="h2" size="medium">OM CARE</Heading>
-        <Heading htmlheading="paragraphItalic" size="paragraphItalic" font="serif" stylingclasses="text-secondary-700 font-light">“Kæmper for en grøn og retfærdig verden”</Heading>
+        <Heading htmlheading="h4" size="small" font="serif" stylingclasses="text-secondary-700 flex justify-end  pr-5 md:pr-40"> “Kæmper for en grøn og retfærdig verden” </Heading>
       </div>
     </section>
     <!-- SLUT på sektion 1 - Titel -->
 
     <!-- START på sektion 2 - Card -->
-    <section>
-      <div>
-        <img src="/omcare/o_section2.webp" alt="kort" />
-      </div>
-      <div class="bg-secondary-500 opacity-75 max-w-70 md:max-w-100 p-7 relative">
-        <img src="/knapnael.svg" alt="nål" class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
-        <Heading htmlheading="h3" size="small" font="display">HVAD GØR CARE?</Heading>
-        <Text>CARE støtter verdens fattigste og mest klimaudsatte mennesker i at skabe sig et godt og værdigt liv. Vi arbejder med klimatilpasning, uddannelse, akut nødhjælp og hjælp til selvhjælp, og vi er til stede både før, under og efter klimakrisen rammer.</Text>
-      </div>
-      <div class="bg-secondary-500 opacity-75 max-w-70 md:max-w-100 p-7 relative">
-        <img src="/knapnael.svg" alt="nål" class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
-        <Heading htmlheading="h3" size="small" font="display">CARES HISTORIE</Heading>
-        <Text>CARE International blev grundlagt i 1945 for at hjælpe et krigshærget og sultende Europa. Her samlede 22 hjælpeorganisationer sig til én. De kaldte sig C.A.R.E: The Cooperative for American Remittances to Europe. CARE Danmark blev oprettet i 1987 og vi er en del af CARE International.</Text>
-      </div>
-      <div class="bg-secondary-500 opacity-75 max-w-70 md:max-w-100 p-7 relative">
-        <img src="/knapnael.svg" alt="nål" class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
-        <Heading htmlheading="h3" size="small" font="display">ETIK I VORES ARBEJDE</Heading>
-        <Text>Vi sikrer kvalitet og standarder i vores arbejde gennem principper og retningslinjer, ligesom vi bekæmper korruption, misbrug og uretmæssig adfærd. Du kan rapportere uretmæssig adfærd via denne side.</Text>
-      </div>
-      <div class="bg-secondary-500 opacity-75 max-w-70 md:max-w-100 p-7 relative">
-        <img src="/knapnael.svg" alt="nål" class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
-        <Heading htmlheading="h3" size="small" font="display">VISION OG MISSION</Heading>
-        <Text>Hos CARE kæmper vi for en grøn og retfærdig verden. Det gør vi, fordi vi mener, at kampen mod klimaforandringer og kampen mod global ulighed er to sider af samme sag.</Text>
+    <section class="relative mx-auto p-10 md:p-40">
+      <img src="/omcare/o_section2.webp" alt="kort" class="absolute inset-0 md:w-full md:h-full z-0 p-5 md:p-20" />
+      <div class="relative z-10 space-y-12">
+        <!-- Boks 1 venstre -->
+        <div class="bg-secondary-500 opacity-85 max-w-70 md:max-w-100 p-6 relative mr-auto shadow-2xl">
+          <img src="/knapnael.svg" alt="nål" class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 md:w-10 h-auto" />
+          <Heading htmlheading="h3" size="small" font="display">HVAD GØR CARE?</Heading>
+          <Text> CARE støtter verdens fattigste og mest klimaudsatte mennesker i at skabe sig et godt og værdigt liv. Vi arbejder med klimatilpasning, uddannelse, akut nødhjælp og hjælp til selvhjælp, og vi er til stede både før, under og efter klimakrisen rammer. </Text>
+        </div>
+
+        <!-- Boks 2 højre -->
+        <div class="bg-secondary-500 opacity-85 max-w-70 md:max-w-100 p-6 relative ml-auto shadow-2xl">
+          <img src="/knapnael.svg" alt="nål" class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 md:w-10 h-auto" />
+          <Heading htmlheading="h3" size="small" font="display">CARES HISTORIE</Heading>
+          <Text> CARE International blev grundlagt i 1945 for at hjælpe et krigshærget og sultende Europa. Her samlede 22 hjælpeorganisationer sig til én. De kaldte sig C.A.R.E: The Cooperative for American Remittances to Europe. CARE Danmark blev oprettet i 1987 og vi er en del af CARE International. </Text>
+        </div>
+
+        <!-- Boks 3 venstre -->
+        <div class="bg-secondary-500 opacity-85 max-w-70 md:max-w-100 p-6 relative mr-auto shadow-2xl">
+          <img src="/knapnael.svg" alt="nål" class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 md:w-10 h-auto" />
+          <Heading htmlheading="h3" size="small" font="display">ETIK I VORES ARBEJDE</Heading>
+          <Text> Vi sikrer kvalitet og standarder i vores arbejde gennem principper og retningslinjer, ligesom vi bekæmper korruption, misbrug og uretmæssig adfærd. Du kan rapportere uretmæssig adfærd via denne side. </Text>
+        </div>
+
+        <!-- Boks 4 højre-->
+        <div class="bg-secondary-500 opacity-85 max-w-70 md:max-w-100 p-6 relative ml-auto shadow-2xl">
+          <img src="/knapnael.svg" alt="nål" class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 md:w-10 h-auto" />
+          <Heading htmlheading="h3" size="small" font="display">VISION OG MISSION</Heading>
+          <Text> Hos CARE kæmper vi for en grøn og retfærdig verden. Det gør vi, fordi vi mener, at kampen mod klimaforandringer og kampen mod global ulighed er to sider af samme sag. </Text>
+        </div>
       </div>
     </section>
     <!-- SLUT på sektion 2 - Card -->
