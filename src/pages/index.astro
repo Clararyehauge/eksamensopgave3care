@@ -1,6 +1,5 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Link from "../components/Link.astro";
 import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
 import Button from "../components/Button.astro";
@@ -10,13 +9,14 @@ import Support from "../components/Support.astro";
 <MainLayout title="Titel">
   <main>
     <!-- START på sektion 1 - Hero -->
-    <section class="relative w-full mb-20">
+    <section class="relative w-full">
       <img src="/public/forside/hero.webp" alt="Billede af kvinde i Afrika" class="w-full h-auto" />
-      <div class="absolute left-3 top-1 md:left-10 md:top-35 p-2 md:p-12 max-w-70 md:max-w-230 bg-primary-100 boxshadowright_hero">
+      <div class="absolute left-3 top-1 md:left-10 md:top-35 p-2 md:p-12 max-w-70 md:max-w-250 bg-primary-100 boxshadowright_hero">
         <div class="flex flex-col gap-1 md:gap-2">
           <Heading htmlheading="h1" size="xlarge" font="display">CARE</Heading>
-          <Heading htmlheading="h2" size="medium" font="display"> Sammen bekæmper vi ulighed og fattigdom </Heading>
           <Heading htmlheading="paragraphItalic" size="paragraphItalic" font="serif" stylingclasses="font-light"> Støt piger og kvinder i klimakampen i verdens fattigste lande </Heading>
+          <Heading htmlheading="h2" size="medium" font="display"> Sammen bekæmper vi ulighed og fattigdom </Heading>
+
           <div class="flex justify-end">
             <Text>
               <Button variant="primary" size="medium" icon="heart"> Støt nu </Button>
@@ -29,20 +29,20 @@ import Support from "../components/Support.astro";
 
     <!-- START på sektion 2 - Forms -->
     <!-- Ikoner -->
-    <div class="flex flex-row justify-center gap-5 md:gap-25">
-      <div class="flex flex-col gap-2">
+    <div class="flex flex-row justify-center gap-5 md:gap-20 gap-y-10 p-10 md:p-20 mb-10 md:mb-20">
+      <div class="flex flex-col items-center gap-2">
         <img src="/public/forside/hero_mennesker.svg" alt="mennesker illustration" class="w-18 h-18" />
         <Heading htmlheading="numbers" size="numbers" font="sans">53,4 mio</Heading>
         <Heading htmlheading="h4" size="small" font="serif">Mennesker</Heading>
       </div>
 
-      <div class="flex flex-col gap-2">
+      <div class="flex flex-col items-center gap-2">
         <img src="/public/forside/hero_lande.svg" alt="lande illustration" class="w-18 h-18" />
         <Heading htmlheading="numbers" size="numbers" font="sans">121</Heading>
         <Heading htmlheading="h4" size="small" font="serif">Lande</Heading>
       </div>
 
-      <div class="flex flex-col gap-2">
+      <div class="flex flex-col items-center gap-2">
         <img src="/public/forside/hero_projekter.svg" alt="projekter illustration" class="w-18 h-18" />
         <Heading htmlheading="numbers" size="numbers" font="sans">1450</Heading>
         <Heading htmlheading="h4" size="small" font="serif">Projekter</Heading>
@@ -53,12 +53,12 @@ import Support from "../components/Support.astro";
       <div class="#Eksempel"></div>
     </section>
 
-    <section class="py-12 mb-10 md:mb-20">
+    <section class="gap-y-10 p-10 md:p-20 mb-10 md:mb-20">
       <div class="text-center mb-10">
         <Heading htmlheading="h3" size="medium" font="display"> Hvad går dine penge til? </Heading>
       </div>
 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-10 max-w-4xl mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10 max-w-full mx-auto">
         <div class="flex flex-col items-center text-center space-y-2">
           <img src="/public/forside/section2_mad.svg" alt="mad" class="w-16 h-16" />
           <Heading htmlheading="numbers" size="numbers" font="sans">38 kr.</Heading>
@@ -87,23 +87,30 @@ import Support from "../components/Support.astro";
     <!-- SLUT på sektion 2 - Forms -->
 
     <!-- START på sektion 3 - Kampagne -->
-    <section class="mx-auto p-10 md:p-20 grid grid-cols-1 md:grid-cols-2">
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-y-10 p-10 md:p-20 mb-10 md:mb-20">
       <div class="max-w-130">
         <Heading htmlheading="h2" size="large" font="display"> CASHEWTRÆER SKABER HÅB OG INDKOMST </Heading>
 
         <Heading htmlheading="h4" size="small" font="serif" stylingclasses="text-secondary-700 font-light flex justify-end"> “Dyrk en bedre fremtid” </Heading>
 
-        <Text teksttype="brødtekst"> Med et cashewtræ kan kvinder sikre mad på bordet og skabe sig en indkomst, der sikrer deres børns fremtid. Når du giver et cashewtræ, hjælper du en kvinde med at starte en plantage. Cashewtræer er tørkeresistente og kan overleve i meget varme og tørre klimaer. Nødderne kan spises, opbevares længe og sælges på markedet, hvilket giver en pålidelig indtægtskilde. Et cashewtræ betyder mad på bordet og en vej ud af fattigdom for hendes familie. </Text>
+        <div class="mt-5">
+          <Text teksttype="brødtekst"> Med et cashewtræ kan kvinder sikre mad på bordet og skabe sig en indkomst, der sikrer deres børns fremtid. Når du giver et cashewtræ, hjælper du en kvinde med at starte en plantage. Cashewtræer er tørkeresistente og kan overleve i meget varme og tørre klimaer. Nødderne kan spises, opbevares længe og sælges på markedet, hvilket giver en pålidelig indtægtskilde. Et cashewtræ betyder mad på bordet og en vej ud af fattigdom for hendes familie. </Text>
+        </div>
 
-        <div class="flex md:flex-row">
-          <img src="/public/forside/section2_træ.svg" alt="træ" class="w-16 h-16" />
-          <div class="">
-            <Heading htmlheading="numbers" size="numbers" font="sans">510 kr.</Heading>
-            <Text teksttype="brødtekst">Kan give en familie to cashewtræer</Text>
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-5 w-full mt-5">
+          <!-- Ikon + tekst altid i række -->
+          <div class="flex flex-row items-center gap-5">
+            <img src="/public/forside/section2_træ.svg" alt="træ" class="w-16 h-16" />
+
+            <div>
+              <Heading htmlheading="numbers" size="numbers" font="sans">510 kr.</Heading>
+              <Text teksttype="brødtekst">Kan give en familie to cashewtræer</Text>
+            </div>
           </div>
 
-          <div class="">
-            <Button variant="primary" size="medium" icon="heart"> Støt nu </Button>
+          <!-- Knap -->
+          <div class="w-full md:w-auto md:self-end mt-5">
+            <Button variant="primary" size="medium" icon="heart" class="w-full md:w-auto"> Støt nu </Button>
           </div>
         </div>
       </div>
@@ -135,15 +142,16 @@ import Support from "../components/Support.astro";
     <!-- SLUT på sektion 4 - Carousel -->
 
     <!-- START på sektion 5 - Internationale programmer -->
-    <section class="mx-auto p-10 md:p-20 grid grid-cols-1 md:grid-cols-2 items-center">
-      <div class="flex flex-col justify-center space-y-2 max-w-120">
+    <section class="grid grid-cols-1 md:grid-cols-2 items-center gap-y-10 p-10 md:p-20 mb-10 md:mb-20">
+      <div class="flex flex-col justify-center space-y-2 max-w-130">
         <Heading htmlheading="h3" size="medium" font="display"> INTERNATIONALE PROGRAMMER </Heading>
 
         <Heading htmlheading="h4" size="small" font="serif" stylingclasses="text-secondary-700 font-light italic self-end"> “Global tilstedeværelse” </Heading>
 
-        <img class="md:hidden" src="/public/forside/f_sektion5.svg" alt="" />
-
-        <Text teksttype="brødtekst"> CARE Danmark er en privat og uafhængig fond, der arbejder i 16 lande fordelt på fem regioner: Vestafrika, Østafrika, Mellemøsten, Asien og Europa. CARE Danmark er en del af CARE International - en af verdens største humanitære organisationer. </Text>
+        <img class="md:hidden mt-5" src="/public/forside/f_sektion5.svg" alt="" />
+        <div class="mt-5">
+          <Text teksttype="brødtekst"> CARE Danmark er en privat og uafhængig fond, der arbejder i 16 lande fordelt på fem regioner: Vestafrika, Østafrika, Mellemøsten, Asien og Europa. CARE Danmark er en del af CARE International - en af verdens største humanitære organisationer. </Text>
+        </div>
       </div>
 
       <div class="flex items-center justify-center">
@@ -153,14 +161,20 @@ import Support from "../components/Support.astro";
     <!-- SLUT på sektion 5 - Internationale programmer -->
   </main>
   <!-- START på sektion 6 - Hjælp -->
-  <section class="bg-primary-300 mb-10 md:mb-20 grid md:grid-cols-2 gap-5 p-5 md:p-20">
-    <div class="">
-      <Heading htmlheading="h3" size="medium" font="display" stylingclasses="font-light">HJÆLP USKYLDIGE FAMILIER</Heading>
-      <Text teksttype="brødtekst">
-        Verden er i øjeblikket vidne til en række forfærdelige krige, konflikter og klima-katastrofer. For millioner af mennesker handler hver dag om ren og skær overlevelse. <br />
-        Uskyldige familier har mistet alt. Deres hjem, deres ejendele, deres nærmeste. Der er akut brug for helt basale ting som mad, vand, medicin, telte og brændstof. Du kan hjælpe mennesker i akut nød!
-      </Text>
-      <Button variant="primary" size="medium" icon="heart"> Støt nu </Button>
+  <section class="bg-primary-300 grid md:grid-cols-2 mx-auto gap-y-10 p-10 md:p-20 mb-10 md:mb-20">
+    <div class="max-w-130 flex flex-col gap-2 md:gap-5">
+      <Heading htmlheading="h3" size="medium" font="display">HJÆLP USKYLDIGE FAMILIER</Heading>
+      <div class="mt-3">
+        <Text teksttype="brødtekst">
+          Verden er i øjeblikket vidne til en række forfærdelige krige, konflikter og klima-katastrofer. For millioner af mennesker handler hver dag om ren og skær overlevelse. <br />
+          Uskyldige familier har mistet alt. Deres hjem, deres ejendele, deres nærmeste. Der er akut brug for helt basale ting som mad, vand, medicin, telte og brændstof. Du kan hjælpe mennesker i akut nød!
+        </Text>
+      </div>
+      <div class="mt-5">
+        <Text>
+          <Button variant="primary" size="medium" icon="heart"> Støt nu </Button>
+        </Text>
+      </div>
     </div>
     <div class="boxshadowleft_orange">
       <img src="/public/forside/f_sektion6.webp" alt="" />
@@ -169,14 +183,17 @@ import Support from "../components/Support.astro";
   <!-- SLUT på sektion 6 - Hjælp -->
 
   <!-- START på sektion 7 - Vores indsatser -->
-  <section class="mb-10 md:mb-20 grid md:grid-cols-2 gap-5 p-5 md:p-20">
+  <section class="mb-10 md:mb-20 grid md:grid-cols-2 gap-5 gap-y-10 mx-auto p-10 md:p-20">
     <div class="flex flex-col justify-center space-y-2 max-w-120">
       <Heading htmlheading="h3" size="medium" font="display"> VORES INDSATSER </Heading>
 
       <Heading htmlheading="h4" size="small" font="serif" stylingclasses="text-secondary-700 font-light italic self-end"> “En grøn og retfærdig verden” </Heading>
-
-      <Text teksttype="brødtekst"> Hos CARE arbejder vi for at give mennesker i verdens mest sårbare områder – især kvinder og piger – et værdigt liv trods klimaforandringer, kriser og fattigdom. Vi fokuserer på klimaindsats, ligestilling, innovation og nødhjælp. Ved at kombinere langsigtet udvikling med hurtig hjælp og tæt samarbejde med lokalsamfund skaber vi varige løsninger. Gennem uddannelse, bæredygtige projekter og støtte til selvhjælp ruster vi de mest udsatte til at stå stærkere i fremtiden. </Text>
-      <Text><Button variant="secondary" size="medium" icon="arrow">Læs mere</Button></Text>
+      <div class="mt-5">
+        <Text teksttype="brødtekst"> Hos CARE arbejder vi for at give mennesker i verdens mest sårbare områder – især kvinder og piger – et værdigt liv trods klimaforandringer, kriser og fattigdom. Vi fokuserer på klimaindsats, ligestilling, innovation og nødhjælp. Ved at kombinere langsigtet udvikling med hurtig hjælp og tæt samarbejde med lokalsamfund skaber vi varige løsninger. Gennem uddannelse, bæredygtige projekter og støtte til selvhjælp ruster vi de mest udsatte til at stå stærkere i fremtiden. </Text>
+      </div>
+      <div class="mt-5">
+        <Text><Button variant="secondary" size="medium" icon="arrow">Læs mere</Button></Text>
+      </div>
     </div>
     <div>
       <img class="boxshadowright_orange" src="/public/forside/f_sektion7.webp" alt="" />
