@@ -11,15 +11,15 @@ import Support from "../components/Support.astro";
     <!-- START på sektion 1 - Hero -->
     <section class="relative w-full">
       <img src="/public/forside/hero.webp" alt="Billede af kvinde i Afrika" class="w-full h-auto" />
-      <div class="absolute left-3 top-1 md:left-10 md:top-35 p-2 md:p-12 max-w-70 md:max-w-250 bg-primary-100 boxshadowright_hero">
+      <div class="absolute left-3 top-1 md:left-10 md:top-45 p-2 md:p-12 max-w-70 md:max-w-200 bg-primary-100 boxshadowright_hero">
         <div class="flex flex-col gap-1 md:gap-2">
           <Heading htmlheading="h1" size="xlarge" font="display">CARE</Heading>
-          <Heading htmlheading="paragraphItalic" size="paragraphItalic" font="serif" stylingclasses="font-light"> Støt piger og kvinder i klimakampen i verdens fattigste lande </Heading>
-          <Heading htmlheading="h2" size="medium" font="display"> Sammen bekæmper vi ulighed og fattigdom </Heading>
+          <Heading htmlheading="h2" size="small" font="display"> Støt piger og kvinder i klimakampen i verdens fattigste lande </Heading>
+          <Heading htmlheading="paragraphItalic" size="paragraphItalic" font="sans" stylingclasses="font-light italic"> Sammen bekæmper vi ulighed og fattigdom </Heading>
 
           <div class="flex justify-end">
             <Text>
-              <Button variant="primary" size="medium" icon="heart"> Støt nu </Button>
+              <Button variant="primary" size="large" icon="heart"> Støt nu </Button>
             </Text>
           </div>
         </div>
@@ -31,19 +31,19 @@ import Support from "../components/Support.astro";
     <!-- Ikoner -->
     <div class="flex flex-row justify-center gap-5 md:gap-20 gap-y-10 p-10 md:p-20 mb-10 md:mb-20">
       <div class="flex flex-col items-center gap-2">
-        <img src="/public/forside/hero_mennesker.svg" alt="mennesker illustration" class="w-18 h-18" />
+        <img src="/mennesker.svg" alt="mennesker illustration" class="w-18 h-18" />
         <Heading htmlheading="numbers" size="numbers" font="sans">53,4 mio</Heading>
         <Heading htmlheading="h4" size="small" font="serif">Mennesker</Heading>
       </div>
 
       <div class="flex flex-col items-center gap-2">
-        <img src="/public/forside/hero_lande.svg" alt="lande illustration" class="w-18 h-18" />
+        <img src="/lande.svg" alt="lande illustration" class="w-18 h-18" />
         <Heading htmlheading="numbers" size="numbers" font="sans">121</Heading>
         <Heading htmlheading="h4" size="small" font="serif">Lande</Heading>
       </div>
 
       <div class="flex flex-col items-center gap-2">
-        <img src="/public/forside/hero_projekter.svg" alt="projekter illustration" class="w-18 h-18" />
+        <img src="/projekter.svg" alt="projekter illustration" class="w-18 h-18" />
         <Heading htmlheading="numbers" size="numbers" font="sans">1450</Heading>
         <Heading htmlheading="h4" size="small" font="serif">Projekter</Heading>
       </div>
@@ -55,7 +55,7 @@ import Support from "../components/Support.astro";
 
     <section class="gap-y-10 p-10 md:p-20 mb-10 md:mb-20">
       <div class="text-center mb-10">
-        <Heading htmlheading="h3" size="medium" font="display"> Hvad går dine penge til? </Heading>
+        <Heading htmlheading="h3" size="medium" font="display"> HVAD VI KAN OPNÅ MED DIN DONATION </Heading>
       </div>
 
       <div class="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10 max-w-full mx-auto">
@@ -72,7 +72,7 @@ import Support from "../components/Support.astro";
         </div>
 
         <div class="flex flex-col items-center text-center space-y-2">
-          <img src="/public/forside/section2_vand.svg" alt="vand" class="w-16 h-16" />
+          <img src="/vand.svg" alt="vand" class="w-16 h-16" />
           <Heading htmlheading="numbers" size="numbers" font="sans">134 kr.</Heading>
           <Text teksttype="brødtekst">Kan sikre at en landsby får 3000 liter vand</Text>
         </div>
@@ -91,7 +91,7 @@ import Support from "../components/Support.astro";
       <div class="max-w-130">
         <Heading htmlheading="h2" size="large" font="display"> CASHEWTRÆER SKABER HÅB OG INDKOMST </Heading>
 
-        <Heading htmlheading="h4" size="small" font="serif" stylingclasses="text-secondary-700 font-light flex justify-end"> “Dyrk en bedre fremtid” </Heading>
+        <Heading htmlheading="h4" size="small" font="sans" stylingclasses="text-secondary-700 font-light flex justify-end italic"> “Dyrk en bedre fremtid” </Heading>
 
         <div class="mt-5">
           <Text teksttype="brødtekst"> Med et cashewtræ kan kvinder sikre mad på bordet og skabe sig en indkomst, der sikrer deres børns fremtid. Når du giver et cashewtræ, hjælper du en kvinde med at starte en plantage. Cashewtræer er tørkeresistente og kan overleve i meget varme og tørre klimaer. Nødderne kan spises, opbevares længe og sælges på markedet, hvilket giver en pålidelig indtægtskilde. Et cashewtræ betyder mad på bordet og en vej ud af fattigdom for hendes familie. </Text>
@@ -110,7 +110,9 @@ import Support from "../components/Support.astro";
 
           <!-- Knap -->
           <div class="w-full md:w-auto md:self-end mt-5">
-            <Button variant="primary" size="medium" icon="heart" class="w-full md:w-auto"> Støt nu </Button>
+            <Text>
+              <Button variant="primary" size="medium" icon="heart"> Støt nu </Button>
+            </Text>
           </div>
         </div>
       </div>
@@ -146,7 +148,7 @@ import Support from "../components/Support.astro";
       <div class="flex flex-col justify-center space-y-2 max-w-130">
         <Heading htmlheading="h3" size="medium" font="display"> INTERNATIONALE PROGRAMMER </Heading>
 
-        <Heading htmlheading="h4" size="small" font="serif" stylingclasses="text-secondary-700 font-light italic self-end"> “Global tilstedeværelse” </Heading>
+        <Heading htmlheading="h4" size="small" font="sans" stylingclasses="text-secondary-700 font-light italic self-end"> “Global tilstedeværelse” </Heading>
 
         <img class="md:hidden mt-5" src="/public/forside/f_sektion5.svg" alt="" />
         <div class="mt-5">
@@ -184,10 +186,10 @@ import Support from "../components/Support.astro";
 
   <!-- START på sektion 7 - Vores indsatser -->
   <section class="mb-10 md:mb-20 grid md:grid-cols-2 gap-5 gap-y-10 mx-auto p-10 md:p-20">
-    <div class="flex flex-col justify-center space-y-2 max-w-120">
+    <div class="flex flex-col justify-center space-y-2 max-w-130">
       <Heading htmlheading="h3" size="medium" font="display"> VORES INDSATSER </Heading>
 
-      <Heading htmlheading="h4" size="small" font="serif" stylingclasses="text-secondary-700 font-light italic self-end"> “En grøn og retfærdig verden” </Heading>
+      <Heading htmlheading="h4" size="small" font="sans" stylingclasses="text-secondary-700 font-light italic self-end"> “En grøn og retfærdig verden” </Heading>
       <div class="mt-5">
         <Text teksttype="brødtekst"> Hos CARE arbejder vi for at give mennesker i verdens mest sårbare områder – især kvinder og piger – et værdigt liv trods klimaforandringer, kriser og fattigdom. Vi fokuserer på klimaindsats, ligestilling, innovation og nødhjælp. Ved at kombinere langsigtet udvikling med hurtig hjælp og tæt samarbejde med lokalsamfund skaber vi varige løsninger. Gennem uddannelse, bæredygtige projekter og støtte til selvhjælp ruster vi de mest udsatte til at stå stærkere i fremtiden. </Text>
       </div>
