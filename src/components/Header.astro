@@ -1,29 +1,53 @@
 ---
+import Button from "./Button.astro";
+import Text from "./Text.astro";
+
 const pathname = new URL(Astro.request.url).pathname;
-const currentPath = pathname.slice(1); // remove the first "/"
+const currentPath = pathname.slice(1);
 ---
 
-<header x-data="{ showmenu: false }" class="">
-  <div id="navbar" class="container mx-auto p-4 flex flex-row justify-between items-center">
-    <div id="logo" class=""></div>
-    <nav id="desktopmenu" class="hidden lg:block">
-      <ul class="flex flex-row gap-4">
-        <li class=""><a href="/" class={currentPath === "" ? "italic font-bold" : "italic"}>Forside</a></li><!-- alternativt: lav et <a href="">Link</a>, hvis du ikke vil bruge Link.astro komponenten -->
-        <li class=""><a href="/omcare/" class={currentPath === "omcare/" ? "italic font-bold" : "italic"}>Om CARE</a></li>
-        <li class=""><a href="/voresindsatser/" class={currentPath === "voresindsatser/" ? "italic font-bold" : "italic"}>Vores indsigter</a></li>
-        <li class=""><a href="/komponentbibliotek/" class={currentPath === "komponentbibliotek/" ? "italic font-bold" : "italic"}>Komponentbibliotek</a></li>
-      </ul>
-    </nav>
-    <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu"
-      ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
-      </svg>
-    </button>
+<header x-data="{ showmenu: false }" class="bg-primary-300">
+  <div id="navbar" class="container mx-auto p-3 flex justify-between items-center">
+    <!-- Logo -->
+    <div id="logo" class="w-10 md:w-15">
+      <a href="/">
+        <img src="/logo.webp" alt="Logo" />
+      </a>
+    </div>
+
+    <!-- Knap -->
+    <div class="flex items-center space-x-3">
+      <Button variant="primary" size="small" icon="heart"> Støt nu </Button>
+
+      <!-- Søgeicon -->
+      <div x-data="{ showSearch: false }" class="relative flex items-center space-x-3">
+        <!-- Søgeikon -->
+        <button @click="showSearch = !showSearch" class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 bg-transparent">
+          <img src="/searchicon.svg" alt="searchicon" class="w-6 md:w-8 h-auto" />
+        </button>
+
+        <!-- Tekstfelt -->
+        <input x-show="showSearch" x-transition x-on:click.outside="showSearch = false" type="text" placeholder="Søg..." class="border-2 border-primary-700 rounded-md py-1 px-2 bg-primary-100 text-primary-900 focus:outline-none" />
+      </div>
+
+      <!-- Burgermenu -->
+      <button id="burgermenu" x-on:click="showmenu = !showmenu">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-10 h-10 md:w-15 md:h-15">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+        </svg>
+      </button>
+    </div>
   </div>
-  <nav id="mobilmenu" class="flex flex-col content-center" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
-    <ul class="border-t-2 border-b-2 border-black">
-      <li class="text-center py-2"><a href="/" class={currentPath === "" ? "italic font-bold" : "italic"}>Forside</a></li>
-      <li class="text-center py-2"><a href="/komponentbibliotek/" class={currentPath === "komponentbibliotek/" ? "italic font-bold" : "italic"}>Komponentbibliotek</a></li>
+
+  <!--Indhold i burgermenu -->
+  <nav class="flex flex-col content-center" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
+    <ul class="">
+      <li class="text-right py-2 pr-4 md:pr-24"><a href="/">Forside</a></li>
+      <li class="text-right py-2 pr-4 md:pr-24"><a href="/omcare/">Om CARE</a></li>
+      <li class="text-right py-2 pr-4 md:pr-24"><a href="/voresindsatser/">Vores indsatser</a></li>
+      <li class="text-right py-2 pr-4 md:pr-24"><a href="/">Det gør vi</a></li>
+      <li class="text-right py-2 pr-4 md:pr-24"><a href="/">Det kan du gøre</a></li>
+      <li class="text-right py-2 pr-4 md:pr-24"><a href="/komponentbibliotek/">Komponentbibliotek</a></li>
     </ul>
   </nav>
 </header>
