@@ -12,9 +12,10 @@ import Button from "../components/Button.astro";
 <MainLayout title="Titel">
   <main>
     <!-- START på sektion 1 - Titel -->
-    <section>
+    <section class="pt-10 md:pt-20">
       <div class="items-center text-center">
         <Heading htmlheading="h2" size="medium">OM CARE</Heading>
+
         <Heading htmlheading="h4" size="small" font="sans" stylingclasses="text-secondary-700 font-light flex justify-end  pr-5 md:pr-40 italic"> “Kæmper for en grøn og retfærdig verden” </Heading>
       </div>
     </section>
@@ -25,7 +26,7 @@ import Button from "../components/Button.astro";
       <img src="/omcare/o_section2.webp" alt="kort" class="absolute inset-0 md:w-full md:h-full z-0 p-5 md:p-20" />
       <div class="relative z-10 space-y-12">
         <!-- Boks 1 venstre -->
-        <div class="bg-secondary-500 opacity-85 max-w-70 md:max-w-100 p-6 relative mr-auto shadow-2xl">
+        <div class="bg-primary-300 opacity-90 max-w-70 md:max-w-100 p-6 relative mr-auto shadow-2xl">
           <img src="/knapnael.svg" alt="nål" class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 md:w-10 h-auto" />
           <Heading htmlheading="h3" size="small" font="display">HVAD GØR CARE?</Heading>
           <Text> CARE støtter verdens fattigste og mest klimaudsatte mennesker i at skabe sig et godt og værdigt liv. Vi arbejder med klimatilpasning, uddannelse, akut nødhjælp og hjælp til selvhjælp, og vi er til stede både før, under og efter klimakrisen rammer. </Text>
@@ -60,11 +61,17 @@ import Button from "../components/Button.astro";
       <div class="mx-auto p-10 md:p-20 mb-10 md:mb-20 grid grid-cols-1 md:grid-cols-2">
         <div class="bg-primary-100 p-10 boxshadowleft_orange">
           <Heading htmlheading="h2" size="medium">SÅDAN BRUGER VI PENGENE</Heading>
-          <Text>CARE havde i 2022 en administrationsomkostning på 10 procent af omsætningen. Én procent af omsætningen bruger vi på kommunikation og engagement, så vi kan sikre flere midler og samtidigt udbrede kendskabet til vores arbejde med at skabe løsninger til verdens mest klimaudsatte mennesker. De resterende 89 procent går til vores projekter. Tallene kan variere alt efter det konkrete års indtægter.</Text>
-          <Text><Button variant="secondary" size="medium" icon="arrow">Få indblik i vores regnskab</Button></Text>
+          <div class="mt-3">
+            <Text>CARE havde i 2022 en administrationsomkostning på 10 procent af omsætningen. Én procent af omsætningen bruger vi på kommunikation og engagement, så vi kan sikre flere midler og samtidigt udbrede kendskabet til vores arbejde med at skabe løsninger til verdens mest klimaudsatte mennesker. De resterende 89 procent går til vores projekter. Tallene kan variere alt efter det konkrete års indtægter.</Text>
+          </div>
+          <div class="mt-5">
+            <Text>
+              <a href="/"> <Button variant="secondary" size="medium" icon="arrow">Få indblik i vores regnskab</Button></a>
+            </Text>
+          </div>
         </div>
         <div>
-          <img src="/omcare/o_sektion3.webp" alt="" />
+          <img src="/omcare/o_sektion3.webp" alt="diagram" class="mt-5" />
         </div>
       </div>
     </section>
