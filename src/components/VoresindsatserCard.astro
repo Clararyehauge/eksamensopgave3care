@@ -1,0 +1,54 @@
+---
+import Heading from "./Heading.astro";
+import Text from "./Text.astro";
+
+export interface Props {
+  title: string;
+  body: string;
+  imageSrc: string;
+  imageAlt?: string;
+  links?: { label: string; href: string }[];
+  reverse?: boolean;
+}
+
+const { title, body, imageSrc, imageAlt = "", links = [], reverse = false } = Astro.props;
+
+// CSS-klasser der vender layoutet på desktop
+const contentOrder = reverse ? "md:order-2" : "md:order-1";
+const imageOrder = reverse ? "md:order-1" : "md:order-2";
+const imageShadow = reverse ? "boxshadowleft_orange" : "boxshadowright_orange";
+---
+
+<section class="relative w-full">
+  <div class="grid md:grid-cols-2 items-center">
+    <div class={`relative z-20 flex justify-center ${contentOrder} bg-primary-300`}>
+      <div class="p-8 md:p-12 flex flex-col gap-6 max-w-[600px] w-full">
+        <Heading htmlheading="h3" size="medium" font="display">{title}</Heading>
+        <Text teksttype="brødtekst" set:html={body} />
+
+        <!-- LINKS MED STREGER -->
+        {
+          links.length > 0 && (
+            <ul class="mt-2 space-y-4">
+              {links.map((l) => (
+                <li class="flex items-center justify-between border-b border-black pb-2">
+                  <a href={l.href} class="text-sm md:text-base hover:underline">
+                    {l.label}
+                  </a>
+                  <span class="text-lg">→</span>
+                </li>
+              ))}
+            </ul>
+          )
+        }
+      </div>
+    </div>
+
+    <!-- BILLEDE -->
+    <div class={`relative flex justify-center items-center ${imageOrder}`}>
+      <div class={`relative w-full ${imageShadow}`}>
+        <img src={imageSrc} alt={imageAlt} class="relative z-10 w-full h-auto object-cover block" />
+      </div>
+    </div>
+  </div>
+</section>
