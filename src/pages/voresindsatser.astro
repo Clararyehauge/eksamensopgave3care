@@ -2,61 +2,148 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Header from "../components/Header.astro";
 import Support from "../components/Support.astro";
+import Stickey from "../components/Stickey.astro";
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
+import VoresindsatserCard from "../components/VoresindsatserCard.astro";
 ---
 
 <MainLayout title="Titel">
-  <main class="container mx-auto p-4">
-    <!-- START på sektion 1 - Titel -->
+  <!-- START på sektion 1 - Titel -->
+  <section>
     <section>
-      <div></div>
+      <div class="items-center text-center">
+        <Heading htmlheading="h2" size="medium">VORES INDSATSER</Heading>
+        <Heading htmlheading="h4" size="small" font="sans" stylingclasses="text-secondary-700 font-light pl-40 md:pl-80 italic"> “En grøn og retfærdig verden” </Heading>
+      </div>
     </section>
-    <!-- SLUT på sektion 1 - Titel -->
+  </section>
+  <!-- SLUT på sektion 1 - Titel -->
+  <Stickey position="right" visibleAt="sm" />
 
+  <section>
     <!-- START på sektion 2 - Kvinder -->
-    <section>
-      <div></div>
+    <section class="gap-y-10 p-10 md:p-20">
+      <VoresindsatserCard
+        title="KVINDER"
+        body="Piger og kvinder i verdens fattigste lande er særligt udsatte, når nøden er størst. Men får de chancen, så går de foran i at skabe en bedre  fremtid for sig selv, familien og hele samfundet. Derfor styrker CARE  piger og kvinder i alt, hvad vi gør."
+        imageSrc="/voresindsatser/v_sektion2.webp"
+        reverse={true}
+        links={[
+          { label: "Når vi hjælper en kvinde, hjælper vi alle", href: "/kvinder" },
+          { label: "Egne penge og stærke stemmer", href: "/kvinder" },
+          { label: "Sådan kan støtten til kvinder se ud", href: "/kvinder" },
+        ]}
+      />
     </section>
     <!-- SLUT på sektion 2 - Kvinder -->
 
     <!-- START på sektion 3 - Klima -->
-    <section>
-      <div></div>
+    <section class="gap-y-10 p-10 md:p-20">
+      <VoresindsatserCard
+        title="KLIMA"
+        body="Klimakrisen rammer hårdest de steder i verden, hvor folk i forvejen har mindst. CARE støtter kvinder i verdens fattigste lande i kampen mod klimaforandringer, både akut og på den lange bane"
+        imageSrc="/voresindsatser/v_sektion3.webp"
+        links={[
+          { label: "Støtte før, under og efter klimakatastrofen", href: "/kvinder" },
+          { label: "Grøn hjælp til selvhjælp ", href: "/kvinder" },
+          { label: "Konsekvenser", href: "/kvinder" },
+        ]}
+      />
     </section>
     <!-- SLUT på sektion 3 - Klima -->
 
     <!-- START på sektion 4 - Innovation -->
-    <section>
-      <div></div>
+    <section class="gap-y-10 p-10 md:p-20">
+      <VoresindsatserCard
+        title="INNOVATION"
+        body="Klimakrise, pandemier og krig i Europa: Verden står i dag over for helt  nye udfordringer. Derfor må vi også tænke nyt, når der skal findes  løsninger. Dét er CAREs tilgang i alle vores nødhjælps- og  udviklingsprojekter."
+        imageSrc="/voresindsatser/v_sektion4.webp"
+        reverse={true}
+        links={[
+          { label: "Støtte før, under og efter klimakatastrofen", href: "/kvinder" },
+          { label: "Grøn hjælp til selvhjælp ", href: "/kvinder" },
+          { label: "Konsekvenser", href: "/kvinder" },
+        ]}
+      />
     </section>
     <!-- SLUT på sektion 4 - Innovation -->
 
     <!-- START på sektion 5 - Nødhjælp -->
-    <section>
-      <div></div>
+    <section class="gap-y-10 p-10 md:p-20">
+      <VoresindsatserCard
+        title="NØDHJÆLP"
+        body="CARE yder akut nødhjælp, når krig og klimakatastrofer rammer. Og når  støvet har lagt sig, støtter vi familier, der har mistet alt, i at  genopbygge deres liv og stå stærkere i fremtiden."
+        imageSrc="/voresindsatser/v_sektion5.webp"
+        links={[
+          { label: "Nødhjælp på den korte og lange bane", href: "/kvinder" },
+          { label: "Fokus på kvinder", href: "/kvinder" },
+          { label: "Nødhjælp inden katastrofen rammer", href: "/kvinder" },
+        ]}
+      />
     </section>
     <!-- SLUT på sektion 5 - Nødhjælp -->
+  </section>
 
-    <!-- START på sektion 6 - Projekter og løsninger -->
-    <section>
-      <div class="#overskrift"></div>
-      <div class="felter"></div>
-    </section>
-    <!-- SLUT på sektion 6 - Projekter og løsninger -->
+  <!-- START på sektion 6 - Projekter og løsninger -->
+  <section>
+    <div class="text-center">
+      <Heading htmlheading="h2" size="large" font="display">CARE’S PROJEKTER OG LØSNINGER</Heading>
+    </div>
+    <div class="felter"></div>
+  </section>
+  <!-- SLUT på sektion 6 - Projekter og løsninger -->
 
-    <!-- START på sektion 7 - Carousel -->
-    <section>
-      <div class="billede"></div>
-    </section>
-    <!-- SLUT på sektion 7 - Carousel -->
+  <!-- START på sektion 7 - Carousel -->
+  <section>
+    <div class="billede"></div>
+  </section>
+  <!-- SLUT på sektion 7 - Carousel -->
+  <div class="loop overflow-hidden relative mb-10 md:mb-20">
+    <div class="loop-track flex w-[200%] animate-scroll gap-0">
+      <img src="/voresindsatser/v_sektion7_1.webp" alt="billede" class="w-1/4 object-contain" />
+      <img src="/voresindsatser/v_sektion7_2.webp" alt="billede" class="w-1/4 object-contain" />
+      <img src="/voresindsatser/v_sektion7_3.webp" alt="billede" class="w-1/4 object-contain" />
+      <img src="/voresindsatser/v_sektion7_4.webp" alt="billede" class="w-1/4 object-contain" />
+      <img src="/voresindsatser/v_sektion7_5.webp" alt="billede" class="w-1/4 object-contain" />
+      <img src="/voresindsatser/v_sektion7_6.webp" alt="billede" class="w-1/4 object-contain" />
+      <img src="/voresindsatser/v_sektion7_7.webp" alt="billede" class="w-1/4 object-contain" />
+      <img src="/voresindsatser/v_sektion7_8.webp" alt="billede" class="w-1/4 object-contain" />
+      <img src="/voresindsatser/v_sektion7_9.webp" alt="billede" class="w-1/4 object-contain" />
+      <img src="/voresindsatser/v_sektion7_10.webp" alt="billede" class="w-1/4 object-contain" />
+      <img src="/voresindsatser/v_sektion7_11.webp" alt="billede" class="w-1/4 object-contain" />
+    </div>
+  </div>
+  <!-- START på FOOTER -->
+  <section>
+    <div class="Donation"></div>
+    <div class="Footer"></div>
+  </section>
+  <!-- SLUT på FOOTER -->
 
-    <!-- START på FOOTER -->
-    <section>
-      <div class="Donation"></div>
-      <div class="Footer"></div>
-    </section>
-    <!-- SLUT på FOOTER -->
-  </main>
   <section>
     <Support />
   </section>
+
+  <style>
+    .loop {
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .loop-track {
+      display: flex;
+      width: 200%;
+      animation: scroll 30s linear infinite;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+  </style>
 </MainLayout>

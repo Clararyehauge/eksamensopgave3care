@@ -6,6 +6,7 @@ import Link from "../components/Link.astro";
 import Button from "../components/Button.astro";
 import Searchbar from "../components/Searchbar.astro";
 import Stickey from "../components/Stickey.astro";
+import VoresindsatserCard from "../components/VoresindsatserCard.astro";
 ---
 
 <MainLayout title="Titel">
@@ -48,5 +49,16 @@ import Stickey from "../components/Stickey.astro";
     <!-- Slut på Buttons komponent instanser -->
 
     <Stickey position="right" visibleAt="sm" />
+
+    <VoresindsatserCard
+      title="KVINDER"
+      body="<p>Piger og kvinder i verdens fattigste lande er særligt udsatte...</p>"
+      imageSrc="/voresindsats/kvinder.webp"
+      links={[
+        { label: "Når vi hjælper en kvinde, hjælper vi alle", href: "/kvinder/hjaelp" },
+        { label: "Egne penge og stærke stemmer", href: "/kvinder/penge" },
+        { label: "Sådan kan støtten til kvinder se ud", href: "/kvinder/støtte" },
+      ]}
+    />
   </main>
 </MainLayout>
