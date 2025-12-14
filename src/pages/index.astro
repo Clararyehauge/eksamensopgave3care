@@ -39,13 +39,19 @@ import Stickey from "../components/Stickey.astro";
     <!-- Ikoner -->
     <div class="flex flex-row justify-center gap-5 md:gap-20 gap-y-10 p-10 md:p-20 mb-10 md:mb-20">
       <div class="flex flex-col items-center gap-2">
-        <img src="/mennesker.svg" alt="mennesker illustration" class="w-18 h-18" />
+        <div class="relative w-20 h-20">
+          <img src="/hands.svg" alt="mennesker illustration" class="w-20 h-20 absolute inset-0" />
+          <img src="/heart.svg" alt="mennesker illustration" class="w-12 h-12 absolute bottom-12 left-10 md:left-9 -translate-x-1/2 animate-pulse animate-infinite animate-duration-[4000ms] animate-delay-100" />
+        </div>
         <Heading htmlheading="numbers" size="numbers" font="sans">53,4 mio</Heading>
         <Heading htmlheading="h4" size="small" font="serif">Mennesker</Heading>
       </div>
 
       <div class="flex flex-col items-center gap-2">
-        <img src="/lande.svg" alt="lande illustration" class="w-18 h-18" />
+        <div class="relative w-20 h-20">
+          <img src="/world.svg" alt="mennesker illustration" class="w-18 h-18 absolute inset-0 animate-spin animate-duration-[6000ms] animate-delay-[2000ms]" />
+          <img src="/map.svg" alt="mennesker illustration" class="w-8 h-8 absolute bottom-15 left-13 -translate-x-1/2" />
+        </div>
         <Heading htmlheading="numbers" size="numbers" font="sans">121</Heading>
         <Heading htmlheading="h4" size="small" font="serif">Lande</Heading>
       </div>
@@ -80,7 +86,10 @@ import Stickey from "../components/Stickey.astro";
         </div>
 
         <div class="flex flex-col items-center text-center space-y-2">
-          <img src="/vand.svg" alt="vand" class="w-16 h-16" />
+          <div class="relative w-20 h-20">
+            <img src="/water.svg" alt="mennesker illustration" class="w-20 h-20 absolute inset-0" />
+            <img src="/drop.svg" alt="mennesker illustration" class="w-5 h-5 absolute bottom-3 left-7 md:left-7 -translate-x-1/2 animate-fade-down animate-infinite animate-duration-[3000ms]" />
+          </div>
           <Heading htmlheading="numbers" size="numbers" font="sans">134 kr.</Heading>
           <Text teksttype="brødtekst">Kan sikre at en landsby får 3000 liter vand</Text>
         </div>
