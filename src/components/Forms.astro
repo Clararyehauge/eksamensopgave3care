@@ -31,7 +31,7 @@ import Button from "./Button.astro";
     </div>
   </div>
 
-  <!----- FRIT BELØB  ----->
+  <!----- VALGFRIT BELØB  ----->
   <div>
     <Text>Valgfrit beløb:</Text>
 
@@ -56,19 +56,23 @@ import Button from "./Button.astro";
   </div>
 
   <script>
+    /*Finder html elementer (Dom)*/
     const typeButtons = document.querySelectorAll(".type-btn");
     const amountButtons = document.querySelectorAll(".amount-btn");
     const customAmount = document.getElementById("custom-amount");
     const summary = document.getElementById("summary");
     const donateBtn = document.getElementById("donateBtn");
 
+    /*Hvad brugeren har valgt - standard værdier*/
     let selectedType = "Enkel donation";
     let selectedAmount = "75";
 
+    /*Opdatere teksten før knappen*/
     function updateSummary() {
       summary.textContent = `${selectedType}, ${selectedAmount} kr.`;
     }
 
+    /* Gør så knapperne ændre farve ved klik - sikre at kun en knap er aktiv*/
     typeButtons.forEach((btn) => {
       btn.addEventListener("click", () => {
         typeButtons.forEach((b) => {
@@ -83,7 +87,7 @@ import Button from "./Button.astro";
         updateSummary();
       });
     });
-
+    /* Fjerner markering fra andre beløb, markerer det valgte beløb, gemmer og opdaterer teksten */
     amountButtons.forEach((btn) => {
       btn.addEventListener("click", () => {
         amountButtons.forEach((b) => {
@@ -99,7 +103,7 @@ import Button from "./Button.astro";
         updateSummary();
       });
     });
-
+    /* "Andet beløb input" - Kører hver gang brugeren vælger sit eget beløb og slår fast beløb fra*/
     customAmount.addEventListener("input", () => {
       amountButtons.forEach((b) => {
         b.classList.remove("bg-secondary-500", "text-white");
@@ -111,14 +115,14 @@ import Button from "./Button.astro";
         updateSummary();
       }
     });
-
+    /* Klik på knap og bliver sendt videre til oplysninger*/
     donateBtn.addEventListener("click", () => {
       const url = `/oplysninger?type=${encodeURIComponent(selectedType)}&amount=${encodeURIComponent(selectedAmount)}`;
 
       window.location.href = url;
     });
 
-    // initial state
+    /* Initial state - Teksten passer med standardværdier*/
     updateSummary();
   </script>
 </div>
