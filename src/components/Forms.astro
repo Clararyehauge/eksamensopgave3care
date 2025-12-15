@@ -1,0 +1,110 @@
+---
+import Heading from "./Heading.astro";
+import Text from "./Text.astro";
+import Button from "./Button.astro";
+---
+
+<div class="max-w-md mx-auto bg-primary-100 p-7 space-y-6 boxshadow_forms">
+  <div class="text-center">
+    <Heading htmlheading="h3" size="medium" font="display" stylingclasses="font-light">GØR EN FORSKEL</Heading>
+  </div>
+  <div class="space-y-0">
+    <Text>Doner en enkelt gang eller gør det månedligt:</Text>
+
+    <div class="flex rounded-lg overflow-hidden border-2 border-secondary-500">
+      <button type="button" data-type="single" class="type-btn flex-1 py-2 font-medium bg-secondary-500 text-white"> Enkel donation </button>
+
+      <button type="button" data-type="monthly" class="type-btn flex-1 py-2 font-medium bg-[#E7B68F] text-gray-800"> Støt månedligt </button>
+    </div>
+  </div>
+
+  <!----- BELØBSVALG  ----->
+  <div>
+    <Text>Vælg dit beløb:</Text>
+
+    <div class="flex rounded-lg overflow-hidden border-2 border-secondary-500">
+      <button type="button" data-amount="50" class="amount-btn flex-1 py-2 bg-primary-300"> 50 kr. </button>
+
+      <button type="button" data-amount="75" class="amount-btn flex-1 py-2 bg-secondary-500 text-white"> 75 kr. </button>
+
+      <button type="button" data-amount="150" class="amount-btn flex-1 py-2 bg-primary-300"> 150 kr. </button>
+    </div>
+  </div>
+
+  <!----- FRIT BELØB  ----->
+  <div>
+    <Text>Valgfrit beløb:</Text>
+
+    <div class="flex items-center border-2 border-secondary-500 rounded-lg bg-primary-300 px-3">
+      <input id="custom-amount" type="text" inputmode="numeric" placeholder="Andet beløb" class="w-full bg-transparent py-2 border-none focus:outline-none" />
+      <span class="ml-2">kr.</span>
+    </div>
+  </div>
+  <div class="text-center">
+    <Text id="summary" class="text-center text-blue-800">Enkel donation, 75 kr.</Text>
+    <div class="flex justify-center">
+      <Text>
+        <Button variant="primary" size="medium" icon="heart"> Støt nu </Button>
+      </Text>
+    </div>
+  </div>
+
+  <script>
+    const typeButtons = document.querySelectorAll(".type-btn");
+    const amountButtons = document.querySelectorAll(".amount-btn");
+    const customAmount = document.getElementById("custom-amount");
+    const summary = document.getElementById("summary");
+
+    let selectedType = "Enkel donation";
+    let selectedAmount = "75";
+
+    function updateSummary() {
+      summary.textContent = `${selectedType}, ${selectedAmount} kr.`;
+    }
+
+    typeButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        typeButtons.forEach((b) => {
+          b.classList.remove("bg-secondary-500", "text-white");
+          b.classList.add("bg-primary-300", "text-gray-800");
+        });
+
+        btn.classList.add("bg-secondary-500", "text-white");
+        btn.classList.remove("bg-primary-300", "text-gray-800");
+
+        selectedType = btn.textContent.trim();
+        updateSummary();
+      });
+    });
+
+    amountButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        amountButtons.forEach((b) => {
+          b.classList.remove("bg-secondary-500", "text-white");
+          b.classList.add("bg-primary-300");
+        });
+
+        btn.classList.add("bg-secondary-500", "text-white");
+        btn.classList.remove("bg-primary-300");
+
+        selectedAmount = btn.dataset.amount;
+        customAmount.value = ""; // ← vigtigt!
+        updateSummary();
+      });
+    });
+
+    customAmount.addEventListener("input", () => {
+      amountButtons.forEach((b) => {
+        b.classList.remove("bg-secondary-500", "text-white");
+        b.classList.add("bg-primary-300");
+      });
+
+      if (customAmount.value) {
+        selectedAmount = customAmount.value;
+        updateSummary();
+      }
+    });
+
+    updateSummary();
+  </script>
+</div>
