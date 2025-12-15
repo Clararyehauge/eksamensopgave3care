@@ -21,9 +21,11 @@ import Forms from "../components/Forms.astro";
           <Heading htmlheading="paragraphItalic" size="paragraphItalic" font="sans" stylingclasses="font-light italic"> Sammen bekæmper vi ulighed og fattigdom </Heading>
 
           <div class="flex justify-end animate-pulse animate-infinite animate-duration-[4000ms] animate-delay-1000">
-            <Text>
-              <Button variant="primary" size="large" icon="heart"> Støt nu </Button>
-            </Text>
+            <a href="/form">
+              <Text>
+                <Button href="/form" variant="primary" size="large" icon="heart"> Støt nu </Button>
+              </Text>
+            </a>
           </div>
         </div>
       </div>
@@ -69,7 +71,7 @@ import Forms from "../components/Forms.astro";
     <!-- Ikoner - Hvad kan vi opnå med din donation -->
     <section class="gap-y-10 p-10 md:p-20 mb-10">
       <div class="text-center mb-10">
-        <Heading htmlheading="h3" size="medium" font="display"> HVAD VI KAN OPNÅ MED DIN DONATION </Heading>
+        <Heading htmlheading="h2" size="medium" font="display"> HVAD VI KAN OPNÅ MED DIN DONATION </Heading>
       </div>
 
       <div class="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10 max-w-full mx-auto">
@@ -108,7 +110,7 @@ import Forms from "../components/Forms.astro";
       <div class="max-w-130">
         <Heading htmlheading="h2" size="large" font="display"> CASHEWTRÆER SKABER HÅB OG INDKOMST </Heading>
 
-        <Heading htmlheading="h4" size="small" font="sans" stylingclasses="text-secondary-700 font-light flex justify-end italic"> “Dyrk en bedre fremtid” </Heading>
+        <Heading htmlheading="h3" size="small" font="sans" stylingclasses="text-secondary-700 font-light flex justify-end italic"> “Dyrk en bedre fremtid” </Heading>
 
         <div class="mt-5">
           <Text teksttype="brødtekst"> Med et cashewtræ kan kvinder sikre mad på bordet og skabe sig en indkomst, der sikrer deres børns fremtid. Når du giver et cashewtræ, hjælper du en kvinde med at starte en plantage. Cashewtræer er tørkeresistente og kan overleve i meget varme og tørre klimaer. Nødderne kan spises, opbevares længe og sælges på markedet, hvilket giver en pålidelig indtægtskilde. Et cashewtræ betyder mad på bordet og en vej ud af fattigdom for hendes familie. </Text>
@@ -127,9 +129,11 @@ import Forms from "../components/Forms.astro";
 
           <!-- Knap -->
           <div class="w-full md:w-auto md:self-end mt-5">
-            <Text>
-              <Button variant="primary" size="medium" icon="heart"> Støt nu </Button>
-            </Text>
+            <a href="/form">
+              <Text>
+                <Button variant="primary" size="medium" icon="heart"> Støt nu </Button>
+              </Text>
+            </a>
           </div>
         </div>
       </div>
@@ -163,9 +167,9 @@ import Forms from "../components/Forms.astro";
     <!-- START på sektion 5 - Internationale programmer -->
     <section class="grid grid-cols-1 md:grid-cols-2 items-center p-10 md:p-20">
       <div class="flex flex-col justify-center space-y-2 max-w-130">
-        <Heading htmlheading="h3" size="medium" font="display"> INTERNATIONALE PROGRAMMER </Heading>
+        <Heading htmlheading="h2" size="medium" font="display"> INTERNATIONALE PROGRAMMER </Heading>
 
-        <Heading htmlheading="h4" size="small" font="sans" stylingclasses="text-secondary-700 font-light italic self-end"> “Global tilstedeværelse” </Heading>
+        <Heading htmlheading="h3" size="small" font="sans" stylingclasses="text-secondary-700 font-light italic self-end"> “Global tilstedeværelse” </Heading>
 
         <img class="md:hidden mt-5" src="/public/forside/f_sektion5.svg" alt="" />
         <div class="mt-5">
@@ -190,23 +194,25 @@ import Forms from "../components/Forms.astro";
         </Text>
       </div>
       <div class="mt-5">
-        <Text>
-          <Button variant="primary" size="medium" icon="heart"> Støt nu </Button>
-        </Text>
+        <a href="/form">
+          <Text>
+            <Button variant="primary" size="medium" icon="heart"> Støt nu </Button>
+          </Text>
+        </a>
       </div>
     </div>
-    <div class="w-full h-auto object-cover">
+    <div class="mt-5 md:mt-0">
       <img src="/public/forside/f_sektion6.webp" alt="" />
     </div>
   </section>
   <!-- SLUT på sektion 6 - Hjælp -->
 
   <!-- START på sektion 7 - Vores indsatser -->
-  <section class="mb-10 md:mb-20 grid md:grid-cols-2 gap-5 gap-y-10 mx-auto p-10 md:p-20">
+  <section class="grid md:grid-cols-2 gap-5 gap-y-10 mx-auto p-10 md:p-20 mb-10 md:mb-20">
     <div class="flex flex-col justify-center space-y-2 max-w-130">
-      <Heading htmlheading="h3" size="medium" font="display"> VORES INDSATSER </Heading>
+      <Heading htmlheading="h2" size="medium" font="display"> VORES INDSATSER </Heading>
 
-      <Heading htmlheading="h4" size="small" font="sans" stylingclasses="text-secondary-700 font-light italic self-end"> “En grøn og retfærdig verden” </Heading>
+      <Heading htmlheading="h3" size="small" font="sans" stylingclasses="text-secondary-700 font-light italic self-end"> “En grøn og retfærdig verden” </Heading>
       <div class="mt-5">
         <Text teksttype="brødtekst"> Hos CARE arbejder vi for at give mennesker i verdens mest sårbare områder – især kvinder og piger – et værdigt liv trods klimaforandringer, kriser og fattigdom. Vi fokuserer på klimaindsats, ligestilling, innovation og nødhjælp. Ved at kombinere langsigtet udvikling med hurtig hjælp og tæt samarbejde med lokalsamfund skaber vi varige løsninger. Gennem uddannelse, bæredygtige projekter og støtte til selvhjælp ruster vi de mest udsatte til at stå stærkere i fremtiden. </Text>
       </div>

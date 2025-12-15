@@ -1,0 +1,89 @@
+---
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
+import Button from "../components/Button.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+const params = Astro.url.searchParams;
+
+const type = params.get("type") || "Enkel donation";
+const amount = params.get("amount") || "75";
+---
+
+<MainLayout title="Titel">
+  <div class="text-center mt-20 mb-10">
+    <Heading htmlheading="h2" size="large" font="display"> TAK FORDI DU STØTTER CARE </Heading>
+  </div>
+
+  <div class="max-w-md mx-auto bg-primary-100 p-8 space-y-6 boxshadow_forms mb-10 md:mb-10">
+    <!-- Beløb -->
+    <div>
+      <input type="text" value={`${type}, ${amount} kr.`} disabled class="w-full bg-primary-300 border-2 border-secondary-500 rounded-lg py-3 px-4 text-gray-800" />
+    </div>
+
+    <!-- Betalingsmetode -->
+    <div class="space-y-3">
+      <label class="flex items-center gap-3 cursor-pointer">
+        <input type="radio" name="payment" checked class="accent-secondary-500" />
+        <span class="font-medium">MobilePay</span>
+
+        <div class="flex gap-2 ml-auto">
+          <img src="/mobilpay.svg" alt="Visa" class="h-6" />
+        </div>
+      </label>
+
+      <label class="flex items-center gap-3 cursor-pointer">
+        <input type="radio" name="payment" class="accent-secondary-500" />
+        <span class="font-medium">Betalingskort</span>
+
+        <div class="flex gap-2 ml-auto">
+          <img src="/visa.svg" alt="Visa" class="h-6" />
+          <img src="/mastercard.svg" alt="Mastercard" class="h-6" />
+          <img src="/dankort.svg" alt="Dankort" class="h-6" />
+        </div>
+      </label>
+    </div>
+
+    <!-- Navn -->
+    <div class="grid grid-cols-2 gap-4">
+      <div>
+        <input type="text" placeholder="Navn *" class="w-full bg-primary-300 border-2 border-secondary-500 rounded-lg py-3 px-4" required />
+      </div>
+
+      <div>
+        <input type="text" placeholder="Efternavn *" class="w-full bg-primary-300 border-2 border-secondary-500 rounded-lg py-3 px-4" required />
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div>
+      <input type="email" placeholder="Email *" class="w-full bg-primary-300 border-2 border-secondary-500 rounded-lg py-3 px-4" required />
+    </div>
+
+    <!-- Telefon -->
+    <div>
+      <input type="tel" placeholder="Telefonnummer *" class="w-full bg-primary-300 border-2 border-secondary-500 rounded-lg py-3 px-4" required />
+    </div>
+
+    <!-- Skattefradrag -->
+    <label class="flex items-center gap-3 cursor-pointer">
+      <input type="checkbox" class="accent-secondary-500" />
+      <Text teksttype="brødtekst">Ja tak, jeg ønsker skattefradrag</Text>
+    </label>
+
+    <!-- Knap -->
+    <div class="flex justify-center pt-4">
+      <Text>
+        <Button variant="primary" size="medium" icon="heart"> Støt </Button>
+      </Text>
+    </div>
+  </div>
+
+  <!-- Persondata -->
+  <div class="max-w-md mx-auto mb-20 space-y-2">
+    <Heading htmlheading="h4" size="small" font="sans">Personadata</Heading>
+    <Heading htmlheading="h5" size="xsmall" font="display">CARE Danmark håndterer din persondata i overensstemmelse med den gældende EU persondataforordning og den danske persondatalov.</Heading>
+    <a href="#">
+      <Heading htmlheading="h5" size="xsmall" font="display" stylingclasses="text-secondary-500">Læs mere i vores privatlivspolitik.</Heading>
+    </a>
+  </div>
+</MainLayout>

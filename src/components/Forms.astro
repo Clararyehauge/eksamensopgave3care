@@ -41,11 +41,17 @@ import Button from "./Button.astro";
     </div>
   </div>
   <div class="text-center">
-    <Text id="summary" class="text-center text-blue-800">Enkel donation, 75 kr.</Text>
+    <div id="summary" class="text-center text-blue-800">
+      <Text>Enkel donation, 75 kr.</Text>
+    </div>
     <div class="flex justify-center">
-      <Text>
-        <Button variant="primary" size="medium" icon="heart"> Støt nu </Button>
-      </Text>
+      <a href="/oplysninger?type=Enkel%20donation&amount=150">
+        <div class="flex justify-center">
+          <button id="donateBtn" type="button">
+            <Button variant="primary" size="medium" icon="heart"> Støt her </Button>
+          </button>
+        </div>
+      </a>
     </div>
   </div>
 
@@ -54,6 +60,7 @@ import Button from "./Button.astro";
     const amountButtons = document.querySelectorAll(".amount-btn");
     const customAmount = document.getElementById("custom-amount");
     const summary = document.getElementById("summary");
+    const donateBtn = document.getElementById("donateBtn");
 
     let selectedType = "Enkel donation";
     let selectedAmount = "75";
@@ -88,7 +95,7 @@ import Button from "./Button.astro";
         btn.classList.remove("bg-primary-300");
 
         selectedAmount = btn.dataset.amount;
-        customAmount.value = ""; // ← vigtigt!
+        customAmount.value = "";
         updateSummary();
       });
     });
@@ -105,6 +112,13 @@ import Button from "./Button.astro";
       }
     });
 
+    donateBtn.addEventListener("click", () => {
+      const url = `/oplysninger?type=${encodeURIComponent(selectedType)}&amount=${encodeURIComponent(selectedAmount)}`;
+
+      window.location.href = url;
+    });
+
+    // initial state
     updateSummary();
   </script>
 </div>

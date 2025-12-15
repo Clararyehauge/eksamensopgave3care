@@ -17,13 +17,17 @@ const currentPath = pathname.slice(1);
 
     <!-- Knap -->
     <div class="flex items-center space-x-3">
-      <Button variant="primary" size="small" icon="heart"> Støt nu </Button>
+      <a href="/form">
+        <Text>
+          <Button variant="primary" size="small" icon="heart"> Støt nu </Button>
+        </Text>
+      </a>
 
       <!-- Søgeicon -->
       <div x-data="{ showSearch: false }" class="relative flex items-center space-x-3">
         <!-- Søgeikon -->
         <button @click="showSearch = !showSearch" class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 bg-transparent">
-          <img src="/searchicon.svg" alt="searchicon" class="w-6 md:w-8 h-auto" />
+          <img src="/searchicon.svg" alt="searchicon" class="w-6 md:w-7 h-auto" />
         </button>
 
         <!-- Tekstfelt -->
@@ -32,7 +36,7 @@ const currentPath = pathname.slice(1);
 
       <!-- Burgermenu -->
       <button id="burgermenu" x-on:click="showmenu = !showmenu">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-10 h-10 md:w-15 md:h-15">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-10 h-10 md:w-12 md:h-12">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
         </svg>
       </button>
