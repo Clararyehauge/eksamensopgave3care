@@ -5,11 +5,12 @@ import Text from "../components/Text.astro";
 import Button from "../components/Button.astro";
 import Stickey from "../components/Stickey.astro";
 import Support from "../components/Support.astro";
-import Stickey from "../components/Stickey.astro";
+import Forms from "../components/Forms.astro";
 ---
 
 <MainLayout title="Titel">
   <main>
+    <Stickey position="right" visibleAt="sm" />
     <!-- START på sektion 1 - Hero -->
     <section class="relative w-full">
       <img src="/public/forside/hero.webp" alt="Billede af kvinde i Afrika" class="w-full h-auto" />
@@ -34,14 +35,14 @@ import Stickey from "../components/Stickey.astro";
       </div>
     </section>
     <!-- SLUT på sektion 1 - Hero -->
-    <Stickey position="right" visibleAt="sm" />
+
     <!-- START på sektion 2 - Forms -->
     <!-- Ikoner -->
-    <div class="flex flex-row justify-center gap-5 md:gap-20 gap-y-10 p-10 md:p-20 mb-10 md:mb-20">
+    <div class="flex flex-row justify-center gap-5 md:gap-20 gap-y-10 p-10 md:p-20">
       <div class="flex flex-col items-center gap-2">
         <div class="relative w-20 h-20">
           <img src="/hands.svg" alt="mennesker illustration" class="w-20 h-20 absolute inset-0" />
-          <img src="/heart.svg" alt="mennesker illustration" class="w-12 h-12 absolute bottom-12 left-10 md:left-9 -translate-x-1/2 animate-pulse animate-infinite animate-duration-[4000ms] animate-delay-100" />
+          <img src="/heart.svg" alt="mennesker illustration" class="w-12 h-12 absolute bottom-12 left-10 md:left-10 -translate-x-1/2 animate-pulse animate-infinite animate-duration-[4000ms] animate-delay-100" />
         </div>
         <Heading htmlheading="numbers" size="numbers" font="sans">53,4 mio</Heading>
         <Heading htmlheading="h4" size="small" font="serif">Mennesker</Heading>
@@ -62,11 +63,10 @@ import Stickey from "../components/Stickey.astro";
         <Heading htmlheading="h4" size="small" font="serif">Projekter</Heading>
       </div>
     </div>
-    <section>
-      <div class="#Forms"></div>
-      <div class="#Eksempel"></div>
-    </section>
+    <!-- FORMS -->
 
+    <Forms />
+    <!-- Ikoner - Hvad kan vi opnå med din donation -->
     <section class="gap-y-10 p-10 md:p-20 mb-10">
       <div class="text-center mb-10">
         <Heading htmlheading="h3" size="medium" font="display"> HVAD VI KAN OPNÅ MED DIN DONATION </Heading>
@@ -87,8 +87,8 @@ import Stickey from "../components/Stickey.astro";
 
         <div class="flex flex-col items-center text-center space-y-2">
           <div class="relative w-20 h-20">
-            <img src="/water.svg" alt="mennesker illustration" class="w-20 h-20 absolute inset-0" />
-            <img src="/drop.svg" alt="mennesker illustration" class="w-5 h-5 absolute bottom-3 left-7 md:left-7 -translate-x-1/2 animate-fade-down animate-infinite animate-duration-[3000ms]" />
+            <img src="/water.svg" alt="mennesker illustration" class="w-16 h-16 absolute inset-0" />
+            <img src="/drop.svg" alt="mennesker illustration" class="w-4 h-4 absolute bottom-3 left-5 -translate-x-1/2 animate-fade-down animate-infinite animate-duration-[3000ms]" />
           </div>
           <Heading htmlheading="numbers" size="numbers" font="sans">134 kr.</Heading>
           <Text teksttype="brødtekst">Kan sikre at en landsby får 3000 liter vand</Text>

@@ -7,6 +7,7 @@ import Button from "../components/Button.astro";
 import Searchbar from "../components/Searchbar.astro";
 import Stickey from "../components/Stickey.astro";
 import VoresindsatserCard from "../components/VoresindsatserCard.astro";
+import Forms from "../components/Forms.astro";
 ---
 
 <MainLayout title="Titel">
@@ -48,8 +49,9 @@ import VoresindsatserCard from "../components/VoresindsatserCard.astro";
     </section>
     <!-- Slut på Buttons komponent instanser -->
 
+    <!-- Start på Stickey, card og forms -->
     <Stickey position="right" visibleAt="sm" />
-
+    <hr class="my-4" />
     <VoresindsatserCard
       title="KVINDER"
       body="<p>Piger og kvinder i verdens fattigste lande er særligt udsatte...</p>"
@@ -60,5 +62,8 @@ import VoresindsatserCard from "../components/VoresindsatserCard.astro";
         { label: "Sådan kan støtten til kvinder se ud", href: "/kvinder/støtte" },
       ]}
     />
+    <hr class="my-4" />
+    <Forms />
+    <!-- Slut på Stickey, card og forms -->
   </main>
 </MainLayout>

@@ -76,10 +76,41 @@
     .boxshadowright_hero{
     @apply shadow-[-13px_14px_0px_0px_#AC312A]
   } /*Hero*/
-  
+
+  .boxshadow_forms{
+    @apply shadow-[-13px_13px_10px_-1px_rgba(0,_0,_0,_0.15)]
+  }
 }
 
 @layer components {
+  .switch {
+    @apply relative inline-block w-12 h-6;
+  }
+
+  .switch input {
+    @apply opacity-0 w-0 h-0;
+  }
+
+  .slider {
+    @apply absolute inset-0 cursor-pointer bg-gray-300 rounded-full transition;
+  }
+
+  .slider::before {
+    content: "";
+    @apply absolute h-5 w-5 left-0.5 top-0.5 bg-white rounded-full transition;
+  }
+
+  input:checked + .slider {
+    @apply bg-red-600;
+  }
+
+  input:checked + .slider::before {
+    @apply translate-x-6;
+  }
+
+  .amount-btn.active {
+    @apply bg-red-600 text-white;
+  }
 }
 
 @layer utilities {
