@@ -16,7 +16,7 @@ import Button from "../components/Button.astro";
       <div class="items-center text-center">
         <Heading htmlheading="h2" size="medium">OM CARE</Heading>
 
-        <Heading htmlheading="h4" size="small" font="sans" stylingclasses="text-secondary-700 font-light flex justify-end  pr-5 md:pr-40 italic"> “Kæmper for en grøn og retfærdig verden” </Heading>
+        <Heading htmlheading="h4" size="small" font="sans" stylingclasses="text-secondary-700 font-light flex justify-end  pr-5 md:pr-40 italic flipin_animation opacity-0"> “Kæmper for en grøn og retfærdig verden” </Heading>
       </div>
     </section>
     <!-- SLUT på sektion 1 - Titel -->
@@ -26,28 +26,28 @@ import Button from "../components/Button.astro";
       <img src="/omcare/o_section2.webp" alt="kort" class="absolute inset-0 md:w-full md:h-full z-0 p-5 md:p-20" />
       <div class="relative z-10 space-y-12">
         <!-- Boks 1 venstre -->
-        <div class="bg-primary-300 opacity-90 max-w-70 md:max-w-100 p-6 relative mr-auto shadow-2xl">
+        <div class="card card-left bg-primary-300 opacity-90 max-w-70 md:max-w-100 p-6 relative mr-auto shadow-2xl">
           <img src="/knapnael.svg" alt="nål" class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 md:w-10 h-auto" />
           <Heading htmlheading="h3" size="small" font="display">HVAD GØR CARE?</Heading>
           <Text> CARE støtter verdens fattigste og mest klimaudsatte mennesker i at skabe sig et godt og værdigt liv. Vi arbejder med klimatilpasning, uddannelse, akut nødhjælp og hjælp til selvhjælp, og vi er til stede både før, under og efter klimakrisen rammer. </Text>
         </div>
 
         <!-- Boks 2 højre -->
-        <div class="bg-secondary-500 opacity-85 max-w-70 md:max-w-100 p-6 relative ml-auto shadow-2xl">
+        <div class="card card-right bg-primary-300 opacity-85 max-w-70 md:max-w-100 p-6 relative ml-auto shadow-2xl">
           <img src="/knapnael.svg" alt="nål" class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 md:w-10 h-auto" />
           <Heading htmlheading="h3" size="small" font="display">CARES HISTORIE</Heading>
           <Text> CARE International blev grundlagt i 1945 for at hjælpe et krigshærget og sultende Europa. Her samlede 22 hjælpeorganisationer sig til én. De kaldte sig C.A.R.E: The Cooperative for American Remittances to Europe. CARE Danmark blev oprettet i 1987 og vi er en del af CARE International. </Text>
         </div>
 
         <!-- Boks 3 venstre -->
-        <div class="bg-secondary-500 opacity-85 max-w-70 md:max-w-100 p-6 relative mr-auto shadow-2xl">
+        <div class="card card-left bg-primary-300 opacity-85 max-w-70 md:max-w-100 p-6 relative mr-auto shadow-2xl">
           <img src="/knapnael.svg" alt="nål" class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 md:w-10 h-auto" />
           <Heading htmlheading="h3" size="small" font="display">ETIK I VORES ARBEJDE</Heading>
           <Text> Vi sikrer kvalitet og standarder i vores arbejde gennem principper og retningslinjer, ligesom vi bekæmper korruption, misbrug og uretmæssig adfærd. Du kan rapportere uretmæssig adfærd via denne side. </Text>
         </div>
 
         <!-- Boks 4 højre-->
-        <div class="bg-secondary-500 opacity-85 max-w-70 md:max-w-100 p-6 relative ml-auto shadow-2xl">
+        <div class="card card-right bg-primary-300 opacity-85 max-w-70 md:max-w-100 p-6 relative ml-auto shadow-2xl">
           <img src="/knapnael.svg" alt="nål" class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 md:w-10 h-auto" />
           <Heading htmlheading="h3" size="small" font="display">VISION OG MISSION</Heading>
           <Text> Hos CARE kæmper vi for en grøn og retfærdig verden. Det gør vi, fordi vi mener, at kampen mod klimaforandringer og kampen mod global ulighed er to sider af samme sag. </Text>
@@ -70,7 +70,7 @@ import Button from "../components/Button.astro";
             </Text>
           </div>
         </div>
-        <div>
+        <div class="card card-right">
           <img src="/omcare/o_sektion3.webp" alt="diagram" class="mt-5" />
         </div>
       </div>
@@ -125,4 +125,30 @@ import Button from "../components/Button.astro";
       transform: translateX(-50%);
     }
   }
+
+  .card {
+    opacity: 0;
+  }
 </style>
+
+<script>
+  import { animate, inView } from "motion";
+
+  inView(".card-left", (element) => {
+    animate(element, { x: [-300, 0], opacity: [0, 1] }, { duration: 2, easing: "ease-out" });
+  });
+
+  inView(".card-right", (element) => {
+    animate(element, { x: [300, 0], opacity: [0, 1] }, { duration: 2, easing: "ease-out" });
+  });
+
+  inView(
+    ".flipin_animation",
+    (element) => {
+      element.classList.add("animate-flip-down", "animate-once", "animate-duration-[3000ms]", "animate-normal");
+
+      element.classList.remove("opacity-0");
+    },
+    { once: true }
+  );
+</script>

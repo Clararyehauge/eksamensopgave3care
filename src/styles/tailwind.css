@@ -74,7 +74,7 @@
   } /*billeder*/
 
     .boxshadowright_hero{
-    @apply shadow-[-13px_14px_0px_0px_#AC312A]
+    @apply shadow-[-14px_-13px_0px_-3px_#AB3123]
   } /*Hero*/
 
   .boxshadow_forms{

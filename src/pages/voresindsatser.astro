@@ -14,7 +14,7 @@ import VoresindsatserCard from "../components/VoresindsatserCard.astro";
     <section class="pt-10 md:pt-20">
       <div class="items-center text-center">
         <Heading htmlheading="h2" size="medium">VORES INDSATSER</Heading>
-        <Heading htmlheading="h4" size="small" font="sans" stylingclasses="text-secondary-700 font-light pl-40 md:pl-80 italic"> “En grøn og retfærdig verden” </Heading>
+        <Heading htmlheading="h4" size="small" font="sans" stylingclasses="text-secondary-700 font-light pl-40 md:pl-80 italic flipin_animation opacity-0"> “En grøn og retfærdig verden” </Heading>
       </div>
     </section>
   </section>
@@ -146,4 +146,18 @@ import VoresindsatserCard from "../components/VoresindsatserCard.astro";
       }
     }
   </style>
+
+  <script>
+    import { animate, inView } from "motion";
+
+    inView(
+      ".flipin_animation",
+      (element) => {
+        element.classList.add("animate-flip-down", "animate-once", "animate-duration-[3000ms]", "animate-normal");
+
+        element.classList.remove("opacity-0");
+      },
+      { once: true }
+    );
+  </script>
 </MainLayout>
