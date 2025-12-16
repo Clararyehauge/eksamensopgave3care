@@ -13,7 +13,7 @@ import Forms from "../components/Forms.astro";
   <section class="relative w-full">
     <img src="/forside/herobillede.webp" alt="Billede af kvinde i Afrika" class="w-full hidden md:block" />
     <img class="md:hidden" src="/forside/hero.webp" alt="herobillede" />
-    <div class="absolute left-3 top-1 md:left-5 md:top-20 p-2 md:p-12 max-w-75 md:max-w-200 bg-primary-100 boxshadowright_hero">
+    <div class="absolute left-5 top-1 md:left-8 md:top-20 p-2 md:p-12 max-w-80 md:max-w-180 bg-primary-100 boxshadowright_hero">
       <div class="flex flex-col gap-1 md:gap-2">
         <Heading htmlheading="h1" size="xlarge" font="display">CARE</Heading>
         <Heading htmlheading="h2" size="small" font="display"> Støt piger og kvinder i klimakampen i verdens fattigste lande </Heading>
@@ -21,7 +21,14 @@ import Forms from "../components/Forms.astro";
 
         <div class="flex justify-end">
           <a href="/form" class="animate-jump animate-infinite animate-duration-[4000ms] animate-ease-linear">
-            <Button variant="primary" size="large" icon="heart">Støt nu</Button>
+            <!-- Knap i mobile -->
+            <div class="block md:hidden">
+              <Button variant="primary" size="small" icon="heart">Støt nu</Button>
+            </div>
+            <!-- Knap i desktop -->
+            <div class="hidden md:block">
+              <Button variant="primary" size="large" icon="heart">Støt nu</Button>
+            </div>
           </a>
         </div>
       </div>
@@ -263,7 +270,7 @@ import Forms from "../components/Forms.astro";
   import { animate, inView } from "motion";
 
   inView(".card-right", (element) => {
-    animate(element, { x: [300, 0], opacity: [0, 1] }, { duration: 2, easing: "ease-out" });
+    animate(element, { x: [300, 0], opacity: [0, 1] }, { duration: 1, easing: "ease-out" });
   });
 
   inView(

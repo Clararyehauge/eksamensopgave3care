@@ -19,31 +19,31 @@ import Button from "../components/Button.astro";
 
   <!-- START på sektion 2 - Map -->
   <section class="relative mx-auto p-10 md:p-40">
-    <img src="/omcare/o_section2.webp" alt="kort" class="absolute inset-0 md:w-full md:h-full z-0 p-5 md:p-20" />
-    <div class="relative z-10">
+    <img src="/omcare/o_section2.webp" alt="kort" class="absolute inset-0 md:w-auto md:h-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 p-5 md:p-20" />
+    <div class="relative z-10 space-y-12">
       <!-- Boks 1 venstre -->
-      <div class="card card-left bg-primary-300 max-w-70 md:max-w-100 p-6 relative mr-auto shadow-2xl">
+      <div class="card card-left bg-primary-300 max-w-80 md:max-w-100 p-6 relative mr-auto shadow-2xl">
         <img src="/knapnael.svg" alt="nål" class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-7 md:w-10" />
         <Heading htmlheading="h3" size="small" font="display">HVAD GØR CARE?</Heading>
         <Text> CARE støtter verdens fattigste og mest klimaudsatte mennesker i at skabe sig et godt og værdigt liv. Vi arbejder med klimatilpasning, uddannelse, akut nødhjælp og hjælp til selvhjælp, og vi er til stede både før, under og efter klimakrisen rammer. </Text>
       </div>
 
       <!-- Boks 2 højre -->
-      <div class="card card-right bg-primary-300 max-w-70 md:max-w-100 p-6 relative ml-auto shadow-2xl">
+      <div class="card card-right bg-primary-300 max-w-80 md:max-w-100 p-6 relative ml-auto shadow-2xl">
         <img src="/knapnael.svg" alt="nål" class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-7 md:w-10" />
         <Heading htmlheading="h3" size="small" font="display">CARES HISTORIE</Heading>
         <Text> CARE International blev grundlagt i 1945 for at hjælpe et krigshærget og sultende Europa. Her samlede 22 hjælpeorganisationer sig til én. De kaldte sig C.A.R.E: The Cooperative for American Remittances to Europe. CARE Danmark blev oprettet i 1987 og vi er en del af CARE International. </Text>
       </div>
 
       <!-- Boks 3 venstre -->
-      <div class="card card-left bg-primary-300 max-w-70 md:max-w-100 p-6 relative mr-auto shadow-2xl">
+      <div class="card card-left bg-primary-300 max-w-80 md:max-w-100 p-6 relative mr-auto shadow-2xl">
         <img src="/knapnael.svg" alt="nål" class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-7 md:w-10" />
         <Heading htmlheading="h3" size="small" font="display">ETIK I VORES ARBEJDE</Heading>
         <Text> Vi sikrer kvalitet og standarder i vores arbejde gennem principper og retningslinjer, ligesom vi bekæmper korruption, misbrug og uretmæssig adfærd. Du kan rapportere uretmæssig adfærd via denne side. </Text>
       </div>
 
       <!-- Boks 4 højre-->
-      <div class="card card-right bg-primary-300 max-w-70 md:max-w-100 p-6 relative ml-auto shadow-2xl">
+      <div class="card card-right bg-primary-300 max-w-80 md:max-w-100 p-6 relative ml-auto shadow-2xl">
         <img src="/knapnael.svg" alt="nål" class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-7 md:w-10" />
         <Heading htmlheading="h3" size="small" font="display">VISION OG MISSION</Heading>
         <Text> Hos CARE kæmper vi for en grøn og retfærdig verden. Det gør vi, fordi vi mener, at kampen mod klimaforandringer og kampen mod global ulighed er to sider af samme sag. </Text>
@@ -51,37 +51,6 @@ import Button from "../components/Button.astro";
     </div>
   </section>
   <!-- SLUT på sektion 2 - Map -->
-
-  <!-- START på Ikoner -->
-  <div class="flex flex-row justify-center gap-5 md:gap-20 p-10 md:p-20">
-    <div class="flex flex-col items-center gap-2">
-      <div class="relative w-18 h-18">
-        <img src="/hands.svg" alt="" class="w-20 h-20 absolute inset-0" />
-        <img src="/heart.svg" alt="" class="w-10 h-10 absolute bottom-12 left-9 -translate-x-1/2 animate-jump animate-infinite animate-duration-[3000ms]" />
-      </div>
-      <Heading htmlheading="numbers" size="numbers" font="sans">53,4 mio</Heading>
-      <Heading htmlheading="h4" size="small" font="sans">Mennesker</Heading>
-    </div>
-
-    <div class="flex flex-col items-center gap-2">
-      <div class="relative w-18 h-18">
-        <img src="/world.svg" alt="" class="w-18 h-18 absolute inset-0 animate-spin animate-duration-[10000ms]" />
-        <img src="/map.svg" alt="" class="w-8 h-8 absolute bottom-15 left-13 -translate-x-1/2" />
-      </div>
-      <Heading htmlheading="numbers" size="numbers" font="sans">121</Heading>
-      <Heading htmlheading="h4" size="small" font="sans">Lande</Heading>
-    </div>
-
-    <div class="flex flex-col items-center gap-2">
-      <div class="relative w-18 h-18">
-        <img src="/omcare/hammer.svg" alt="" class="w-18 h-18 absolute animate-wiggle-more animate-infinite animate-duration-[3000ms] animate-ease-linear" />
-        <img src="/omcare/skrue.svg" alt="" class="w-18 h-18 absolute inset-0" />
-      </div>
-      <Heading htmlheading="numbers" size="numbers" font="sans">1450</Heading>
-      <Heading htmlheading="h4" size="small" font="sans">Projekter</Heading>
-    </div>
-  </div>
-  <!--SLUT Ikoner -->
 
   <!-- START på sektion 3 - Sådan bruger vi penge -->
   <section class="bg-primary-300">
@@ -159,11 +128,11 @@ import Button from "../components/Button.astro";
   import { animate, inView } from "motion";
 
   inView(".card-left", (element) => {
-    animate(element, { x: [-300, 0], opacity: [0, 1] }, { duration: 2, easing: "ease-out" });
+    animate(element, { x: [-300, 0], opacity: [0, 1] }, { duration: 1, easing: "ease-out" });
   });
 
   inView(".card-right", (element) => {
-    animate(element, { x: [300, 0], opacity: [0, 1] }, { duration: 2, easing: "ease-out" });
+    animate(element, { x: [300, 0], opacity: [0, 1] }, { duration: 1, easing: "ease-out" });
   });
 
   inView(
