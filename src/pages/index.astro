@@ -21,9 +21,11 @@ import Forms from "../components/Forms.astro";
 
         <div class="flex justify-end">
           <div class="animate-jump animate-infinite animate-duration-[4000ms] animate-ease-linear">
+            <a href="/form">
             <Text>
               <Button variant="primary" size="large" icon="heart"> Støt nu </Button>
             </Text>
+            </a>
           </div>
         </div>
       </div>
@@ -44,12 +46,12 @@ import Forms from "../components/Forms.astro";
   <!-- SLUT på sektion 2 - Forms -->
 
   <!-- START INFOGRAFIK-->
-  <section class="gap-y-10 p-10 md:p-20 mb-10">
-    <div class="text-center mb-10">
+   <section class="mb-10 md:mb-20 ">
+    <div class="text-center p-10 md:p-20">
       <Heading htmlheading="h3" size="medium" font="display"> HVAD VI KAN OPNÅ MED DIN DONATION </Heading>
     </div>
-
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10 max-w-full mx-auto">
+    <div class="loop overflow-hidden relative">
+    <div class=" loop-track flex w-[200%] animate-scroll gap-5 md:gap-10">
       <div class="flex flex-col items-center text-center space-y-2">
         <img src="/forside/section2_mad.svg" alt="mad" class="w-16 h-16" />
         <Heading htmlheading="numbers" size="numbers" font="sans">38 kr.</Heading>
@@ -71,11 +73,30 @@ import Forms from "../components/Forms.astro";
         <Text teksttype="brødtekst">Kan sikre at en landsby får 3000 liter vand</Text>
       </div>
 
-      <div class="flex flex-col items-center text-center space-y-2">
+       <div class="flex flex-col items-center text-center space-y-2">
         <img src="/forside/section2_træ.svg" alt="træ" class="w-16 h-16" />
         <Heading htmlheading="numbers" size="numbers" font="sans">510 kr.</Heading>
         <Text teksttype="brødtekst">Kan give en familie to cashewtræer</Text>
       </div>
+
+       <div class="flex flex-col items-center text-center space-y-2">
+        <img src="/vogn.svg" alt="vogn" class="w-16 h-16" />
+        <Heading htmlheading="numbers" size="numbers" font="sans">173 kr.</Heading>
+        <Text teksttype="brødtekst">Kan give fem familier ingredienser til et måltid mad</Text>
+      </div>
+
+      <div class="flex flex-col items-center text-center space-y-2">
+        <img src="/korn.svg" alt="korn" class="w-16 h-16" />
+        <Heading htmlheading="numbers" size="numbers" font="sans">519 kr.</Heading>
+        <Text teksttype="brødtekst">Kan sikre 15 familier 16 kg korn til at starte et landbrug</Text>
+      </div>
+
+       <div class="flex flex-col items-center text-center space-y-2">
+        <img src="/Komfur.svg" alt="Komfur" class="w-16 h-16" />
+        <Heading htmlheading="numbers" size="numbers" font="sans">2827 kr.</Heading>
+        <Text teksttype="brødtekst">Kan give en gruppe kvinder et fælles solcelle-komfur</Text>
+      </div>
+</div>
     </div>
   </section>
   <!-- Slut INFOGRAFIK-->
@@ -99,9 +120,11 @@ import Forms from "../components/Forms.astro";
           </div>
         </div>
         <div class="w-full md:w-auto md:self-end mt-5 pb-5 md:pb-3">
+          <a href="/form">
           <Text>
             <Button variant="primary" size="medium" icon="heart"> Støt nu </Button>
           </Text>
+          </a>
         </div>
       </div>
     </div>
@@ -163,9 +186,11 @@ import Forms from "../components/Forms.astro";
         </Text>
       </div>
       <div class="mt-5">
+        <a href="/form">
         <Text>
           <Button variant="primary" size="medium" icon="heart"> Støt nu </Button>
         </Text>
+        </a>
       </div>
     </div>
     <div class="w-full h-auto object-cover">
@@ -176,7 +201,7 @@ import Forms from "../components/Forms.astro";
 
   <!-- START på sektion 7 - Vores indsatser -->
   <section class="grid md:grid-cols-2 gap-5 mx-auto p-10 md:p-20">
-    <div class="flex flex-col justify-center max-w-130">
+    <div class="flex flex-col justify-center max-w-xl">
       <Heading htmlheading="h3" size="medium" font="display"> VORES INDSATSER </Heading>
 
       <Heading htmlheading="h4" size="small" font="sans" stylingclasses="text-secondary-700 font-light italic self-end flipin_animation opacity-0"> “En grøn og retfærdig verden” </Heading>
@@ -188,7 +213,7 @@ import Forms from "../components/Forms.astro";
       </div>
     </div>
 
-    <img class="boxshadowright_orange" src="/forside/f_sektion7.webp" alt="Billede af afrikanske børn" />
+    <img class="boxshadowright_orange w-full" src="/forside/f_sektion7.webp" alt="Billede af afrikanske børn" />
   </section>
   <!-- SLUT på sektion 7 - Vores indsatser -->
 
