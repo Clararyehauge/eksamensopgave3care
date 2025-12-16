@@ -8,98 +8,131 @@ import Text from "../components/Text.astro";
 import VoresindsatserCard from "../components/VoresindsatserCard.astro";
 ---
 
-<MainLayout title="Titel">
+<MainLayout title="Vores indsatser">
   <!-- START på sektion 1 - Titel -->
-  <section>
-    <section class="pt-10 md:pt-20">
-      <div class="items-center text-center">
-        <Heading htmlheading="h2" size="medium">VORES INDSATSER</Heading>
-        <Heading htmlheading="h4" size="small" font="sans" stylingclasses="text-secondary-700 font-light pl-40 md:pl-80 italic flipin_animation opacity-0"> “En grøn og retfærdig verden” </Heading>
-      </div>
-    </section>
+  <section class="pt-10 md:pt-20">
+    <div class="items-center text-center">
+      <Heading htmlheading="h2" size="medium">VORES INDSATSER</Heading>
+      <Heading htmlheading="h4" size="small" font="sans" stylingclasses="text-secondary-700 font-light pl-40 md:pl-80 italic flipin_animation opacity-0"> “En grøn og retfærdig verden” </Heading>
+    </div>
   </section>
   <!-- SLUT på sektion 1 - Titel -->
-  <Stickey position="right" visibleAt="sm" />
 
-  <section>
-    <!-- START på sektion 2 - Kvinder -->
-    <section class="gap-y-10 p-10 md:p-20">
-      <VoresindsatserCard
-        title="KVINDER"
-        body="Piger og kvinder i verdens fattigste lande er særligt udsatte, når nøden er størst. Men får de chancen, så går de foran i at skabe en bedre  fremtid for sig selv, familien og hele samfundet. Derfor styrker CARE  piger og kvinder i alt, hvad vi gør."
-        imageSrc="/voresindsatser/v_sektion2.webp"
-        reverse={true}
-        links={[
-          { label: "Når vi hjælper en kvinde, hjælper vi alle", href: "/kvinder" },
-          { label: "Egne penge og stærke stemmer", href: "/kvinder" },
-          { label: "Sådan kan støtten til kvinder se ud", href: "/kvinder" },
-        ]}
-      />
-    </section>
-    <!-- SLUT på sektion 2 - Kvinder -->
-
-    <!-- START på sektion 3 - Klima -->
-    <section class="gap-y-10 p-10 md:p-20">
-      <VoresindsatserCard
-        title="KLIMA"
-        body="Klimakrisen rammer hårdest de steder i verden, hvor folk i forvejen har mindst. CARE støtter kvinder i verdens fattigste lande i kampen mod klimaforandringer, både akut og på den lange bane"
-        imageSrc="/voresindsatser/klima.webp"
-        links={[
-          { label: "Støtte før, under og efter klimakatastrofen", href: "/kvinder" },
-          { label: "Grøn hjælp til selvhjælp ", href: "/kvinder" },
-          { label: "Konsekvenser", href: "/kvinder" },
-        ]}
-      />
-    </section>
-    <!-- SLUT på sektion 3 - Klima -->
-
-    <!-- START på sektion 4 - Innovation -->
-    <section class="gap-y-10 p-10 md:p-20">
-      <VoresindsatserCard
-        title="INNOVATION"
-        body="Klimakrise, pandemier og krig i Europa: Verden står i dag over for helt  nye udfordringer. Derfor må vi også tænke nyt, når der skal findes  løsninger. Dét er CAREs tilgang i alle vores nødhjælps- og  udviklingsprojekter."
-        imageSrc="/voresindsatser/innovation.webp"
-        reverse={true}
-        links={[
-          { label: "Støtte før, under og efter klimakatastrofen", href: "/kvinder" },
-          { label: "Grøn hjælp til selvhjælp ", href: "/kvinder" },
-          { label: "Konsekvenser", href: "/kvinder" },
-        ]}
-      />
-    </section>
-    <!-- SLUT på sektion 4 - Innovation -->
-
-    <!-- START på sektion 5 - Nødhjælp -->
-    <section class="gap-y-10 p-10 md:p-20">
-      <VoresindsatserCard
-        title="NØDHJÆLP"
-        body="CARE yder akut nødhjælp, når krig og klimakatastrofer rammer. Og når  støvet har lagt sig, støtter vi familier, der har mistet alt, i at  genopbygge deres liv og stå stærkere i fremtiden."
-        imageSrc="/voresindsatser/nodhjalp.webp"
-        links={[
-          { label: "Nødhjælp på den korte og lange bane", href: "/kvinder" },
-          { label: "Fokus på kvinder", href: "/kvinder" },
-          { label: "Nødhjælp inden katastrofen rammer", href: "/kvinder" },
-        ]}
-      />
-    </section>
-    <!-- SLUT på sektion 5 - Nødhjælp -->
+  <!-- START på sektion 2 - Kvinder -->
+  <section class="p-10 md:p-20">
+    <VoresindsatserCard
+      title="KVINDER"
+      body="Piger og kvinder i verdens fattigste lande er særligt udsatte, når nøden er størst. Men får de chancen, så går de foran i at skabe en bedre  fremtid for sig selv, familien og hele samfundet. Derfor styrker CARE  piger og kvinder i alt, hvad vi gør."
+      imageSrc="/voresindsatser/v_sektion2.webp"
+      reverse={true}
+      links={[
+        { label: "Når vi hjælper en kvinde, hjælper vi alle", href: "/kvinder" },
+        { label: "Egne penge og stærke stemmer", href: "/kvinder" },
+        { label: "Sådan kan støtten til kvinder se ud", href: "/kvinder" },
+      ]}
+    />
   </section>
+  <!-- SLUT på sektion 2 - Kvinder -->
+
+  <!-- START på sektion 3 - Klima -->
+  <section class="p-10 md:p-20">
+    <VoresindsatserCard
+      title="KLIMA"
+      body="Klimakrisen rammer hårdest de steder i verden, hvor folk i forvejen har mindst. CARE støtter kvinder i verdens fattigste lande i kampen mod klimaforandringer, både akut og på den lange bane"
+      imageSrc="/voresindsatser/klima.webp"
+      links={[
+        { label: "Støtte før, under og efter klimakatastrofen", href: "/kvinder" },
+        { label: "Grøn hjælp til selvhjælp ", href: "/kvinder" },
+        { label: "Konsekvenser", href: "/kvinder" },
+      ]}
+    />
+  </section>
+  <!-- SLUT på sektion 3 - Klima -->
+
+  <!-- START på sektion 4 - Innovation -->
+  <section class="p-10 md:p-20">
+    <VoresindsatserCard
+      title="INNOVATION"
+      body="Klimakrise, pandemier og krig i Europa: Verden står i dag over for helt  nye udfordringer. Derfor må vi også tænke nyt, når der skal findes  løsninger. Dét er CAREs tilgang i alle vores nødhjælps- og  udviklingsprojekter."
+      imageSrc="/voresindsatser/innovation.webp"
+      reverse={true}
+      links={[
+        { label: "Støtte før, under og efter klimakatastrofen", href: "/kvinder" },
+        { label: "Grøn hjælp til selvhjælp ", href: "/kvinder" },
+        { label: "Konsekvenser", href: "/kvinder" },
+      ]}
+    />
+  </section>
+  <!-- SLUT på sektion 4 - Innovation -->
+
+  <!-- START på sektion 5 - Nødhjælp -->
+  <section class="p-10 md:p-20">
+    <VoresindsatserCard
+      title="NØDHJÆLP"
+      body="CARE yder akut nødhjælp, når krig og klimakatastrofer rammer. Og når  støvet har lagt sig, støtter vi familier, der har mistet alt, i at  genopbygge deres liv og stå stærkere i fremtiden."
+      imageSrc="/voresindsatser/nodhjalp.webp"
+      links={[
+        { label: "Nødhjælp på den korte og lange bane", href: "/kvinder" },
+        { label: "Fokus på kvinder", href: "/kvinder" },
+        { label: "Nødhjælp inden katastrofen rammer", href: "/kvinder" },
+      ]}
+    />
+  </section>
+  <!-- SLUT på sektion 5 - Nødhjælp -->
 
   <!-- START på sektion 6 - Projekter og løsninger -->
-  <section>
+  <section class="pt-10 md:pt-20">
     <div class="text-center">
       <Heading htmlheading="h2" size="large" font="display">CARE’S PROJEKTER OG LØSNINGER</Heading>
     </div>
-    <div class="felter"></div>
+    <div class="relative z-10 mx-auto p-10 md:p-40 md:pt-20">
+      <!-- Boks 1 venstre -->
+      <div class="card card-left bg-primary-300 max-w-70 md:max-w-130 text-center p-5 md:p-8 relative mr-auto shadow-2xl">
+        <img src="/knapnael.svg" alt="nål" class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 md:w-10 h-auto" />
+        <Heading htmlheading="h3" size="small" font="display">1. Drypvanding i Somalia</Heading>
+        <Text> Reducere vandforbrug og øger høstudbytte hos småbønder </Text>
+      </div>
+
+      <!-- Boks 2 højre -->
+      <div class="card card-right bg-primary-300 max-w-70 md:max-w-130 text-center p-5 md:p-8 relative ml-auto shadow-2xl">
+        <img src="/knapnael.svg" alt="nål" class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 md:w-10 h-auto" />
+        <Heading htmlheading="h3" size="small" font="display">2. Bekæmpelse af Prosopis i Etiopien</Heading>
+        <Text> Etiopien genskaber jord og skaber indtægter via energibriketter.</Text>
+      </div>
+
+      <!-- Boks 3 venstre -->
+      <div class="card card-left bg-primary-300 max-w-70 md:max-w-130 text-center p-5 md:p-8 relative mr-auto shadow-2xl">
+        <img src="/knapnael.svg" alt="nål" class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 md:w-10 h-auto" />
+        <Heading htmlheading="h3" size="small" font="display">3. Vertikale haver i Uganda</Heading>
+        <Text>Øger ernæring og indkomst i flygtningesamfund.</Text>
+      </div>
+
+      <!-- Boks 4 højre-->
+      <div class="card card-right bg-primary-300 max-w-70 md:max-w-130 text-center p-5 md:p-8 relative ml-auto shadow-2xl">
+        <img src="/knapnael.svg" alt="nål" class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 md:w-10 h-auto" />
+        <Heading htmlheading="h3" size="small" font="display">4. Kvindestyrede lånegrupper i Burkina Faso</Heading>
+        <Text> Fremmer finansiel uafhængighed og bæredygtigt landbrug. </Text>
+      </div>
+
+      <!-- Boks 5 venstre -->
+      <div class="card card-left bg-primary-300 max-w-70 md:max-w-130 text-center p-5 md:p-8 relative mr-auto shadow-2xl">
+        <img src="/knapnael.svg" alt="nål" class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 md:w-10 h-auto" />
+        <Heading htmlheading="h3" size="small" font="display">5.Biodigesters i Uganda</Heading>
+        <Text>Gør organisk affald til biogas og gødning. </Text>
+      </div>
+
+      <!-- Boks 6 højre-->
+      <div class="card card-right bg-primary-300 max-w-70 md:max-w-130 text-center p-5 md:p-8 relative ml-auto shadow-2xl">
+        <img src="/knapnael.svg" alt="nål" class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 md:w-10 h-auto" />
+        <Heading htmlheading="h3" size="small" font="display">6. Agri-innovationscentre i Somaili</Heading>
+        <Text> Samarbejde med universiteter om bæredygtigt landbrug. </Text>
+      </div>
+    </div>
   </section>
   <!-- SLUT på sektion 6 - Projekter og løsninger -->
 
   <!-- START på sektion 7 - Carousel -->
-  <section>
-    <div class="billede"></div>
-  </section>
-  <!-- SLUT på sektion 7 - Carousel -->
-  <div class="loop overflow-hidden relative mb-10 md:mb-20">
+  <section class="loop overflow-hidden relative mb-10 md:mb-20">
     <div class="loop-track flex w-[200%] animate-scroll gap-0">
       <img src="/voresindsatser/v_sektion7_1.webp" alt="billede" class="w-1/4 object-contain" />
       <img src="/voresindsatser/v_sektion7_2.webp" alt="billede" class="w-1/4 object-contain" />
@@ -113,51 +146,61 @@ import VoresindsatserCard from "../components/VoresindsatserCard.astro";
       <img src="/voresindsatser/v_sektion7_10.webp" alt="billede" class="w-1/4 object-contain" />
       <img src="/voresindsatser/v_sektion7_11.webp" alt="billede" class="w-1/4 object-contain" />
     </div>
-  </div>
-  <!-- START på FOOTER -->
-  <section>
-    <div class="Donation"></div>
-    <div class="Footer"></div>
   </section>
-  <!-- SLUT på FOOTER -->
+  <!-- SLUT på sektion 7 - Carousel -->
 
+  <!-- START på FOOTER -->
   <section>
     <Support />
   </section>
-
-  <style>
-    .loop {
-      overflow: hidden;
-      width: 100%;
-    }
-
-    .loop-track {
-      display: flex;
-      width: 200%;
-      animation: scroll 30s linear infinite;
-    }
-
-    @keyframes scroll {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-50%);
-      }
-    }
-  </style>
-
-  <script>
-    import { animate, inView } from "motion";
-
-    inView(
-      ".flipin_animation",
-      (element) => {
-        element.classList.add("animate-flip-down", "animate-once", "animate-duration-[3000ms]", "animate-normal");
-
-        element.classList.remove("opacity-0");
-      },
-      { once: true }
-    );
-  </script>
+  <!-- SLUT på FOOTER -->
+  <Stickey position="right" visibleAt="sm" />
 </MainLayout>
+
+<style>
+  .loop {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .loop-track {
+    display: flex;
+    width: 200%;
+    animation: scroll 30s linear infinite;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .card {
+    opacity: 0;
+  }
+</style>
+
+<script>
+  import { animate, inView } from "motion";
+
+  inView(".card-left", (element) => {
+    animate(element, { x: [-300, 0], opacity: [0, 1] }, { duration: 2, easing: "ease-out" });
+  });
+
+  inView(".card-right", (element) => {
+    animate(element, { x: [300, 0], opacity: [0, 1] }, { duration: 2, easing: "ease-out" });
+  });
+
+  inView(
+    ".flipin_animation",
+    (element) => {
+      element.classList.add("animate-flip-down", "animate-once", "animate-duration-[3000ms]", "animate-normal");
+
+      element.classList.remove("opacity-0");
+    },
+    { once: true }
+  );
+</script>
