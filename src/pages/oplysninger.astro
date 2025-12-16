@@ -9,7 +9,7 @@ const type = params.get("type") || "Enkel donation";
 const amount = params.get("amount") || "75";
 ---
 
-<MainLayout title="Titel">
+<MainLayout title="Oplysninger for donation">
   <div class="text-center mt-20 mb-10">
     <Heading htmlheading="h2" size="large" font="display"> TAK FORDI DU STØTTER CARE </Heading>
   </div>
@@ -17,7 +17,7 @@ const amount = params.get("amount") || "75";
   <div class="max-w-md mx-auto bg-primary-100 p-8 space-y-6 boxshadow_forms mb-10 md:mb-10">
     <!-- Beløb -->
     <div>
-      <input type="text" value={`${type}, ${amount} kr.`} disabled class="w-full bg-primary-300 border-2 border-secondary-500 rounded-lg py-3 px-4 text-gray-800" />
+      <input type="text" value={`${type}, ${amount} kr.`} disabled class="w-full bg-primary-300 border-2 border-secondary-500 rounded-lg py-3 px-4 text-gray-800 inset-shadow-sm inset-shadow-black-900" />
     </div>
 
     <!-- Betalingsmetode -->
@@ -46,22 +46,22 @@ const amount = params.get("amount") || "75";
     <!-- Navn -->
     <div class="grid grid-cols-2 gap-4">
       <div>
-        <input type="text" placeholder="Navn *" class="w-full bg-primary-300 border-2 border-secondary-500 rounded-lg py-3 px-4" required />
+        <input type="text" placeholder="Navn *" class="w-full bg-primary-300 border-2 border-secondary-500 rounded-lg py-3 px-4 inset-shadow-sm inset-shadow-black-900" required />
       </div>
 
       <div>
-        <input type="text" placeholder="Efternavn *" class="w-full bg-primary-300 border-2 border-secondary-500 rounded-lg py-3 px-4" required />
+        <input type="text" placeholder="Efternavn *" class="w-full bg-primary-300 border-2 border-secondary-500 rounded-lg py-3 px-4 inset-shadow-sm inset-shadow-black-900" required />
       </div>
     </div>
 
     <!-- Email -->
     <div>
-      <input type="email" placeholder="Email *" class="w-full bg-primary-300 border-2 border-secondary-500 rounded-lg py-3 px-4" required />
+      <input type="email" placeholder="Email *" class="w-full bg-primary-300 border-2 border-secondary-500 rounded-lg py-3 px-4 inset-shadow-sm inset-shadow-black-900" required />
     </div>
 
     <!-- Telefon -->
     <div>
-      <input type="tel" placeholder="Telefonnummer *" class="w-full bg-primary-300 border-2 border-secondary-500 rounded-lg py-3 px-4" required />
+      <input type="tel" placeholder="Telefonnummer *" class="w-full bg-primary-300 border-2 border-secondary-500 rounded-lg py-3 px-4 inset-shadow-sm inset-shadow-black-900" required />
     </div>
 
     <!-- Skattefradrag -->

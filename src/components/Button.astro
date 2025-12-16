@@ -1,6 +1,6 @@
 ---
 // Henter parametrene fra Astro.props
-const { variant = "primary", size = "medium", icon = "" } = Astro.props;
+const { variant = "primary", size = "medium", icon = "", ...rest } = Astro.props;
 
 //Definer den styling (Tailwind classes, der gør sig gældende for alle knapper)
 const buttonStyling = "px-8 py-2";
@@ -27,7 +27,7 @@ const iconSrc = icon ? iconFiles[icon] : null;
 ---
 
 <!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list -->
-<button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size], "flex items-center gap-2"]}>
+<button {...rest} class:list={[buttonStyling, variantClasses[variant], sizeClasses[size], "flex items-center gap-2"]}>
   <slot />
 
   {iconSrc && <img src={iconSrc} alt="" class="w-5 h-5 object-contain" />}
