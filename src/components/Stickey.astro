@@ -2,9 +2,9 @@
 const { position = "right", visibleAt = "sm" } = Astro.props;
 
 const icons = [
-  { id: "call", href: "tel:+182963", src: "/MobilePay.webp", label: "Ring til os" },
-  { id: "chat", href: "tel:+1217", src: "/SMS.webp", label: "Send besked" },
-  { id: "donate", href: "/4183 9515151", src: "/Bank.webp", label: "Støt os" },
+  { id: "call", href: "/form", src: "/MobilePay.webp", label: "Ring til os" },
+  { id: "chat", href: "/form", src: "/SMS.webp", label: "Send besked" },
+  { id: "donate", href: "/form", src: "/Bank.webp", label: "Støt os" },
 ];
 
 const posClass = position === "right" ? "right-0" : "left-0";

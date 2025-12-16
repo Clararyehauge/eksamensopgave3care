@@ -76,9 +76,7 @@
     .boxshadowright_hero{
     @apply shadow-[-14px_-13px_0px_-3px_#AB3123]
   } /*Hero*/
-.boxshadow_indsatser{
-  @apply shadow-[-7px_10px_0px_3px_#DC6940]
-}
+
   .boxshadow_forms{
     @apply shadow-[-13px_13px_10px_-1px_rgba(0,_0,_0,_0.15)]
   }
