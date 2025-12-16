@@ -130,7 +130,7 @@ import Forms from "../components/Forms.astro";
 
   <!-- START på sektion 5 - Internationale programmer -->
   <section class="grid grid-cols-1 md:grid-cols-2 items-center p-10 md:p-20">
-    <div class="flex flex-col justify-center space-y-2 max-w-130">
+    <div class="flex flex-col max-w-130">
       <Heading htmlheading="h3" size="medium" font="display"> INTERNATIONALE PROGRAMMER </Heading>
 
       <Heading htmlheading="h4" size="small" font="sans" stylingclasses="text-secondary-700 font-light italic self-end flipin_animation opacity-0"> “Global tilstedeværelse” </Heading>
@@ -140,6 +140,9 @@ import Forms from "../components/Forms.astro";
       </div>
       <div class="mt-5">
         <Text teksttype="brødtekst"> CARE Danmark er en privat og uafhængig fond, der arbejder i 16 lande fordelt på fem regioner: Vestafrika, Østafrika, Mellemøsten, Asien og Europa. CARE Danmark er en del af CARE International - en af verdens største humanitære organisationer. </Text>
+      </div>
+      <div class="mt-5 justify-end flex">
+        <a href="/omcare/"> <Text><Button variant="secondary" size="medium" icon="arrow">Læs mere</Button></Text></a>
       </div>
     </div>
 
@@ -180,13 +183,12 @@ import Forms from "../components/Forms.astro";
       <div class="mt-5">
         <Text teksttype="brødtekst"> Hos CARE arbejder vi for at give mennesker i verdens mest sårbare områder – især kvinder og piger – et værdigt liv trods klimaforandringer, kriser og fattigdom. Vi fokuserer på klimaindsats, ligestilling, innovation og nødhjælp. Ved at kombinere langsigtet udvikling med hurtig hjælp og tæt samarbejde med lokalsamfund skaber vi varige løsninger. Gennem uddannelse, bæredygtige projekter og støtte til selvhjælp ruster vi de mest udsatte til at stå stærkere i fremtiden. </Text>
       </div>
-      <div class="mt-5">
+      <div class="mt-5 justify-end flex">
         <a href="/voresindsatser/"> <Text><Button variant="secondary" size="medium" icon="arrow">Læs mere</Button></Text></a>
       </div>
     </div>
-    <div>
-      <img class="boxshadowright_orange" src="/forside/f_sektion7.webp" alt="Billede af afrikanske børn" />
-    </div>
+
+    <img class="boxshadowright_orange" src="/forside/f_sektion7.webp" alt="Billede af afrikanske børn" />
   </section>
   <!-- SLUT på sektion 7 - Vores indsatser -->
 
