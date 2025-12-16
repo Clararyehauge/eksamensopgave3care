@@ -74,7 +74,10 @@ import Button from "../components/Button.astro";
     </div>
 
     <div class="flex flex-col items-center gap-2">
-      <img src="/projekter.svg" alt="projekter illustration" class="w-18 h-18" />
+      <div class="relative w-18 h-18">
+        <img src="/omcare/hammer.svg" alt="mennesker illustration" class="w-18 h-18 absolute animate-wiggle-more animate-infinite animate-duration-[3000ms] animate-ease-linear" />
+        <img src="/omcare/skrue.svg" alt="mennesker illustration" class="w-18 h-18 absolute inset-0" />
+      </div>
       <Heading htmlheading="numbers" size="numbers" font="sans">1450</Heading>
       <Heading htmlheading="h4" size="small" font="sans">Projekter</Heading>
     </div>
