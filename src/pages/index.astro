@@ -9,164 +9,151 @@ import Forms from "../components/Forms.astro";
 ---
 
 <MainLayout title="Care Danmark">
-  <main>
-    <!-- START på sektion 1 - Hero -->
-    <section class="relative w-full">
-      <img src="/forside/herobillede.webp" alt="Billede af kvinde i Afrika" class="w-full h-auto hidden md:block" />
-      <img class="md:hidden" src="/forside/hero.webp" alt="billede af kvinde i Afrika" />
-      <div class="absolute left-3 top-1 md:left-5 md:top-20 p-2 md:p-12 max-w-75 md:max-w-200 bg-primary-100 boxshadowright_hero">
-        <div class="flex flex-col gap-1 md:gap-2">
-          <Heading htmlheading="h1" size="xlarge" font="display">CARE</Heading>
-          <Heading htmlheading="h2" size="small" font="display"> Støt piger og kvinder i klimakampen i verdens fattigste lande </Heading>
-          <Heading htmlheading="paragraphItalic" size="paragraphItalic" font="sans" stylingclasses="font-light italic"> Sammen bekæmper vi ulighed og fattigdom </Heading>
+  <!-- START på sektion 1 - Hero -->
+  <section class="relative w-full">
+    <img src="/forside/herobillede.webp" alt="Billede af kvinde i Afrika" class="w-full h-auto hidden md:block" />
+    <img class="md:hidden" src="/forside/hero.webp" alt="herobillede" />
+    <div class="absolute left-3 top-1 md:left-5 md:top-20 p-2 md:p-12 max-w-75 md:max-w-200 bg-primary-100 boxshadowright_hero">
+      <div class="flex flex-col gap-1 md:gap-2">
+        <Heading htmlheading="h1" size="xlarge" font="display">CARE</Heading>
+        <Heading htmlheading="h2" size="small" font="display"> Støt piger og kvinder i klimakampen i verdens fattigste lande </Heading>
+        <Heading htmlheading="paragraphItalic" size="paragraphItalic" font="sans" stylingclasses="font-light italic"> Sammen bekæmper vi ulighed og fattigdom </Heading>
 
-          <div class="flex justify-end">
-            <div class="animate-jump animate-infinite animate-duration-[4000ms] animate-ease-linear">
-              <Text>
-                <Button variant="primary" size="large" icon="heart"> Støt nu </Button>
-              </Text>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="animate-bounce animate-duration-[2000ms] absolute inset-x-0 bottom-1 md:bottom-10 flex justify-center">
-        <div class="relative md:w-30 md:h-30">
-          <span class="absolute left-0 top-2/4 w-[60%] h-[7px] bg-secondary-700 rotate-45 rounded-full"></span>
-          <span class="absolute right-0 top-2/4 w-[60%] h-[7px] bg-secondary-700 -rotate-45 rounded-full"></span>
-        </div>
-      </div>
-    </section>
-    <!-- SLUT på sektion 1 - Hero -->
-
-    <Stickey position="right" visibleAt="sm" />
-
-    <!-- START på sektion 2 - Forms -->
-
-    <!-- FORM-->
-    <section class="mt-10">
-      <Forms />
-    </section>
-
-    <!-- INFOGRAFIK-->
-    <section class="gap-y-10 p-10 md:p-20 mb-10">
-      <div class="text-center mb-10">
-        <Heading htmlheading="h3" size="medium" font="display"> HVAD VI KAN OPNÅ MED DIN DONATION </Heading>
-      </div>
-
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10 max-w-full mx-auto">
-        <div class="flex flex-col items-center text-center space-y-2">
-          <img src="/forside/section2_mad.svg" alt="mad" class="w-16 h-16" />
-          <Heading htmlheading="numbers" size="numbers" font="sans">38 kr.</Heading>
-          <Text teksttype="brødtekst">Kan give en familie et måltid mad</Text>
-        </div>
-
-        <div class="flex flex-col items-center text-center space-y-2">
-          <img src="/forside/section2_telt.svg" alt="telt" class="w-16 h-16" />
-          <Heading htmlheading="numbers" size="numbers" font="sans">341 kr.</Heading>
-          <Text teksttype="brødtekst">Sikre en familie på flugt et telt at overnatte i</Text>
-        </div>
-
-        <div class="flex flex-col items-center text-center space-y-2">
-          <div class="relative w-16 h-16">
-            <img src="/water.svg" alt="mennesker illustration" class="w-16 h-16 absolute inset-0" />
-            <img src="/drop.svg" alt="mennesker illustration" class="w-4 h-4 absolute bottom-2 left-5 md:left-5 -translate-x-1/2 animate-fade-down animate-infinite animate-duration-[3000ms]" />
-          </div>
-          <Heading htmlheading="numbers" size="numbers" font="sans">134 kr.</Heading>
-          <Text teksttype="brødtekst">Kan sikre at en landsby får 3000 liter vand</Text>
-        </div>
-
-        <div class="flex flex-col items-center text-center space-y-2">
-          <img src="/forside/section2_træ.svg" alt="træ" class="w-16 h-16" />
-          <Heading htmlheading="numbers" size="numbers" font="sans">510 kr.</Heading>
-          <Text teksttype="brødtekst">Kan give en familie to cashewtræer</Text>
-        </div>
-      </div>
-    </section>
-    <!-- SLUT på sektion 2 - Forms -->
-
-    <!-- START på sektion 3 - Kampagne -->
-    <section class="grid grid-cols-1 md:grid-cols-2 gap-y-10 p-10 md:p-20 mb-10 md:mb-20 bg-primary-300">
-      <div class="max-w-130">
-        <Heading htmlheading="h2" size="large" font="display"> CASHEWTRÆER SKABER HÅB OG INDKOMST </Heading>
-
-        <Heading htmlheading="h4" size="small" font="sans" stylingclasses="text-secondary-700 font-light flex justify-end italic flipin_animation opacity-0"> “Dyrk en bedre fremtid” </Heading>
-
-        <div class="mt-5">
-          <Text teksttype="brødtekst"> Med et cashewtræ kan kvinder sikre mad på bordet og skabe sig en indkomst, der sikrer deres børns fremtid. Når du giver et cashewtræ, hjælper du en kvinde med at starte en plantage. Cashewtræer er tørkeresistente og kan overleve i meget varme og tørre klimaer. Nødderne kan spises, opbevares længe og sælges på markedet, hvilket giver en pålidelig indtægtskilde. Et cashewtræ betyder mad på bordet og en vej ud af fattigdom for hendes familie. </Text>
-        </div>
-
-        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-5 w-full mt-5">
-          <!-- Ikon + tekst altid i række -->
-          <div class="flex flex-row items-center gap-5">
-            <img src="/forside/section2_træ.svg" alt="træ" class="w-16 h-16 animate-wiggle animate-infinite" />
-
-            <div>
-              <Heading htmlheading="numbers" size="numbers" font="sans">510 kr.</Heading>
-              <Text teksttype="brødtekst">Kan give en familie to cashewtræer</Text>
-            </div>
-          </div>
-
-          <!-- Knap -->
-          <div class="w-full md:w-auto md:self-end mt-5">
+        <div class="flex justify-end">
+          <div class="animate-jump animate-infinite animate-duration-[4000ms] animate-ease-linear">
             <Text>
-              <Button variant="primary" size="medium" icon="heart"> Støt nu </Button>
+              <Button variant="primary" size="large" icon="heart"> Støt nu </Button>
             </Text>
           </div>
         </div>
       </div>
-      <div>
-        <img class="boxshadowright_orange" src="/forside/f_sektion3.webp" alt="kvinde der arbejder med cashewtræer" />
+    </div>
+    <div class="animate-bounce animate-duration-[2000ms] absolute inset-x-0 bottom-1 md:bottom-10 flex justify-center">
+      <div class="relative md:w-30 md:h-30">
+        <span class="absolute left-0 top-2/4 w-[60%] h-[7px] bg-secondary-700 rotate-45 rounded-full"></span>
+        <span class="absolute right-0 top-2/4 w-[60%] h-[7px] bg-secondary-700 -rotate-45 rounded-full"></span>
       </div>
-    </section>
-    <!-- SLUT på sektion 3 - Kampagne -->
+    </div>
+  </section>
+  <!-- SLUT på sektion 1 - Hero -->
 
-    <!-- START på sektion 4 - Carousel -->
-    <section class="mb-10 md:mb-20">
-      <div class="loop overflow-hidden relative">
-        <div class="loop-track flex w-[200%] animate-scroll gap-0">
-          <img src="/forside/f_sektion4_1.webp" alt="billede" class="w-1/4 object-contain" />
-          <img src="/forside/f_sektion4_2.webp" alt="billede" class="w-1/4 object-contain" />
-          <img src="/forside/f_sektion4_3.webp" alt="billede" class="w-1/4 object-contain" />
-          <img src="/forside/f_sektion4_4.webp" alt="billede" class="w-1/4 object-contain" />
-          <img src="/forside/f_sektion4_5.webp" alt="billede" class="w-1/4 object-contain" />
-          <img src="/forside/f_sektion4_6.webp" alt="billede" class="w-1/4 object-contain" />
-          <img src="/forside/f_sektion4_7.webp" alt="billede" class="w-1/4 object-contain" />
-          <img src="/forside/f_sektion4_8.webp" alt="billede" class="w-1/4 object-contain" />
-          <img src="/forside/f_sektion4_9.webp" alt="billede" class="w-1/4 object-contain" />
-          <img src="/forside/f_sektion4_10.webp" alt="billede" class="w-1/4 object-contain" />
-          <img src="/forside/f_sektion4_11.webp" alt="billede" class="w-1/4 object-contain" />
-          <img src="/forside/f_sektion4_12.webp" alt="billede" class="w-1/4 object-contain" />
+  <!-- START på sektion 2 - Forms -->
+  <section class="mt-10">
+    <Forms />
+  </section>
+  <!-- SLUT på sektion 2 - Forms -->
+
+  <!-- START INFOGRAFIK-->
+  <section class="gap-y-10 p-10 md:p-20 mb-10">
+    <div class="text-center mb-10">
+      <Heading htmlheading="h3" size="medium" font="display"> HVAD VI KAN OPNÅ MED DIN DONATION </Heading>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10 max-w-full mx-auto">
+      <div class="flex flex-col items-center text-center space-y-2">
+        <img src="/forside/section2_mad.svg" alt="mad" class="w-16 h-16" />
+        <Heading htmlheading="numbers" size="numbers" font="sans">38 kr.</Heading>
+        <Text teksttype="brødtekst">Kan give en familie et måltid mad</Text>
+      </div>
+
+      <div class="flex flex-col items-center text-center space-y-2">
+        <img src="/forside/section2_telt.svg" alt="telt" class="w-16 h-16" />
+        <Heading htmlheading="numbers" size="numbers" font="sans">341 kr.</Heading>
+        <Text teksttype="brødtekst">Sikre en familie på flugt et telt at overnatte i</Text>
+      </div>
+
+      <div class="flex flex-col items-center text-center space-y-2">
+        <div class="relative w-16 h-16">
+          <img src="/water.svg" alt="mennesker illustration" class="w-16 h-16 absolute inset-0" />
+          <img src="/drop.svg" alt="mennesker illustration" class="w-4 h-4 absolute bottom-2 left-5 md:left-5 -translate-x-1/2 animate-fade-down animate-infinite animate-duration-[3000ms]" />
+        </div>
+        <Heading htmlheading="numbers" size="numbers" font="sans">134 kr.</Heading>
+        <Text teksttype="brødtekst">Kan sikre at en landsby får 3000 liter vand</Text>
+      </div>
+
+      <div class="flex flex-col items-center text-center space-y-2">
+        <img src="/forside/section2_træ.svg" alt="træ" class="w-16 h-16" />
+        <Heading htmlheading="numbers" size="numbers" font="sans">510 kr.</Heading>
+        <Text teksttype="brødtekst">Kan give en familie to cashewtræer</Text>
+      </div>
+    </div>
+  </section>
+  <!-- Slut INFOGRAFIK-->
+
+  <!-- START på sektion 3 - Kampagne -->
+  <section class="p-10 md:p-20 grid grid-cols-1 md:grid-cols-2 bg-primary-300">
+    <div class="max-w-130">
+      <Heading htmlheading="h2" size="large" font="display"> CASHEWTRÆER SKABER HÅB OG INDKOMST </Heading>
+      <Heading htmlheading="h4" size="small" font="sans" stylingclasses="text-secondary-700 font-light flex justify-end italic flipin_animation opacity-0"> “Dyrk en bedre fremtid” </Heading>
+      <div class="mt-5">
+        <Text teksttype="brødtekst"> Med et cashewtræ kan kvinder sikre mad på bordet og skabe sig en indkomst, der sikrer deres børns fremtid. Når du giver et cashewtræ, hjælper du en kvinde med at starte en plantage. Cashewtræer er tørkeresistente og kan overleve i meget varme og tørre klimaer. Nødderne kan spises, opbevares længe og sælges på markedet, hvilket giver en pålidelig indtægtskilde. Et cashewtræ betyder mad på bordet og en vej ud af fattigdom for hendes familie. </Text>
+      </div>
+
+      <!-- Ikon + tekst + knap -->
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-5 w-full mt-5">
+        <div class="flex flex-row items-center gap-5">
+          <img src="/forside/section2_træ.svg" alt="træ" class="w-16 h-16 animate-wiggle animate-infinite" />
+          <div>
+            <Heading htmlheading="numbers" size="numbers" font="sans">510 kr.</Heading>
+            <Text teksttype="brødtekst">Kan give en familie to cashewtræer</Text>
+          </div>
+        </div>
+        <div class="w-full md:w-auto md:self-end mt-5 pb-5 md:pb-3">
+          <Text>
+            <Button variant="primary" size="medium" icon="heart"> Støt nu </Button>
+          </Text>
         </div>
       </div>
-    </section>
-    <!-- SLUT på sektion 4 - Carousel -->
+    </div>
+    <img class="boxshadowright_orange" src="/forside/f_sektion3.webp" alt="kvinde der arbejder med cashewtræer" />
+  </section>
+  <!-- SLUT på sektion 3 - Kampagne -->
 
-    <!-- START på sektion 5 - Internationale programmer -->
-    <section class="grid grid-cols-1 md:grid-cols-2 items-center p-10 md:p-20">
-      <div class="flex flex-col justify-center space-y-2 max-w-130">
-        <Heading htmlheading="h3" size="medium" font="display"> INTERNATIONALE PROGRAMMER </Heading>
+  <!-- START på sektion 4 - Carousel -->
+  <section class="mt-10 md:mt-20 loop overflow-hidden relative">
+    <div class="loop-track flex w-[200%] animate-scroll gap-0">
+      <img src="/forside/f_sektion4_1.webp" alt="billede" class="w-1/4 object-contain" />
+      <img src="/forside/f_sektion4_2.webp" alt="billede" class="w-1/4 object-contain" />
+      <img src="/forside/f_sektion4_3.webp" alt="billede" class="w-1/4 object-contain" />
+      <img src="/forside/f_sektion4_4.webp" alt="billede" class="w-1/4 object-contain" />
+      <img src="/forside/f_sektion4_5.webp" alt="billede" class="w-1/4 object-contain" />
+      <img src="/forside/f_sektion4_6.webp" alt="billede" class="w-1/4 object-contain" />
+      <img src="/forside/f_sektion4_7.webp" alt="billede" class="w-1/4 object-contain" />
+      <img src="/forside/f_sektion4_8.webp" alt="billede" class="w-1/4 object-contain" />
+      <img src="/forside/f_sektion4_9.webp" alt="billede" class="w-1/4 object-contain" />
+      <img src="/forside/f_sektion4_10.webp" alt="billede" class="w-1/4 object-contain" />
+      <img src="/forside/f_sektion4_11.webp" alt="billede" class="w-1/4 object-contain" />
+      <img src="/forside/f_sektion4_12.webp" alt="billede" class="w-1/4 object-contain" />
+    </div>
+  </section>
+  <!-- SLUT på sektion 4 - Carousel -->
 
-        <Heading htmlheading="h4" size="small" font="sans" stylingclasses="text-secondary-700 font-light italic self-end flipin_animation opacity-0"> “Global tilstedeværelse” </Heading>
+  <!-- START på sektion 5 - Internationale programmer -->
+  <section class="grid grid-cols-1 md:grid-cols-2 items-center p-10 md:p-20">
+    <div class="flex flex-col justify-center space-y-2 max-w-130">
+      <Heading htmlheading="h3" size="medium" font="display"> INTERNATIONALE PROGRAMMER </Heading>
 
-        <div class="card card-right">
-          <img class="md:hidden mt-5" src="/forside/f_sektion5.svg" alt="map" />
-        </div>
-        <div class="mt-5">
-          <Text teksttype="brødtekst"> CARE Danmark er en privat og uafhængig fond, der arbejder i 16 lande fordelt på fem regioner: Vestafrika, Østafrika, Mellemøsten, Asien og Europa. CARE Danmark er en del af CARE International - en af verdens største humanitære organisationer. </Text>
-        </div>
+      <Heading htmlheading="h4" size="small" font="sans" stylingclasses="text-secondary-700 font-light italic self-end flipin_animation opacity-0"> “Global tilstedeværelse” </Heading>
+
+      <div class="card card-right">
+        <img class="md:hidden mt-5" src="/forside/f_sektion5.svg" alt="map" />
       </div>
-
-      <div class="flex items-center justify-center card card-right">
-        <img class="hidden md:block" src="/forside/f_sektion5.svg" alt="" />
+      <div class="mt-5">
+        <Text teksttype="brødtekst"> CARE Danmark er en privat og uafhængig fond, der arbejder i 16 lande fordelt på fem regioner: Vestafrika, Østafrika, Mellemøsten, Asien og Europa. CARE Danmark er en del af CARE International - en af verdens største humanitære organisationer. </Text>
       </div>
-    </section>
-    <!-- SLUT på sektion 5 - Internationale programmer -->
-  </main>
+    </div>
+
+    <div class="flex items-center justify-center card card-right">
+      <img class="hidden md:block" src="/forside/f_sektion5.svg" alt="" />
+    </div>
+  </section>
+  <!-- SLUT på sektion 5 - Internationale programmer -->
+
   <!-- START på sektion 6 - Hjælp -->
   <section class="bg-primary-300 mb-10 md:mb-20 grid md:grid-cols-2 gap-5 mx-auto p-10 md:p-20">
     <div class="bg-primary-100 boxshadowleft_orange p-10 flex flex-col justify-center max-w-130 md:max-w-200">
       <Heading htmlheading="h3" size="medium" font="display">HJÆLP USKYLDIGE FAMILIER</Heading>
-      <div class="mt-3">
+      <div class="mt-5">
         <Text teksttype="brødtekst">
           Verden er i øjeblikket vidne til en række forfærdelige krige, konflikter og klima-katastrofer. For millioner af mennesker handler hver dag om ren og skær overlevelse. <br />
           Uskyldige familier har mistet alt. Deres hjem, deres ejendele, deres nærmeste. Der er akut brug for helt basale ting som mad, vand, medicin, telte og brændstof. Du kan hjælpe mennesker i akut nød!
@@ -204,22 +191,20 @@ import Forms from "../components/Forms.astro";
   <!-- SLUT på sektion 7 - Vores indsatser -->
 
   <!-- START på sektion 8 - Carousel -->
-  <section class="mb-10 md:mb-20">
-    <div class="loop overflow-hidden relative">
-      <div class="loop-track flex w-[200%] animate-scroll gap-0">
-        <img src="/forside/f_sektion4_1.webp" alt="billede" class="w-1/4 object-contain" />
-        <img src="/forside/f_sektion4_2.webp" alt="billede" class="w-1/4 object-contain" />
-        <img src="/forside/f_sektion4_3.webp" alt="billede" class="w-1/4 object-contain" />
-        <img src="/forside/f_sektion4_4.webp" alt="billede" class="w-1/4 object-contain" />
-        <img src="/forside/f_sektion4_5.webp" alt="billede" class="w-1/4 object-contain" />
-        <img src="/forside/f_sektion4_6.webp" alt="billede" class="w-1/4 object-contain" />
-        <img src="/forside/f_sektion4_7.webp" alt="billede" class="w-1/4 object-contain" />
-        <img src="/forside/f_sektion4_8.webp" alt="billede" class="w-1/4 object-contain" />
-        <img src="/forside/f_sektion4_9.webp" alt="billede" class="w-1/4 object-contain" />
-        <img src="/forside/f_sektion4_10.webp" alt="billede" class="w-1/4 object-contain" />
-        <img src="/forside/f_sektion4_11.webp" alt="billede" class="w-1/4 object-contain" />
-        <img src="/forside/f_sektion4_12.webp" alt="billede" class="w-1/4 object-contain" />
-      </div>
+  <section class="mb-10 md:mb-20 loop overflow-hidden relative">
+    <div class="loop-track flex w-[200%] animate-scroll gap-0">
+      <img src="/forside/f_sektion4_1.webp" alt="billede" class="w-1/4 object-contain" />
+      <img src="/forside/f_sektion4_2.webp" alt="billede" class="w-1/4 object-contain" />
+      <img src="/forside/f_sektion4_3.webp" alt="billede" class="w-1/4 object-contain" />
+      <img src="/forside/f_sektion4_4.webp" alt="billede" class="w-1/4 object-contain" />
+      <img src="/forside/f_sektion4_5.webp" alt="billede" class="w-1/4 object-contain" />
+      <img src="/forside/f_sektion4_6.webp" alt="billede" class="w-1/4 object-contain" />
+      <img src="/forside/f_sektion4_7.webp" alt="billede" class="w-1/4 object-contain" />
+      <img src="/forside/f_sektion4_8.webp" alt="billede" class="w-1/4 object-contain" />
+      <img src="/forside/f_sektion4_9.webp" alt="billede" class="w-1/4 object-contain" />
+      <img src="/forside/f_sektion4_10.webp" alt="billede" class="w-1/4 object-contain" />
+      <img src="/forside/f_sektion4_11.webp" alt="billede" class="w-1/4 object-contain" />
+      <img src="/forside/f_sektion4_12.webp" alt="billede" class="w-1/4 object-contain" />
     </div>
   </section>
   <!-- SLUT på sektion 8 - Carousel -->
