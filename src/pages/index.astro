@@ -11,7 +11,7 @@ import Forms from "../components/Forms.astro";
 <MainLayout title="Care Danmark">
   <!-- START på sektion 1 - Hero -->
   <section class="relative w-full">
-    <img src="/forside/herobillede.webp" alt="Billede af kvinde i Afrika" class="w-full h-auto hidden md:block" />
+    <img src="/forside/herobillede.webp" alt="Billede af kvinde i Afrika" class="w-full hidden md:block" />
     <img class="md:hidden" src="/forside/hero.webp" alt="herobillede" />
     <div class="absolute left-3 top-1 md:left-5 md:top-20 p-2 md:p-12 max-w-75 md:max-w-200 bg-primary-100 boxshadowright_hero">
       <div class="flex flex-col gap-1 md:gap-2">
@@ -20,17 +20,13 @@ import Forms from "../components/Forms.astro";
         <Heading htmlheading="paragraphItalic" size="paragraphItalic" font="sans" stylingclasses="font-light italic"> Sammen bekæmper vi ulighed og fattigdom </Heading>
 
         <div class="flex justify-end">
-          <div class="animate-jump animate-infinite animate-duration-[4000ms] animate-ease-linear">
-            <a href="/form">
-            <Text>
-              <Button variant="primary" size="large" icon="heart"> Støt nu </Button>
-            </Text>
-            </a>
-          </div>
+          <a href="/form" class="animate-jump animate-infinite animate-duration-[4000ms] animate-ease-linear">
+            <Button variant="primary" size="large" icon="heart">Støt nu</Button>
+          </a>
         </div>
       </div>
     </div>
-    <div class="animate-bounce animate-duration-[2000ms] absolute inset-x-0 bottom-1 md:bottom-10 flex justify-center">
+    <div class="animate-bounce animate-duration-[2000ms] absolute inset-x-0 bottom-1 md:bottom-3 flex justify-center">
       <div class="relative md:w-30 md:h-30">
         <span class="absolute left-0 top-2/4 w-[60%] h-[7px] bg-secondary-700 rotate-45 rounded-full"></span>
         <span class="absolute right-0 top-2/4 w-[60%] h-[7px] bg-secondary-700 -rotate-45 rounded-full"></span>
@@ -46,57 +42,57 @@ import Forms from "../components/Forms.astro";
   <!-- SLUT på sektion 2 - Forms -->
 
   <!-- START INFOGRAFIK-->
-   <section class="mb-10 md:mb-20 ">
+  <section class="mb-10 md:mb-20">
     <div class="text-center p-10 md:p-20">
       <Heading htmlheading="h3" size="medium" font="display"> HVAD VI KAN OPNÅ MED DIN DONATION </Heading>
     </div>
-    <div class="loop overflow-hidden relative">
-    <div class=" loop-track flex w-[200%] animate-scroll gap-5 md:gap-10">
-      <div class="flex flex-col items-center text-center space-y-2">
-        <img src="/forside/section2_mad.svg" alt="mad" class="w-16 h-16" />
-        <Heading htmlheading="numbers" size="numbers" font="sans">38 kr.</Heading>
-        <Text teksttype="brødtekst">Kan give en familie et måltid mad</Text>
-      </div>
-
-      <div class="flex flex-col items-center text-center space-y-2">
-        <img src="/forside/section2_telt.svg" alt="telt" class="w-16 h-16" />
-        <Heading htmlheading="numbers" size="numbers" font="sans">341 kr.</Heading>
-        <Text teksttype="brødtekst">Sikre en familie på flugt et telt at overnatte i</Text>
-      </div>
-
-      <div class="flex flex-col items-center text-center space-y-2">
-        <div class="relative w-16 h-16">
-          <img src="/water.svg" alt="mennesker illustration" class="w-16 h-16 absolute inset-0" />
-          <img src="/drop.svg" alt="mennesker illustration" class="w-4 h-4 absolute bottom-2 left-5 md:left-5 -translate-x-1/2 animate-fade-down animate-infinite animate-duration-[3000ms]" />
+    <div class="loop overflow-hidden">
+      <div class="loop-track flex animate-scroll gap-5 md:gap-10">
+        <div class="flex flex-col items-center text-center gap-2">
+          <img src="/forside/section2_mad.svg" alt="mad" class="w-16 h-16" />
+          <Heading htmlheading="numbers" size="numbers" font="sans">38 kr.</Heading>
+          <Text teksttype="brødtekst">Kan give en familie et måltid mad</Text>
         </div>
-        <Heading htmlheading="numbers" size="numbers" font="sans">134 kr.</Heading>
-        <Text teksttype="brødtekst">Kan sikre at en landsby får 3000 liter vand</Text>
-      </div>
 
-       <div class="flex flex-col items-center text-center space-y-2">
-        <img src="/forside/section2_træ.svg" alt="træ" class="w-16 h-16" />
-        <Heading htmlheading="numbers" size="numbers" font="sans">510 kr.</Heading>
-        <Text teksttype="brødtekst">Kan give en familie to cashewtræer</Text>
-      </div>
+        <div class="flex flex-col items-center text-center gap-2">
+          <img src="/forside/section2_telt.svg" alt="telt" class="w-16 h-16" />
+          <Heading htmlheading="numbers" size="numbers" font="sans">341 kr.</Heading>
+          <Text teksttype="brødtekst">Sikre en familie på flugt et telt at overnatte i</Text>
+        </div>
 
-       <div class="flex flex-col items-center text-center space-y-2">
-        <img src="/vogn.svg" alt="vogn" class="w-16 h-16" />
-        <Heading htmlheading="numbers" size="numbers" font="sans">173 kr.</Heading>
-        <Text teksttype="brødtekst">Kan give fem familier ingredienser til et måltid mad</Text>
-      </div>
+        <div class="flex flex-col items-center text-center gap-2">
+          <div class="relative w-16 h-16">
+            <img src="/water.svg" alt="mennesker illustration" class="w-16 h-16 absolute inset-0" />
+            <img src="/drop.svg" alt="mennesker illustration" class="w-4 h-4 absolute bottom-2 left-5 -translate-x-1/2 animate-fade-down animate-infinite animate-duration-[3000ms]" />
+          </div>
+          <Heading htmlheading="numbers" size="numbers" font="sans">134 kr.</Heading>
+          <Text teksttype="brødtekst">Kan sikre at en landsby får 3000 liter vand</Text>
+        </div>
 
-      <div class="flex flex-col items-center text-center space-y-2">
-        <img src="/korn.svg" alt="korn" class="w-16 h-16" />
-        <Heading htmlheading="numbers" size="numbers" font="sans">519 kr.</Heading>
-        <Text teksttype="brødtekst">Kan sikre 15 familier 16 kg korn til at starte et landbrug</Text>
-      </div>
+        <div class="flex flex-col items-center text-center gap-2">
+          <img src="/forside/section2_træ.svg" alt="træ" class="w-16 h-16" />
+          <Heading htmlheading="numbers" size="numbers" font="sans">510 kr.</Heading>
+          <Text teksttype="brødtekst">Kan give en familie to cashewtræer</Text>
+        </div>
 
-       <div class="flex flex-col items-center text-center space-y-2">
-        <img src="/Komfur.svg" alt="Komfur" class="w-16 h-16" />
-        <Heading htmlheading="numbers" size="numbers" font="sans">2827 kr.</Heading>
-        <Text teksttype="brødtekst">Kan give en gruppe kvinder et fælles solcelle-komfur</Text>
+        <div class="flex flex-col items-center text-center gap-2">
+          <img src="/vogn.svg" alt="vogn" class="w-16 h-16" />
+          <Heading htmlheading="numbers" size="numbers" font="sans">173 kr.</Heading>
+          <Text teksttype="brødtekst">Kan give fem familier ingredienser til et måltid mad</Text>
+        </div>
+
+        <div class="flex flex-col items-center text-center gap-2">
+          <img src="/korn.svg" alt="korn" class="w-16 h-16" />
+          <Heading htmlheading="numbers" size="numbers" font="sans">519 kr.</Heading>
+          <Text teksttype="brødtekst">Kan sikre 15 familier 16 kg korn til at starte et landbrug</Text>
+        </div>
+
+        <div class="flex flex-col items-center text-center gap-2">
+          <img src="/Komfur.svg" alt="Komfur" class="w-16 h-16" />
+          <Heading htmlheading="numbers" size="numbers" font="sans">2827 kr.</Heading>
+          <Text teksttype="brødtekst">Kan give en gruppe kvinder et fælles solcelle-komfur</Text>
+        </div>
       </div>
-</div>
     </div>
   </section>
   <!-- Slut INFOGRAFIK-->
@@ -119,11 +115,11 @@ import Forms from "../components/Forms.astro";
             <Text teksttype="brødtekst">Kan give en familie to cashewtræer</Text>
           </div>
         </div>
-        <div class="w-full md:w-auto md:self-end mt-5 pb-5 md:pb-3">
+        <div class="w-auto md:self-end mt-5 pb-5 md:pb-3">
           <a href="/form">
-          <Text>
-            <Button variant="primary" size="medium" icon="heart"> Støt nu </Button>
-          </Text>
+            <Text>
+              <Button variant="primary" size="medium" icon="heart"> Støt nu </Button>
+            </Text>
           </a>
         </div>
       </div>
@@ -134,7 +130,7 @@ import Forms from "../components/Forms.astro";
 
   <!-- START på sektion 4 - Carousel -->
   <section class="mt-10 md:mt-20 loop overflow-hidden relative">
-    <div class="loop-track flex w-[200%] animate-scroll gap-0">
+    <div class="loop-track flex animate-scroll">
       <img src="/forside/f_sektion4_1.webp" alt="billede" class="w-1/4 object-contain" />
       <img src="/forside/f_sektion4_2.webp" alt="billede" class="w-1/4 object-contain" />
       <img src="/forside/f_sektion4_3.webp" alt="billede" class="w-1/4 object-contain" />
@@ -158,19 +154,17 @@ import Forms from "../components/Forms.astro";
 
       <Heading htmlheading="h4" size="small" font="sans" stylingclasses="text-secondary-700 font-light italic self-end flipin_animation opacity-0"> “Global tilstedeværelse” </Heading>
 
-      <div class="card card-right">
-        <img class="md:hidden mt-5" src="/forside/f_sektion5.svg" alt="map" />
-      </div>
-      <div class="mt-5">
-        <Text teksttype="brødtekst"> CARE Danmark er en privat og uafhængig fond, der arbejder i 16 lande fordelt på fem regioner: Vestafrika, Østafrika, Mellemøsten, Asien og Europa. CARE Danmark er en del af CARE International - en af verdens største humanitære organisationer. </Text>
-      </div>
+      <img class="md:hidden mt-5 card card-right" src="/forside/f_sektion5.svg" alt="map" />
+
+      <Text stylingclasses="mt-5" teksttype="brødtekst"> CARE Danmark er en privat og uafhængig fond, der arbejder i 16 lande fordelt på fem regioner: Vestafrika, Østafrika, Mellemøsten, Asien og Europa. CARE Danmark er en del af CARE International - en af verdens største humanitære organisationer. </Text>
+
       <div class="mt-5 justify-end flex">
         <a href="/omcare/"> <Text><Button variant="secondary" size="medium" icon="arrow">Læs mere</Button></Text></a>
       </div>
     </div>
 
     <div class="flex items-center justify-center card card-right">
-      <img class="hidden md:block" src="/forside/f_sektion5.svg" alt="" />
+      <img class="hidden md:block" src="/forside/f_sektion5.svg" alt="map" />
     </div>
   </section>
   <!-- SLUT på sektion 5 - Internationale programmer -->
@@ -179,23 +173,20 @@ import Forms from "../components/Forms.astro";
   <section class="bg-primary-300 mb-10 md:mb-20 grid md:grid-cols-2 gap-5 mx-auto p-10 md:p-20">
     <div class="bg-primary-100 boxshadowleft_orange p-10 flex flex-col justify-center max-w-130 md:max-w-200">
       <Heading htmlheading="h3" size="medium" font="display">HJÆLP USKYLDIGE FAMILIER</Heading>
-      <div class="mt-5">
-        <Text teksttype="brødtekst">
-          Verden er i øjeblikket vidne til en række forfærdelige krige, konflikter og klima-katastrofer. For millioner af mennesker handler hver dag om ren og skær overlevelse. <br />
-          Uskyldige familier har mistet alt. Deres hjem, deres ejendele, deres nærmeste. Der er akut brug for helt basale ting som mad, vand, medicin, telte og brændstof. Du kan hjælpe mennesker i akut nød!
-        </Text>
-      </div>
-      <div class="mt-5">
-        <a href="/form">
+
+      <Text stylingclasses="mt-5" teksttype="brødtekst">
+        Verden er i øjeblikket vidne til en række forfærdelige krige, konflikter og klima-katastrofer. For millioner af mennesker handler hver dag om ren og skær overlevelse. <br />
+        Uskyldige familier har mistet alt. Deres hjem, deres ejendele, deres nærmeste. Der er akut brug for helt basale ting som mad, vand, medicin, telte og brændstof. Du kan hjælpe mennesker i akut nød!
+      </Text>
+
+      <a class="mt-5" href="/form">
         <Text>
           <Button variant="primary" size="medium" icon="heart"> Støt nu </Button>
         </Text>
-        </a>
-      </div>
+      </a>
     </div>
-    <div class="w-full h-auto object-cover">
-      <img src="/forside/f_sektion6.webp" alt="" />
-    </div>
+
+    <img class="w-full" src="/forside/f_sektion6.webp" alt="" />
   </section>
   <!-- SLUT på sektion 6 - Hjælp -->
 
@@ -205,12 +196,10 @@ import Forms from "../components/Forms.astro";
       <Heading htmlheading="h3" size="medium" font="display"> VORES INDSATSER </Heading>
 
       <Heading htmlheading="h4" size="small" font="sans" stylingclasses="text-secondary-700 font-light italic self-end flipin_animation opacity-0"> “En grøn og retfærdig verden” </Heading>
-      <div class="mt-5">
-        <Text teksttype="brødtekst"> Hos CARE arbejder vi for at give mennesker i verdens mest sårbare områder – især kvinder og piger – et værdigt liv trods klimaforandringer, kriser og fattigdom. Vi fokuserer på klimaindsats, ligestilling, innovation og nødhjælp. Ved at kombinere langsigtet udvikling med hurtig hjælp og tæt samarbejde med lokalsamfund skaber vi varige løsninger. Gennem uddannelse, bæredygtige projekter og støtte til selvhjælp ruster vi de mest udsatte til at stå stærkere i fremtiden. </Text>
-      </div>
-      <div class="mt-5 justify-end flex">
-        <a href="/voresindsatser/"> <Text><Button variant="secondary" size="medium" icon="arrow">Læs mere</Button></Text></a>
-      </div>
+
+      <Text stylingclasses="mt-5" teksttype="brødtekst"> Hos CARE arbejder vi for at give mennesker i verdens mest sårbare områder – især kvinder og piger – et værdigt liv trods klimaforandringer, kriser og fattigdom. Vi fokuserer på klimaindsats, ligestilling, innovation og nødhjælp. Ved at kombinere langsigtet udvikling med hurtig hjælp og tæt samarbejde med lokalsamfund skaber vi varige løsninger. Gennem uddannelse, bæredygtige projekter og støtte til selvhjælp ruster vi de mest udsatte til at stå stærkere i fremtiden. </Text>
+
+      <a class="mt-5 justify-end flex" href="/voresindsatser/"> <Text><Button variant="secondary" size="medium" icon="arrow">Læs mere</Button></Text></a>
     </div>
 
     <img class="boxshadowright_orange w-full" src="/forside/f_sektion7.webp" alt="Billede af afrikanske børn" />
@@ -219,7 +208,7 @@ import Forms from "../components/Forms.astro";
 
   <!-- START på sektion 8 - Carousel -->
   <section class="mb-10 md:mb-20 loop overflow-hidden relative">
-    <div class="loop-track flex w-[200%] animate-scroll gap-0">
+    <div class="loop-track flex animate-scroll">
       <img src="/forside/f_sektion4_1.webp" alt="billede" class="w-1/4 object-contain" />
       <img src="/forside/f_sektion4_2.webp" alt="billede" class="w-1/4 object-contain" />
       <img src="/forside/f_sektion4_3.webp" alt="billede" class="w-1/4 object-contain" />

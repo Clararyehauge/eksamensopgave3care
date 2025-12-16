@@ -1,8 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Header from "../components/Header.astro";
 import Support from "../components/Support.astro";
-import Footer from "../components/Footer.astro";
 import Text from "../components/Text.astro";
 import Heading from "../components/Heading.astro";
 import Stickey from "../components/Stickey.astro";
@@ -12,9 +10,9 @@ import Button from "../components/Button.astro";
 <MainLayout title="Om Care">
   <!-- START på sektion 1 - Titel -->
   <section class="pt-10 md:pt-20">
-    <div class="items-center text-center">
+    <div class="text-center">
       <Heading htmlheading="h2" size="medium">OM CARE</Heading>
-      <Heading htmlheading="h4" size="small" font="sans" stylingclasses="text-secondary-700 font-light flex justify-end  pr-5 md:pr-40 italic flipin_animation opacity-0"> “Kæmper for en grøn og retfærdig verden” </Heading>
+      <Heading htmlheading="h4" size="small" font="sans" stylingclasses="text-secondary-700 font-light text-right pr-5 md:pr-40 italic flipin_animation opacity-0"> “Kæmper for en grøn og retfærdig verden” </Heading>
     </div>
   </section>
   <!-- SLUT på sektion 1 - Titel -->
@@ -25,40 +23,41 @@ import Button from "../components/Button.astro";
     <div class="relative z-10">
       <!-- Boks 1 venstre -->
       <div class="card card-left bg-primary-300 max-w-70 md:max-w-100 p-6 relative mr-auto shadow-2xl">
-        <img src="/knapnael.svg" alt="nål" class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 md:w-10 h-auto" />
+        <img src="/knapnael.svg" alt="nål" class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-7 md:w-10" />
         <Heading htmlheading="h3" size="small" font="display">HVAD GØR CARE?</Heading>
         <Text> CARE støtter verdens fattigste og mest klimaudsatte mennesker i at skabe sig et godt og værdigt liv. Vi arbejder med klimatilpasning, uddannelse, akut nødhjælp og hjælp til selvhjælp, og vi er til stede både før, under og efter klimakrisen rammer. </Text>
       </div>
 
       <!-- Boks 2 højre -->
       <div class="card card-right bg-primary-300 max-w-70 md:max-w-100 p-6 relative ml-auto shadow-2xl">
-        <img src="/knapnael.svg" alt="nål" class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 md:w-10 h-auto" />
+        <img src="/knapnael.svg" alt="nål" class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-7 md:w-10" />
         <Heading htmlheading="h3" size="small" font="display">CARES HISTORIE</Heading>
         <Text> CARE International blev grundlagt i 1945 for at hjælpe et krigshærget og sultende Europa. Her samlede 22 hjælpeorganisationer sig til én. De kaldte sig C.A.R.E: The Cooperative for American Remittances to Europe. CARE Danmark blev oprettet i 1987 og vi er en del af CARE International. </Text>
       </div>
 
       <!-- Boks 3 venstre -->
       <div class="card card-left bg-primary-300 max-w-70 md:max-w-100 p-6 relative mr-auto shadow-2xl">
-        <img src="/knapnael.svg" alt="nål" class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 md:w-10 h-auto" />
+        <img src="/knapnael.svg" alt="nål" class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-7 md:w-10" />
         <Heading htmlheading="h3" size="small" font="display">ETIK I VORES ARBEJDE</Heading>
         <Text> Vi sikrer kvalitet og standarder i vores arbejde gennem principper og retningslinjer, ligesom vi bekæmper korruption, misbrug og uretmæssig adfærd. Du kan rapportere uretmæssig adfærd via denne side. </Text>
       </div>
 
       <!-- Boks 4 højre-->
       <div class="card card-right bg-primary-300 max-w-70 md:max-w-100 p-6 relative ml-auto shadow-2xl">
-        <img src="/knapnael.svg" alt="nål" class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-7 md:w-10 h-auto" />
+        <img src="/knapnael.svg" alt="nål" class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-7 md:w-10" />
         <Heading htmlheading="h3" size="small" font="display">VISION OG MISSION</Heading>
         <Text> Hos CARE kæmper vi for en grøn og retfærdig verden. Det gør vi, fordi vi mener, at kampen mod klimaforandringer og kampen mod global ulighed er to sider af samme sag. </Text>
       </div>
     </div>
   </section>
   <!-- SLUT på sektion 2 - Map -->
+
   <!-- START på Ikoner -->
   <div class="flex flex-row justify-center gap-5 md:gap-20 p-10 md:p-20">
     <div class="flex flex-col items-center gap-2">
       <div class="relative w-18 h-18">
-        <img src="/hands.svg" alt="mennesker illustration" class="w-20 h-20 absolute inset-0" />
-        <img src="/heart.svg" alt="mennesker illustration" class="w-10 h-10 absolute bottom-12 left-10 md:left-10 -translate-x-1/2 animate-jump animate-infinite animate-duration-[3000ms]" />
+        <img src="/hands.svg" alt="" class="w-20 h-20 absolute inset-0" />
+        <img src="/heart.svg" alt="" class="w-10 h-10 absolute bottom-12 left-9 -translate-x-1/2 animate-jump animate-infinite animate-duration-[3000ms]" />
       </div>
       <Heading htmlheading="numbers" size="numbers" font="sans">53,4 mio</Heading>
       <Heading htmlheading="h4" size="small" font="sans">Mennesker</Heading>
@@ -66,8 +65,8 @@ import Button from "../components/Button.astro";
 
     <div class="flex flex-col items-center gap-2">
       <div class="relative w-18 h-18">
-        <img src="/world.svg" alt="mennesker illustration" class="w-18 h-18 absolute inset-0 animate-spin animate-duration-[10000ms]" />
-        <img src="/map.svg" alt="mennesker illustration" class="w-8 h-8 absolute bottom-15 left-13 -translate-x-1/2" />
+        <img src="/world.svg" alt="" class="w-18 h-18 absolute inset-0 animate-spin animate-duration-[10000ms]" />
+        <img src="/map.svg" alt="" class="w-8 h-8 absolute bottom-15 left-13 -translate-x-1/2" />
       </div>
       <Heading htmlheading="numbers" size="numbers" font="sans">121</Heading>
       <Heading htmlheading="h4" size="small" font="sans">Lande</Heading>
@@ -75,27 +74,26 @@ import Button from "../components/Button.astro";
 
     <div class="flex flex-col items-center gap-2">
       <div class="relative w-18 h-18">
-        <img src="/omcare/hammer.svg" alt="mennesker illustration" class="w-18 h-18 absolute animate-wiggle-more animate-infinite animate-duration-[3000ms] animate-ease-linear" />
-        <img src="/omcare/skrue.svg" alt="mennesker illustration" class="w-18 h-18 absolute inset-0" />
+        <img src="/omcare/hammer.svg" alt="" class="w-18 h-18 absolute animate-wiggle-more animate-infinite animate-duration-[3000ms] animate-ease-linear" />
+        <img src="/omcare/skrue.svg" alt="" class="w-18 h-18 absolute inset-0" />
       </div>
       <Heading htmlheading="numbers" size="numbers" font="sans">1450</Heading>
       <Heading htmlheading="h4" size="small" font="sans">Projekter</Heading>
     </div>
   </div>
   <!--SLUT Ikoner -->
+
   <!-- START på sektion 3 - Sådan bruger vi penge -->
   <section class="bg-primary-300">
     <div class="mx-auto p-10 md:p-20 mb-10 md:mb-20 grid grid-cols-1 md:grid-cols-2">
       <div class="bg-primary-100 p-10 boxshadowleft_orange">
         <Heading htmlheading="h2" size="medium">SÅDAN BRUGER VI PENGENE</Heading>
-        <div class="mt-5">
-          <Text>CARE havde i 2022 en administrationsomkostning på 10 procent af omsætningen. Én procent af omsætningen bruger vi på kommunikation og engagement, så vi kan sikre flere midler og samtidigt udbrede kendskabet til vores arbejde med at skabe løsninger til verdens mest klimaudsatte mennesker. De resterende 89 procent går til vores projekter. Tallene kan variere alt efter det konkrete års indtægter.</Text>
-        </div>
-        <div class="mt-5">
-          <Text>
-            <a href="/"> <Button variant="secondary" size="medium" icon="arrow">Få indblik i vores regnskab</Button></a>
-          </Text>
-        </div>
+
+        <Text stylingclasses="mt-5">CARE havde i 2022 en administrationsomkostning på 10 procent af omsætningen. Én procent af omsætningen bruger vi på kommunikation og engagement, så vi kan sikre flere midler og samtidigt udbrede kendskabet til vores arbejde med at skabe løsninger til verdens mest klimaudsatte mennesker. De resterende 89 procent går til vores projekter. Tallene kan variere alt efter det konkrete års indtægter.</Text>
+
+        <Text stylingclasses="mt-5">
+          <a href="/"> <Button variant="secondary" size="medium" icon="arrow">Få indblik i vores regnskab</Button></a>
+        </Text>
       </div>
       <div class="card card-right">
         <img src="/omcare/o_sektion3.webp" alt="diagram" class="mt-5" />
@@ -121,11 +119,13 @@ import Button from "../components/Button.astro";
     </div>
   </section>
   <!-- SLUT på sektion 4 - Carousel -->
+
   <!-- START på FOOTER -->
   <section>
     <Support />
   </section>
   <!-- SLUT på FOOTER -->
+
   <Stickey position="right" visibleAt="sm" />
 </MainLayout>
 

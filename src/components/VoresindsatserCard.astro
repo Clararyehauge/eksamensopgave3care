@@ -19,9 +19,9 @@ const imageOrder = reverse ? "md:order-1" : "md:order-2";
 const imageShadow = reverse ? "boxshadowleft_orange" : "boxshadowright_orange";
 ---
 
-<section class="relative w-full">
+<section>
   <div class="grid md:grid-cols-2 items-center">
-    <div class={`relative z-20 flex justify-center ${contentOrder} bg-primary-300`}>
+    <div class={`flex justify-center ${contentOrder} bg-primary-300`}>
       <div class="p-8 md:p-12 flex flex-col gap-6 max-w-[600px] w-full">
         <Heading htmlheading="h3" size="medium" font="display">{title}</Heading>
         <Text teksttype="brødtekst" set:html={body} />
@@ -47,9 +47,9 @@ const imageShadow = reverse ? "boxshadowleft_orange" : "boxshadowright_orange";
     </div>
 
     <!-- BILLEDE -->
-    <div class={`relative flex justify-center items-center ${imageOrder}`}>
+    <div class={`flex justify-center items-center ${imageOrder}`}>
       <div class={`relative w-full ${imageShadow}`}>
-        <img src={imageSrc} alt={imageAlt} class="relative z-10 w-full h-auto object-cover block" />
+        <img src={imageSrc} alt={imageAlt} class="w-full object-cover" />
       </div>
     </div>
   </div>

@@ -1,21 +1,21 @@
 ---
-const { position = "right", visibleAt = "sm" } = Astro.props;
+const { position = "right" } = Astro.props;
 
 const icons = [
-  { id: "call", href: "/form", src: "/MobilePay.webp", label: "Ring til os" },
-  { id: "chat", href: "/form", src: "/SMS.webp", label: "Send besked" },
-  { id: "donate", href: "/form", src: "/Bank.webp", label: "Støt os" },
+  { href: "/form", src: "/MobilePay.webp", label: "Ring til os" },
+  { href: "/form", src: "/SMS.webp", label: "Send besked" },
+  { href: "/form", src: "/Bank.webp", label: "Støt os" },
 ];
 
 const posClass = position === "right" ? "right-0" : "left-0";
-const visibleClass = visibleAt === "sm" ? "flex" : "flex";
+const roundedClass = position === "right" ? "rounded-l-xl" : "rounded-r-xl";
 ---
 
-<div class={`${visibleClass} fixed ${posClass} top-3/4 z-40 -translate-y-1/2`}>
-  <nav class="flex flex-col items-center bg-blue-900 rounded-l-xl p-2 md:p-5 gap-1 md:gap-3 shadow-2xl">
+<div class={`fixed ${posClass} top-3/4 z-40 -translate-y-1/2 flex`}>
+  <nav class={`flex flex-col items-center bg-blue-900 ${roundedClass} p-2 md:p-5 gap-1 md:gap-3 shadow-2xl`}>
     {
       icons.map((icon) => (
-        <a href={icon.href} class="w-12 h-12 flex items-center justify-center rounded-md bg-transparent transition transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white" aria-label={icon.label}>
+        <a href={icon.href} aria-label={icon.label} class="w-12 h-12 flex items-center justify-center rounded-md transition transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white">
           <img src={icon.src} alt={icon.label} class="w-7 h-7 md:w-10 md:h-10" loading="lazy" />
         </a>
       ))

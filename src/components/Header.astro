@@ -45,7 +45,6 @@ const currentPath = pathname.slice(1);
   <!--Indhold i burgermenu -->
   <nav class="flex flex-col content-center pb-10" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
     <ul class="">
-      <li class="text-right py-2 pr-4 md:pr-24"><a href="/"><Text teksttype="brødtekst">Forside</Text></a></li>
       <li class="text-right py-2 pr-4 md:pr-24"><a href="/omcare/"><Text teksttype="brødtekst">Om Care</Text></a></li>
       <li class="text-right py-2 pr-4 md:pr-24"><a href="/voresindsatser/"><Text teksttype="brødtekst">Vores indsatser</Text></a></li>
       <li class="text-right py-2 pr-4 md:pr-24"><a href="/"><Text teksttype="brødtekst">Det gør vi</Text></a></li>
@@ -53,7 +52,7 @@ const currentPath = pathname.slice(1);
     </ul>
     <div class="flex justify-end mt-4 pr-4 md:pr-24">
       <a href="/form">
-      <Button variant="primary" size="small" icon="heart"> Støt nu </Button>
+        <Button variant="primary" size="small" icon="heart"> Støt nu </Button>
       </a>
     </div>
   </nav>
