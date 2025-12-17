@@ -5,6 +5,8 @@ import Stickey from "../components/Stickey.astro";
 import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
 import VoresindsatserCard from "../components/VoresindsatserCard.astro";
+import Carousel from "../components/Carousel.astro";
+const section7Images = [{ src: "/voresindsatser/v_sektion7_1.webp" }, { src: "/voresindsatser/v_sektion7_2.webp" }, { src: "/voresindsatser/v_sektion7_3.webp" }, { src: "/voresindsatser/v_sektion7_4.webp" }, { src: "/voresindsatser/v_sektion7_5.webp" }, { src: "/voresindsatser/v_sektion7_6.webp" }, { src: "/voresindsatser/v_sektion7_7.webp" }, { src: "/voresindsatser/v_sektion7_8.webp" }, { src: "/voresindsatser/v_sektion7_9.webp" }, { src: "/voresindsatser/v_sektion7_10.webp" }, { src: "/voresindsatser/v_sektion7_11.webp" }, { src: "/voresindsatser/v_sektion7_12.webp" }];
 ---
 
 <MainLayout title="Vores indsatser">
@@ -167,21 +169,10 @@ import VoresindsatserCard from "../components/VoresindsatserCard.astro";
     <!-- SLUT på sektion 6 - Projekter og løsninger -->
 
     <!-- START på sektion 7 - Carousel -->
-    <section class="loop overflow-hidden relative mb-10 md:mb-20">
-      <div class="loop-track flex w-[200%] animate-scroll gap-0">
-        <img src="/voresindsatser/v_sektion7_1.webp" alt="billede" class="w-1/4 object-contain" />
-        <img src="/voresindsatser/v_sektion7_2.webp" alt="billede" class="w-1/4 object-contain" />
-        <img src="/voresindsatser/v_sektion7_3.webp" alt="billede" class="w-1/4 object-contain" />
-        <img src="/voresindsatser/v_sektion7_4.webp" alt="billede" class="w-1/4 object-contain" />
-        <img src="/voresindsatser/v_sektion7_5.webp" alt="billede" class="w-1/4 object-contain" />
-        <img src="/voresindsatser/v_sektion7_6.webp" alt="billede" class="w-1/4 object-contain" />
-        <img src="/voresindsatser/v_sektion7_7.webp" alt="billede" class="w-1/4 object-contain" />
-        <img src="/voresindsatser/v_sektion7_8.webp" alt="billede" class="w-1/4 object-contain" />
-        <img src="/voresindsatser/v_sektion7_9.webp" alt="billede" class="w-1/4 object-contain" />
-        <img src="/voresindsatser/v_sektion7_10.webp" alt="billede" class="w-1/4 object-contain" />
-        <img src="/voresindsatser/v_sektion7_11.webp" alt="billede" class="w-1/4 object-contain" />
-      </div>
+    <section class="mb-10 md:mb-20">
+      <Carousel images={section7Images} speed={40} itemWidth="w-40 md:w-70" />
     </section>
+
     <!-- SLUT på sektion 7 - Carousel -->
 
     <!-- START på FOOTER -->
@@ -193,26 +184,6 @@ import VoresindsatserCard from "../components/VoresindsatserCard.astro";
   </section>
 
   <style>
-    .loop {
-      overflow: hidden;
-      width: 100%;
-    }
-
-    .loop-track {
-      display: flex;
-      width: 200%;
-      animation: scroll 30s linear infinite;
-    }
-
-    @keyframes scroll {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-50%);
-      }
-    }
-
     .card {
       opacity: 0;
     }

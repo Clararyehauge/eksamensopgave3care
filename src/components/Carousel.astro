@@ -1,0 +1,31 @@
+---
+const { images = [], speed = 40, itemWidth = "w-1/4" } = Astro.props;
+---
+
+<section class="mb-10 md:mb-20 loop overflow-hidden relative">
+  <div class="loop-track flex" style={`animation-duration: ${speed}s`}>
+    {images.map((img) => <img src={img.src} alt={img.alt ?? "billede"} class={`${itemWidth} object-contain`} loading="lazy" />)}
+  </div>
+</section>
+
+<style>
+  .loop {
+    width: 100%;
+  }
+
+  .loop-track {
+    width: max-content;
+    animation-name: scroll;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+</style>
