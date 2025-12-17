@@ -11,7 +11,7 @@ const { title } = Astro.props;
     <meta name="robots" content="noindex" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-<link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png" />
     <link rel="manifest" href="/favicon_io/site.webmanifest" />
@@ -28,3 +28,31 @@ const { title } = Astro.props;
   </body>
   <script src="../assets/login.js"></script>
 </html>
+
+<style>
+  .card {
+    opacity: 0;
+  }
+</style>
+
+<script>
+  import { animate, inView } from "motion";
+
+  inView(".card-left", (element) => {
+    animate(element, { x: [-300, 0], opacity: [0, 1] }, { duration: 1, easing: "ease-out" });
+  });
+
+  inView(".card-right", (element) => {
+    animate(element, { x: [300, 0], opacity: [0, 1] }, { duration: 1, easing: "ease-out" });
+  });
+
+  inView(
+    ".flipin_animation",
+    (element) => {
+      element.classList.add("animate-flip-down", "animate-once", "animate-duration-[3000ms]", "animate-normal");
+
+      element.classList.remove("opacity-0");
+    },
+    { once: true }
+  );
+</script>

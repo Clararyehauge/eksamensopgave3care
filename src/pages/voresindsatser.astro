@@ -182,32 +182,4 @@ const section7Images = [{ src: "/voresindsatser/v_sektion7_1.webp" }, { src: "/v
     <!-- SLUT på FOOTER -->
     <Stickey position="right" visibleAt="sm" />
   </section>
-
-  <style>
-    .card {
-      opacity: 0;
-    }
-  </style>
-
-  <script>
-    import { animate, inView } from "motion";
-
-    inView(".card-left", (element) => {
-      animate(element, { x: [-300, 0], opacity: [0, 1] }, { duration: 1, easing: "ease-out" });
-    });
-
-    inView(".card-right", (element) => {
-      animate(element, { x: [300, 0], opacity: [0, 1] }, { duration: 1, easing: "ease-out" });
-    });
-
-    inView(
-      ".flipin_animation",
-      (element) => {
-        element.classList.add("animate-flip-down", "animate-once", "animate-duration-[3000ms]", "animate-normal");
-
-        element.classList.remove("opacity-0");
-      },
-      { once: true }
-    );
-  </script>
 </MainLayout>

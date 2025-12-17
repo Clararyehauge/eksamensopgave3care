@@ -87,31 +87,3 @@ const section4Images = [{ src: "/omcare/o_sektion4_1.webp" }, { src: "/omcare/o_
 
   <Stickey position="right" visibleAt="sm" />
 </MainLayout>
-
-<style>
-  .card {
-    opacity: 0;
-  }
-</style>
-
-<script>
-  import { animate, inView } from "motion";
-
-  inView(".card-left", (element) => {
-    animate(element, { x: [-300, 0], opacity: [0, 1] }, { duration: 1, easing: "ease-out" });
-  });
-
-  inView(".card-right", (element) => {
-    animate(element, { x: [300, 0], opacity: [0, 1] }, { duration: 1, easing: "ease-out" });
-  });
-
-  inView(
-    ".flipin_animation",
-    (element) => {
-      element.classList.add("animate-flip-down", "animate-once", "animate-duration-[3000ms]", "animate-normal");
-
-      element.classList.remove("opacity-0");
-    },
-    { once: true }
-  );
-</script>
