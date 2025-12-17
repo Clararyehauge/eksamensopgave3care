@@ -6,6 +6,8 @@ import Button from "../components/Button.astro";
 import Support from "../components/Support.astro";
 import Stickey from "../components/Stickey.astro";
 import Forms from "../components/Forms.astro";
+import Carousel from "../components/Carousel.astro";
+const section4Images = [{ src: "/forside/f_sektion4_1.webp" }, { src: "/forside/f_sektion4_2.webp" }, { src: "/forside/f_sektion4_3.webp" }, { src: "/forside/f_sektion4_4.webp" }, { src: "/forside/f_sektion4_5.webp" }, { src: "/forside/f_sektion4_6.webp" }, { src: "/forside/f_sektion4_7.webp" }, { src: "/forside/f_sektion4_8.webp" }, { src: "/forside/f_sektion4_9.webp" }, { src: "/forside/f_sektion4_10.webp" }, { src: "/forside/f_sektion4_11.webp" }, { src: "/forside/f_sektion4_12.webp" }];
 ---
 
 <MainLayout title="Care Danmark">
@@ -53,8 +55,8 @@ import Forms from "../components/Forms.astro";
     <div class="text-center p-10 md:p-20">
       <Heading htmlheading="h3" size="medium" font="display"> HVAD VI KAN OPNÅ MED DIN DONATION </Heading>
     </div>
-    <div class="loop overflow-hidden">
-      <div class="loop-track flex animate-scroll gap-5 md:gap-10">
+    <div class="loop_info overflow-hidden">
+      <div class="loop-track_info scroll_info flex gap-5 md:gap-10">
         <div class="flex flex-col items-center text-center gap-2">
           <img src="/forside/section2_mad.svg" alt="mad" class="w-16 h-16" />
           <Heading htmlheading="numbers" size="numbers" font="sans">38 kr.</Heading>
@@ -105,7 +107,7 @@ import Forms from "../components/Forms.astro";
   <!-- Slut INFOGRAFIK-->
 
   <!-- START på sektion 3 - Kampagne -->
-  <section class="p-10 md:p-20 grid grid-cols-1 md:grid-cols-2 bg-primary-300">
+  <section class="p-10 md:p-20 mb-10 md:mb-20 grid grid-cols-1 md:grid-cols-2 bg-primary-300">
     <div class="max-w-130">
       <Heading htmlheading="h2" size="large" font="display"> CASHEWTRÆER SKABER HÅB OG INDKOMST </Heading>
       <Heading htmlheading="h4" size="small" font="sans" stylingclasses="text-secondary-700 font-light flex justify-end italic flipin_animation opacity-0"> “Dyrk en bedre fremtid” </Heading>
@@ -136,21 +138,8 @@ import Forms from "../components/Forms.astro";
   <!-- SLUT på sektion 3 - Kampagne -->
 
   <!-- START på sektion 4 - Carousel -->
-  <section class="mt-10 md:mt-20 loop overflow-hidden relative">
-    <div class="loop-track flex animate-scroll">
-      <img src="/forside/f_sektion4_1.webp" alt="billede" class="w-1/4 object-contain" />
-      <img src="/forside/f_sektion4_2.webp" alt="billede" class="w-1/4 object-contain" />
-      <img src="/forside/f_sektion4_3.webp" alt="billede" class="w-1/4 object-contain" />
-      <img src="/forside/f_sektion4_4.webp" alt="billede" class="w-1/4 object-contain" />
-      <img src="/forside/f_sektion4_5.webp" alt="billede" class="w-1/4 object-contain" />
-      <img src="/forside/f_sektion4_6.webp" alt="billede" class="w-1/4 object-contain" />
-      <img src="/forside/f_sektion4_7.webp" alt="billede" class="w-1/4 object-contain" />
-      <img src="/forside/f_sektion4_8.webp" alt="billede" class="w-1/4 object-contain" />
-      <img src="/forside/f_sektion4_9.webp" alt="billede" class="w-1/4 object-contain" />
-      <img src="/forside/f_sektion4_10.webp" alt="billede" class="w-1/4 object-contain" />
-      <img src="/forside/f_sektion4_11.webp" alt="billede" class="w-1/4 object-contain" />
-      <img src="/forside/f_sektion4_12.webp" alt="billede" class="w-1/4 object-contain" />
-    </div>
+  <section class="mb-10 md:mb-20">
+    <Carousel images={section4Images} speed={40} itemWidth="w-40 md:w-70" />
   </section>
   <!-- SLUT på sektion 4 - Carousel -->
 
@@ -214,22 +203,10 @@ import Forms from "../components/Forms.astro";
   <!-- SLUT på sektion 7 - Vores indsatser -->
 
   <!-- START på sektion 8 - Carousel -->
-  <section class="mb-10 md:mb-20 loop overflow-hidden relative">
-    <div class="loop-track flex animate-scroll">
-      <img src="/forside/f_sektion4_1.webp" alt="billede" class="w-1/4 object-contain" />
-      <img src="/forside/f_sektion4_2.webp" alt="billede" class="w-1/4 object-contain" />
-      <img src="/forside/f_sektion4_3.webp" alt="billede" class="w-1/4 object-contain" />
-      <img src="/forside/f_sektion4_4.webp" alt="billede" class="w-1/4 object-contain" />
-      <img src="/forside/f_sektion4_5.webp" alt="billede" class="w-1/4 object-contain" />
-      <img src="/forside/f_sektion4_6.webp" alt="billede" class="w-1/4 object-contain" />
-      <img src="/forside/f_sektion4_7.webp" alt="billede" class="w-1/4 object-contain" />
-      <img src="/forside/f_sektion4_8.webp" alt="billede" class="w-1/4 object-contain" />
-      <img src="/forside/f_sektion4_9.webp" alt="billede" class="w-1/4 object-contain" />
-      <img src="/forside/f_sektion4_10.webp" alt="billede" class="w-1/4 object-contain" />
-      <img src="/forside/f_sektion4_11.webp" alt="billede" class="w-1/4 object-contain" />
-      <img src="/forside/f_sektion4_12.webp" alt="billede" class="w-1/4 object-contain" />
-    </div>
+  <section class="mb-10 md:mb-20">
+    <Carousel images={section4Images} speed={40} itemWidth="w-40 md:w-70" />
   </section>
+
   <!-- SLUT på sektion 8 - Carousel -->
 
   <!-- START på FOOTER -->
@@ -241,26 +218,28 @@ import Forms from "../components/Forms.astro";
 </MainLayout>
 
 <style>
-  .loop {
-    overflow: hidden;
+  .loop_info {
     width: 100%;
+    overflow: hidden;
   }
 
-  .loop-track {
+  .loop-track_info {
     display: flex;
-    width: 200%;
-    animation: scroll 30s linear infinite;
+    width: max-content;
+    animation-name: scroll_info;
+    animation-duration: 40s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
   }
 
-  @keyframes scroll {
-    0% {
+  @keyframes scroll_info {
+    from {
       transform: translateX(0);
     }
-    100% {
+    to {
       transform: translateX(-50%);
     }
   }
-
   .card {
     opacity: 0;
   }

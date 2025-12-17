@@ -5,6 +5,8 @@ import Text from "../components/Text.astro";
 import Heading from "../components/Heading.astro";
 import Stickey from "../components/Stickey.astro";
 import Button from "../components/Button.astro";
+import Carousel from "../components/Carousel.astro";
+const section4Images = [{ src: "/omcare/o_sektion4_1.webp" }, { src: "/omcare/o_sektion4_2.webp" }, { src: "/omcare/o_sektion4_3.webp" }, { src: "/omcare/o_sektion4_4.webp" }, { src: "/omcare/o_sektion4_5.webp" }, { src: "/omcare/o_sektion4_6.webp" }, { src: "/omcare/o_sektion4_7.webp" }, { src: "/omcare/o_sektion4_8.webp" }, { src: "/omcare/o_sektion4_9.webp" }, { src: "/omcare/o_sektion4_10.webp" }, { src: "/omcare/o_sektion4_11.webp" }, { src: "/omcare/o_sektion4_12.webp" }];
 ---
 
 <MainLayout title="Om Care">
@@ -72,20 +74,8 @@ import Button from "../components/Button.astro";
   <!-- SLUT på sektion 3 - Sådan bruger vi penge -->
 
   <!-- START på sektion 4 - Carousel -->
-  <section class="mb-10 md:mb-20 loop overflow-hidden relative">
-    <div class="loop-track flex w-[200%] animate-scroll gap-0">
-      <img src="/omcare/o_sektion4_1.webp" alt="billede" class="w-1/4 object-contain" />
-      <img src="/omcare/o_sektion4_2.webp" alt="billede" class="w-1/4 object-contain" />
-      <img src="/omcare/o_sektion4_3.webp" alt="billede" class="w-1/4 object-contain" />
-      <img src="/omcare/o_sektion4_4.webp" alt="billede" class="w-1/4 object-contain" />
-      <img src="/omcare/o_sektion4_5.webp" alt="billede" class="w-1/4 object-contain" />
-      <img src="/omcare/o_sektion4_6.webp" alt="billede" class="w-1/4 object-contain" />
-      <img src="/omcare/o_sektion4_7.webp" alt="billede" class="w-1/4 object-contain" />
-      <img src="/omcare/o_sektion4_8.webp" alt="billede" class="w-1/4 object-contain" />
-      <img src="/omcare/o_sektion4_9.webp" alt="billede" class="w-1/4 object-contain" />
-      <img src="/omcare/o_sektion4_10.webp" alt="billede" class="w-1/4 object-contain" />
-      <img src="/omcare/o_sektion4_11.webp" alt="billede" class="w-1/4 object-contain" />
-    </div>
+  <section class="mb-10 md:mb-20">
+    <Carousel images={section4Images} speed={40} itemWidth="w-40 md:w-70" />
   </section>
   <!-- SLUT på sektion 4 - Carousel -->
 
@@ -99,26 +89,6 @@ import Button from "../components/Button.astro";
 </MainLayout>
 
 <style>
-  .loop {
-    overflow: hidden;
-    width: 100%;
-  }
-
-  .loop-track {
-    display: flex;
-    width: 200%;
-    animation: scroll 30s linear infinite;
-  }
-
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-
   .card {
     opacity: 0;
   }

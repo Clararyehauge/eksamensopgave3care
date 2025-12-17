@@ -112,8 +112,7 @@ import Button from "./Button.astro";
   });
   /* Klik på knap og bliver sendt videre til oplysninger*/
   donateBtn.addEventListener("click", () => {
-    const url = `/oplysninger?type=${encodeURIComponent(selectedType)}&amount=${encodeURIComponent(selectedAmount)}`;
-    window.location.href = url;
+    window.location.href = "/oplysninger";
   });
 
   /* Initial state - Teksten passer med standardværdier*/
