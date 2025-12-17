@@ -1,5 +1,4 @@
 @import "tailwindcss";
-
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
 @import "tailwindcss-animated";
@@ -24,6 +23,7 @@
   /* Her tilføjes theme variable // tokens */
 
   /*Farver */
+
   /* Orange */
   --color-primary-50: #fdf6ef;
   --color-primary-100: #f4e8da; /* Baggrund */
@@ -90,34 +90,6 @@
 }
 
 @layer components {
-  .switch {
-    @apply relative inline-block w-12 h-6;
-  }
-
-  .switch input {
-    @apply opacity-0 w-0 h-0;
-  }
-
-  .slider {
-    @apply absolute inset-0 cursor-pointer bg-gray-300 rounded-full transition;
-  }
-
-  .slider::before {
-    content: "";
-    @apply absolute h-5 w-5 left-0.5 top-0.5 bg-white rounded-full transition;
-  }
-
-  input:checked + .slider {
-    @apply bg-red-600;
-  }
-
-  input:checked + .slider::before {
-    @apply translate-x-6;
-  }
-
-  .amount-btn.active {
-    @apply bg-red-600 text-white;
-  }
 }
 
 @layer utilities {
