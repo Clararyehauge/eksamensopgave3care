@@ -1,5 +1,6 @@
 ---
 // Henter parametrene fra Astro.props
+// Rest gør komponenten mere fleksibel - bruger til at sende ID med i forms
 const { variant = "primary", size = "medium", font = "sans", icon = "", ...rest } = Astro.props;
 
 //Definer den styling (Tailwind classes, der gør sig gældende for alle knapper)
@@ -15,7 +16,7 @@ const variantClasses = {
 const sizeClasses = {
   large: "text-[1rem] lg:text-[1.3rem]",
   medium: "text-[0.8rem] lg:text-[1.1rem]",
-  small: "text-[0.8rem] lg:text-[1rem]",
+  small: "text-[0.rem] lg:text-[1rem]",
 };
 
 const iconFiles = {

@@ -10,7 +10,7 @@ import Button from "./Button.astro";
   </div>
   <div class="space-y-0">
     <Text>Doner en enkelt gang eller gør det månedligt:</Text>
-
+    <!-- data-type gør at farverne kan aflæses i JS  -->
     <div class="flex rounded-lg overflow-hidden border-2 border-secondary-500">
       <button type="button" data-type="single" class="type-btn flex-1 py-2 font-medium bg-secondary-500 text-white inset-shadow-sm inset-shadow-black-900"> Enkel donation </button>
 
@@ -21,7 +21,7 @@ import Button from "./Button.astro";
   <!----- BELØBSVALG  ----->
   <div>
     <Text>Vælg dit beløb:</Text>
-
+    <!-- data-amount gør at beløb kan aflæses i JS -->
     <div class="flex rounded-lg overflow-hidden border-2 border-secondary-500 inset-shadow-sm inset-shadow-indigo-900">
       <button type="button" data-amount="50" class="amount-btn flex-1 py-2 bg-primary-300 inset-shadow-sm"> 50 kr. </button>
 
@@ -34,13 +34,14 @@ import Button from "./Button.astro";
   <!----- VALGFRIT BELØB  ----->
   <div>
     <Text>Valgfrit beløb:</Text>
-
+    <!-- inputmode = bedre i mobil -->
     <div class="flex items-center border-2 border-secondary-500 rounded-lg bg-primary-300 px-3">
       <input id="custom-amount" type="text" inputmode="numeric" placeholder="Andet beløb" class="w-full bg-transparent py-2 border-none focus:outline-none inset-shadow-sm inset-shadow-black-900" />
       <span class="ml-2">kr.</span>
     </div>
   </div>
   <div class="text-center">
+    <!-- dynamisk opsummering - giver brugeren bekræftelse på valg før knap -->
     <div id="summary" class="text-center">
       <Text teksttype="brødtekst">Enkel donation, 75 kr.</Text>
     </div>
@@ -58,16 +59,16 @@ import Button from "./Button.astro";
   const summary = document.getElementById("summary");
   const donateBtn = document.getElementById("donateBtn");
 
-  /*Hvad brugeren har valgt - standard værdier*/
+  /* Gemmer brugerens valg har valgt - standard værdier*/
   let selectedType = "Enkel donation";
   let selectedAmount = "75";
 
-  /*Opdatere teksten før knappen*/
+  /*Opdatere teksten før knappen baseret på brugerens valg*/
   function updateSummary() {
     summary.textContent = `${selectedType}, ${selectedAmount} kr.`;
   }
 
-  /* Gør så knapperne ændre farve ved klik - sikre at kun en knap er aktiv*/
+  /*Valg af donationstype: Sikrer at kun en type kan vælges ad gangenn - Opdatere visel state og tekst */
   typeButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
       typeButtons.forEach((b) => {
@@ -82,7 +83,7 @@ import Button from "./Button.astro";
       updateSummary();
     });
   });
-  /* Fjerner markering fra andre beløb, markerer det valgte beløb, gemmer og opdaterer teksten */
+  /* Valg af fast beløb: Fjerner markering af andre beløb - nulstiller "andet beløb" */
   amountButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
       amountButtons.forEach((b) => {
@@ -98,7 +99,7 @@ import Button from "./Button.astro";
       updateSummary();
     });
   });
-  /* "Andet beløb input" - Kører hver gang brugeren vælger sit eget beløb og slår fast beløb fra*/
+  /* "Andet beløb input" - Deaktiverer faste beløb - Opdatere opsummering */
   customAmount.addEventListener("input", () => {
     amountButtons.forEach((b) => {
       b.classList.remove("bg-secondary-500", "text-white");
@@ -110,11 +111,11 @@ import Button from "./Button.astro";
       updateSummary();
     }
   });
-  /* Klik på knap og bliver sendt videre til oplysninger*/
+  /* Klik på knap: Bliver sendt videre til oplysninger*/
   donateBtn.addEventListener("click", () => {
     window.location.href = "/oplysninger";
   });
 
-  /* Initial state - Teksten passer med standardværdier*/
+  /* Initial state - Teksten/opsummering passer med standardværdier*/
   updateSummary();
 </script>

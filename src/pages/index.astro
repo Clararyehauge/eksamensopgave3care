@@ -6,6 +6,7 @@ import Button from "../components/Button.astro";
 import Support from "../components/Support.astro";
 import Stickey from "../components/Stickey.astro";
 import Forms from "../components/Forms.astro";
+
 import Carousel from "../components/Carousel.astro";
 const section4Images = [{ src: "/forside/f_sektion4_1.webp" }, { src: "/forside/f_sektion4_2.webp" }, { src: "/forside/f_sektion4_3.webp" }, { src: "/forside/f_sektion4_4.webp" }, { src: "/forside/f_sektion4_5.webp" }, { src: "/forside/f_sektion4_6.webp" }, { src: "/forside/f_sektion4_7.webp" }, { src: "/forside/f_sektion4_8.webp" }, { src: "/forside/f_sektion4_9.webp" }, { src: "/forside/f_sektion4_10.webp" }, { src: "/forside/f_sektion4_11.webp" }, { src: "/forside/f_sektion4_12.webp" }];
 ---
@@ -50,11 +51,12 @@ const section4Images = [{ src: "/forside/f_sektion4_1.webp" }, { src: "/forside/
   </section>
   <!-- SLUT på sektion 2 - Forms -->
 
-  <!-- START INFOGRAFIK-->
+  <!-- START INFOGRAFIK -->
   <section class="mb-10 md:mb-20">
     <div class="text-center p-10 md:p-20">
       <Heading htmlheading="h3" size="medium" font="display"> HVAD VI KAN OPNÅ MED DIN DONATION </Heading>
     </div>
+    <!-- Her bruger vi html/css og ikke komponent-->
     <div class="loop_info overflow-hidden">
       <div class="loop-track_info scroll_info loop_info:hover loop-track_info flex gap-5 md:gap-10">
         <div class="flex flex-col items-center text-center gap-2">
@@ -206,7 +208,6 @@ const section4Images = [{ src: "/forside/f_sektion4_1.webp" }, { src: "/forside/
   <section class="mb-10 md:mb-20">
     <Carousel images={section4Images} speed={40} itemWidth="w-40 md:w-70" />
   </section>
-
   <!-- SLUT på sektion 8 - Carousel -->
 
   <!-- START på FOOTER -->
