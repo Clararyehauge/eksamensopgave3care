@@ -16,20 +16,20 @@ const section4Images = [{ src: "/forside/f_sektion4_1.webp" }, { src: "/forside/
   <section class="relative w-full">
     <img src="/forside/herobillede.webp" alt="Billede af kvinde i Afrika" class="w-full hidden md:block" />
     <img class="md:hidden" src="/forside/hero.webp" alt="herobillede" />
-    <div class="absolute left-5 top-1 md:left-8 md:top-20 p-2 md:p-12 max-w-80 md:max-w-180 bg-primary-100 boxshadowright_hero">
+    <div class="absolute left-5 top-1 md:left-8 md:top-20 p-2 md:p-12 max-w-70 md:max-w-180 bg-primary-100 boxshadowright_hero">
       <div class="flex flex-col gap-1 md:gap-2">
         <Heading htmlheading="h1" size="xlarge" font="display">CARE</Heading>
         <Heading htmlheading="h2" size="small" font="display"> Støt piger og kvinder i klimakampen i verdens fattigste lande </Heading>
         <Heading htmlheading="paragraphItalic" size="paragraphItalic" font="sans" stylingclasses="font-light italic"> Sammen bekæmper vi ulighed og fattigdom </Heading>
 
-        <div class="flex justify-end">
-          <a href="/form" class="animate-jump animate-infinite animate-duration-[4000ms] animate-ease-linear">
+        <div class="flex">
+          <a href="/form" class="">
             <!-- Knap i mobile -->
-            <div class="block md:hidden">
+            <div class="block md:hidden animate-jump animate-infinite animate-duration-[4000ms] animate-ease-linear">
               <Button variant="primary" size="small" icon="heart">Støt nu</Button>
             </div>
             <!-- Knap i desktop -->
-            <div class="hidden md:block">
+            <div class="hidden md:block mt-5 animate-jump animate-infinite animate-duration-[4000ms] animate-ease-linear">
               <Button variant="primary" size="large" icon="heart">Støt nu</Button>
             </div>
           </a>
@@ -37,7 +37,7 @@ const section4Images = [{ src: "/forside/f_sektion4_1.webp" }, { src: "/forside/
       </div>
     </div>
     <div class="animate-bounce animate-duration-[2000ms] absolute inset-x-0 bottom-1 md:bottom-3 flex justify-center">
-      <div class="relative md:w-30 md:h-30">
+      <div class="relative md:w-20 md:h-20">
         <span class="absolute left-0 top-2/4 w-[60%] h-[7px] bg-secondary-700 rotate-45 rounded-full"></span>
         <span class="absolute right-0 top-2/4 w-[60%] h-[7px] bg-secondary-700 -rotate-45 rounded-full"></span>
       </div>
@@ -49,15 +49,14 @@ const section4Images = [{ src: "/forside/f_sektion4_1.webp" }, { src: "/forside/
   <section class="p-10 md:p-20">
     <Forms />
   </section>
-  <!-- SLUT på sektion 2 - Forms -->
 
   <!-- START INFOGRAFIK -->
-  <section class="mb-10 md:mb-20">
-    <div class="text-center p-10 md:p-20">
+  <section class=" bg-primary-300">
+    <div class="text-center p-10 md:p-10">
       <Heading htmlheading="h3" size="medium" font="display"> HVAD VI KAN OPNÅ MED DIN DONATION </Heading>
     </div>
     <!-- Her bruger vi html/css og ikke komponent-->
-    <div class="loop_info overflow-hidden">
+    <div class="loop_info overflow-hidden pb-10">
       <div class="loop-track_info scroll_info loop_info:hover loop-track_info flex gap-5 md:gap-10">
         <div class="flex flex-col items-center text-center gap-2">
           <img src="/forside/section2_mad.svg" alt="mad" class="w-16 h-16" />
@@ -107,8 +106,74 @@ const section4Images = [{ src: "/forside/f_sektion4_1.webp" }, { src: "/forside/
     </div>
   </section>
   <!-- Slut INFOGRAFIK-->
+  <!-- SLUT på sektion 2 - Forms -->
 
-  <!-- START på sektion 3 - Kampagne -->
+   <!-- START på sektion 3 - Vores indsatser -->
+  <section class="grid md:grid-cols-2 gap-5 mx-auto p-10 md:p-20">
+    <div class="flex flex-col justify-center max-w-xl">
+      <Heading htmlheading="h3" size="medium" font="display"> VORES INDSATSER </Heading>
+
+      <Heading htmlheading="h4" size="small" font="sans" stylingclasses="text-secondary-700 font-light italic self-end flipin_animation opacity-0"> “En grøn og retfærdig verden” </Heading>
+
+      <Text stylingclasses="mt-5" teksttype="brødtekst"> Hos CARE arbejder vi for at give mennesker i verdens mest sårbare områder – især kvinder og piger – et værdigt liv trods klimaforandringer, kriser og fattigdom. Vi fokuserer på klimaindsats, ligestilling, innovation og nødhjælp. Ved at kombinere langsigtet udvikling med hurtig hjælp og tæt samarbejde med lokalsamfund skaber vi varige løsninger. Gennem uddannelse, bæredygtige projekter og støtte til selvhjælp ruster vi de mest udsatte til at stå stærkere i fremtiden. </Text>
+
+      <a class="mt-5" href="/voresindsatser/"> <Text><Button variant="secondary" size="medium" icon="arrow">Læs mere</Button></Text></a>
+    </div>
+
+    <img class="boxshadowright_orange w-full" src="/forside/f_sektion7.webp" alt="Billede af afrikanske børn" />
+  </section>
+  <!-- SLUT på sektion 3 - Vores indsatser -->
+
+  <!-- START på sektion 4 - Carousel -->
+  <section class="mb-10 md:mb-20">
+    <Carousel images={section4Images} speed={40} itemWidth="w-40 md:w-70" />
+  </section>
+  <!-- SLUT på sektion 4 - Carousel -->
+
+<!-- START på sektion 5 - Hjælp -->
+  <section class="bg-primary-300 grid md:grid-cols-2 gap-5 mx-auto p-10 md:p-20">
+    <div class="bg-primary-100 boxshadowleft_orange p-10 flex flex-col justify-center max-w-130 md:max-w-200">
+      <Heading htmlheading="h3" size="medium" font="display">HJÆLP USKYLDIGE FAMILIER</Heading>
+
+      <Text stylingclasses="mt-5" teksttype="brødtekst">
+        Verden er i øjeblikket vidne til en række forfærdelige krige, konflikter og klima-katastrofer. For millioner af mennesker handler hver dag om ren og skær overlevelse. <br />
+        Uskyldige familier har mistet alt. Deres hjem, deres ejendele, deres nærmeste. Der er akut brug for helt basale ting som mad, vand, medicin, telte og brændstof. Du kan hjælpe mennesker i akut nød!
+      </Text>
+
+      <a class="mt-5" href="/form">
+        <Text>
+          <Button variant="primary" size="medium" icon="heart"> Støt nu </Button>
+        </Text>
+      </a>
+    </div>
+
+    <img class="w-full mt-5 md:mt-0" src="/forside/f_sektion6.webp" alt="" />
+  </section>
+  <!-- SLUT på sektion 5 - Hjælp -->
+
+<!-- START på sektion 6 - Internationale programmer -->
+  <section class="grid grid-cols-1 md:grid-cols-2 items-center p-10 md:p-20">
+    <div class="flex flex-col max-w-130">
+      <Heading htmlheading="h3" size="medium" font="display"> INTERNATIONALE PROGRAMMER </Heading>
+
+      <Heading htmlheading="h4" size="small" font="sans" stylingclasses="text-secondary-700 font-light italic self-end flipin_animation opacity-0"> “Global tilstedeværelse” </Heading>
+
+      <img class="md:hidden mt-5 card card-right" src="/forside/f_sektion5.svg" alt="map" />
+
+      <Text stylingclasses="mt-5" teksttype="brødtekst"> CARE Danmark er en privat og uafhængig fond, der arbejder i 16 lande fordelt på fem regioner: Vestafrika, Østafrika, Mellemøsten, Asien og Europa. CARE Danmark er en del af CARE International - en af verdens største humanitære organisationer. </Text>
+
+      <div class="mt-5">
+        <a href="/omcare/"> <Text><Button variant="secondary" size="medium" icon="arrow">Læs mere</Button></Text></a>
+      </div>
+    </div>
+
+    <div class="flex items-center justify-center card card-right">
+      <img class="hidden md:block" src="/forside/f_sektion5.svg" alt="map" />
+    </div>
+  </section>
+  <!-- SLUT på sektion 6 - Internationale programmer -->
+
+<!-- START på sektion 7 - Kampagne -->
   <section class="p-10 md:p-20 mb-10 md:mb-20 grid grid-cols-1 md:grid-cols-2 bg-primary-300">
     <div class="max-w-130">
       <Heading htmlheading="h2" size="large" font="display"> CASHEWTRÆER SKABER HÅB OG INDKOMST </Heading>
@@ -137,72 +202,7 @@ const section4Images = [{ src: "/forside/f_sektion4_1.webp" }, { src: "/forside/
     </div>
     <img class="boxshadowright_orange" src="/forside/f_sektion3.webp" alt="kvinde der arbejder med cashewtræer" />
   </section>
-  <!-- SLUT på sektion 3 - Kampagne -->
-
-  <!-- START på sektion 4 - Carousel -->
-  <section class="mb-10 md:mb-20">
-    <Carousel images={section4Images} speed={40} itemWidth="w-40 md:w-70" />
-  </section>
-  <!-- SLUT på sektion 4 - Carousel -->
-
-  <!-- START på sektion 5 - Internationale programmer -->
-  <section class="grid grid-cols-1 md:grid-cols-2 items-center p-10 md:p-20">
-    <div class="flex flex-col max-w-130">
-      <Heading htmlheading="h3" size="medium" font="display"> INTERNATIONALE PROGRAMMER </Heading>
-
-      <Heading htmlheading="h4" size="small" font="sans" stylingclasses="text-secondary-700 font-light italic self-end flipin_animation opacity-0"> “Global tilstedeværelse” </Heading>
-
-      <img class="md:hidden mt-5 card card-right" src="/forside/f_sektion5.svg" alt="map" />
-
-      <Text stylingclasses="mt-5" teksttype="brødtekst"> CARE Danmark er en privat og uafhængig fond, der arbejder i 16 lande fordelt på fem regioner: Vestafrika, Østafrika, Mellemøsten, Asien og Europa. CARE Danmark er en del af CARE International - en af verdens største humanitære organisationer. </Text>
-
-      <div class="mt-5 justify-end flex">
-        <a href="/omcare/"> <Text><Button variant="secondary" size="medium" icon="arrow">Læs mere</Button></Text></a>
-      </div>
-    </div>
-
-    <div class="flex items-center justify-center card card-right">
-      <img class="hidden md:block" src="/forside/f_sektion5.svg" alt="map" />
-    </div>
-  </section>
-  <!-- SLUT på sektion 5 - Internationale programmer -->
-
-  <!-- START på sektion 6 - Hjælp -->
-  <section class="bg-primary-300 mb-10 md:mb-20 grid md:grid-cols-2 gap-5 mx-auto p-10 md:p-20">
-    <div class="bg-primary-100 boxshadowleft_orange p-10 flex flex-col justify-center max-w-130 md:max-w-200">
-      <Heading htmlheading="h3" size="medium" font="display">HJÆLP USKYLDIGE FAMILIER</Heading>
-
-      <Text stylingclasses="mt-5" teksttype="brødtekst">
-        Verden er i øjeblikket vidne til en række forfærdelige krige, konflikter og klima-katastrofer. For millioner af mennesker handler hver dag om ren og skær overlevelse. <br />
-        Uskyldige familier har mistet alt. Deres hjem, deres ejendele, deres nærmeste. Der er akut brug for helt basale ting som mad, vand, medicin, telte og brændstof. Du kan hjælpe mennesker i akut nød!
-      </Text>
-
-      <a class="mt-5" href="/form">
-        <Text>
-          <Button variant="primary" size="medium" icon="heart"> Støt nu </Button>
-        </Text>
-      </a>
-    </div>
-
-    <img class="w-full" src="/forside/f_sektion6.webp" alt="" />
-  </section>
-  <!-- SLUT på sektion 6 - Hjælp -->
-
-  <!-- START på sektion 7 - Vores indsatser -->
-  <section class="grid md:grid-cols-2 gap-5 mx-auto p-10 md:p-20">
-    <div class="flex flex-col justify-center max-w-xl">
-      <Heading htmlheading="h3" size="medium" font="display"> VORES INDSATSER </Heading>
-
-      <Heading htmlheading="h4" size="small" font="sans" stylingclasses="text-secondary-700 font-light italic self-end flipin_animation opacity-0"> “En grøn og retfærdig verden” </Heading>
-
-      <Text stylingclasses="mt-5" teksttype="brødtekst"> Hos CARE arbejder vi for at give mennesker i verdens mest sårbare områder – især kvinder og piger – et værdigt liv trods klimaforandringer, kriser og fattigdom. Vi fokuserer på klimaindsats, ligestilling, innovation og nødhjælp. Ved at kombinere langsigtet udvikling med hurtig hjælp og tæt samarbejde med lokalsamfund skaber vi varige løsninger. Gennem uddannelse, bæredygtige projekter og støtte til selvhjælp ruster vi de mest udsatte til at stå stærkere i fremtiden. </Text>
-
-      <a class="mt-5 justify-end flex" href="/voresindsatser/"> <Text><Button variant="secondary" size="medium" icon="arrow">Læs mere</Button></Text></a>
-    </div>
-
-    <img class="boxshadowright_orange w-full" src="/forside/f_sektion7.webp" alt="Billede af afrikanske børn" />
-  </section>
-  <!-- SLUT på sektion 7 - Vores indsatser -->
+  <!-- SLUT på sektion 7 - Kampagne -->
 
   <!-- START på sektion 8 - Carousel -->
   <section class="mb-10 md:mb-20">
