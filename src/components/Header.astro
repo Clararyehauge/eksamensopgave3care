@@ -1,6 +1,7 @@
 ---
 import Button from "./Button.astro";
 import Text from "./Text.astro";
+import Heading from "./Heading.astro";
 
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1);
@@ -45,10 +46,11 @@ const currentPath = pathname.slice(1);
   <!--Indhold i burgermenu -->
   <nav class="flex flex-col content-center pb-10" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
     <ul class="">
-      <li class="text-right py-2 pr-4 md:pr-24"><a href="/omcare/"><Text teksttype="brødtekst">Om Care</Text></a></li>
-      <li class="text-right py-2 pr-4 md:pr-24"><a href="/voresindsatser/"><Text teksttype="brødtekst">Vores indsatser</Text></a></li>
-      <li class="text-right py-2 pr-4 md:pr-24"><a href="/"><Text teksttype="brødtekst">Det gør vi</Text></a></li>
-      <li class="text-right py-2 pr-4 md:pr-24"><a href="/"><Text teksttype="brødtekst">Det kan du gøre</Text></a></li>
+      <li class="text-right py-2 pr-4 md:pr-24"><a href="/omcare/"><Heading htmlheading="menu" size="menu" font="sans">Om care</Heading></a></li>
+
+      <li class="text-right py-2 pr-4 md:pr-24"><a href="/voresindsatser/"><Heading htmlheading="menu" size="menu" font="sans">Vores indsatser</Heading></a></li>
+      <li class="text-right py-2 pr-4 md:pr-24"><a href="/"><Heading htmlheading="menu" size="menu" font="sans">Det gør vi</Heading></a></li>
+      <li class="text-right py-2 pr-4 md:pr-24"><a href="/"><Heading htmlheading="menu" size="menu" font="sans">Det kan du gøre</Heading></a></li>
     </ul>
   </nav>
 </header>
