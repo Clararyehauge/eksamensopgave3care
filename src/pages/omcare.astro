@@ -6,9 +6,10 @@ import Heading from "../components/Heading.astro";
 import Stickey from "../components/Stickey.astro";
 import Button from "../components/Button.astro";
 import Carousel from "../components/Carousel.astro";
-const section4Images = [{ src: "/omcare/o_sektion4_1.webp" }, { src: "/omcare/o_sektion4_2.webp" }, { src: "/omcare/o_sektion4_3.webp" }, { src: "/omcare/o_sektion4_4.webp" }, { src: "/omcare/o_sektion4_5.webp" }, { src: "/omcare/o_sektion4_6.webp" }, { src: "/omcare/o_sektion4_7.webp" }, { src: "/omcare/o_sektion4_8.webp" }, { src: "/omcare/o_sektion4_9.webp" }, { src: "/omcare/o_sektion4_10.webp" }, { src: "/omcare/o_sektion4_11.webp" }, { src: "/omcare/o_sektion4_12.webp" }];
+const section4Images = [{ src: "/omcare/o_sektion4_1.webp" }, { src: "/omcare/o_sektion4_2.webp" }, { src: "/omcare/o_sektion4_3.webp" }, { src: "/omcare/o_sektion4_4.webp" }, { src: "/omcare/o_sektion4_5.webp" }, { src: "/omcare/o_sektion4_6.webp" }, { src: "/omcare/o_sektion4_7.webp" }, { src: "/omcare/o_sektion4_8.webp" }, { src: "/omcare/o_sektion4_9.webp" }, { src: "/omcare/o_sektion4_10.webp" }, { src: "/omcare/o_sektion4_11.webp" }];
 ---
 
+<!-- MB ved sektioner der ikke skal have padding + sektioner med bg - p-10 ved smalle sektioner - p-10 md:p-20 ved resten --><!-- Grid bruges til overordnet layout/struktur - flex bruges til indhold og justering inde i layout  -->
 <MainLayout title="Om Care">
   <!-- START på sektion 1 - Titel -->
   <section class="pt-10 md:pt-20">
@@ -20,6 +21,7 @@ const section4Images = [{ src: "/omcare/o_sektion4_1.webp" }, { src: "/omcare/o_
   <!-- SLUT på sektion 1 - Titel -->
 
   <!-- START på sektion 2 - Map -->
+  <!-- p-40 så kortet fylder mere -->
   <section class="relative mx-auto p-10 md:p-40">
     <img src="/omcare/o_section2.webp" alt="kort" class="absolute inset-0 md:w-auto md:h-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 p-5 md:p-20" />
     <div class="relative z-10 space-y-12">

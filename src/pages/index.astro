@@ -11,6 +11,7 @@ import Carousel from "../components/Carousel.astro";
 const section4Images = [{ src: "/forside/f_sektion4_1.webp" }, { src: "/forside/f_sektion4_2.webp" }, { src: "/forside/f_sektion4_3.webp" }, { src: "/forside/f_sektion4_4.webp" }, { src: "/forside/f_sektion4_5.webp" }, { src: "/forside/f_sektion4_6.webp" }, { src: "/forside/f_sektion4_7.webp" }, { src: "/forside/f_sektion4_8.webp" }, { src: "/forside/f_sektion4_9.webp" }, { src: "/forside/f_sektion4_10.webp" }, { src: "/forside/f_sektion4_11.webp" }, { src: "/forside/f_sektion4_12.webp" }];
 ---
 
+<!-- MB ved sektioner der ikke skal have padding + sektioner med bg - p-10 ved smalle sektioner - p-10 md:p-20 ved resten --><!-- Grid bruges til overordnet layout/struktur - flex bruges til indhold og justering inde i layout  -->
 <MainLayout title="Care Danmark">
   <!-- START på sektion 1 - Hero -->
   <section class="relative w-full">
@@ -51,7 +52,7 @@ const section4Images = [{ src: "/forside/f_sektion4_1.webp" }, { src: "/forside/
   </section>
 
   <!-- START INFOGRAFIK -->
-  <section class=" bg-primary-300">
+  <section class="bg-primary-300">
     <div class="text-center p-10 md:p-10">
       <Heading htmlheading="h3" size="medium" font="display"> HVAD VI KAN OPNÅ MED DIN DONATION </Heading>
     </div>
@@ -108,7 +109,7 @@ const section4Images = [{ src: "/forside/f_sektion4_1.webp" }, { src: "/forside/
   <!-- Slut INFOGRAFIK-->
   <!-- SLUT på sektion 2 - Forms -->
 
-   <!-- START på sektion 3 - Vores indsatser -->
+  <!-- START på sektion 3 - Vores indsatser -->
   <section class="grid md:grid-cols-2 gap-5 mx-auto p-10 md:p-20">
     <div class="flex flex-col justify-center max-w-xl">
       <Heading htmlheading="h3" size="medium" font="display"> VORES INDSATSER </Heading>
@@ -130,7 +131,7 @@ const section4Images = [{ src: "/forside/f_sektion4_1.webp" }, { src: "/forside/
   </section>
   <!-- SLUT på sektion 4 - Carousel -->
 
-<!-- START på sektion 5 - Hjælp -->
+  <!-- START på sektion 5 - Hjælp -->
   <section class="bg-primary-300 grid md:grid-cols-2 gap-5 mx-auto p-10 md:p-20">
     <div class="bg-primary-100 boxshadowleft_orange p-10 flex flex-col justify-center max-w-130 md:max-w-200">
       <Heading htmlheading="h3" size="medium" font="display">HJÆLP USKYLDIGE FAMILIER</Heading>
@@ -151,7 +152,7 @@ const section4Images = [{ src: "/forside/f_sektion4_1.webp" }, { src: "/forside/
   </section>
   <!-- SLUT på sektion 5 - Hjælp -->
 
-<!-- START på sektion 6 - Internationale programmer -->
+  <!-- START på sektion 6 - Internationale programmer -->
   <section class="grid grid-cols-1 md:grid-cols-2 items-center p-10 md:p-20">
     <div class="flex flex-col max-w-130">
       <Heading htmlheading="h3" size="medium" font="display"> INTERNATIONALE PROGRAMMER </Heading>
@@ -173,7 +174,7 @@ const section4Images = [{ src: "/forside/f_sektion4_1.webp" }, { src: "/forside/
   </section>
   <!-- SLUT på sektion 6 - Internationale programmer -->
 
-<!-- START på sektion 7 - Kampagne -->
+  <!-- START på sektion 7 - Kampagne -->
   <section class="p-10 md:p-20 mb-10 md:mb-20 grid grid-cols-1 md:grid-cols-2 bg-primary-300">
     <div class="max-w-130">
       <Heading htmlheading="h2" size="large" font="display"> CASHEWTRÆER SKABER HÅB OG INDKOMST </Heading>

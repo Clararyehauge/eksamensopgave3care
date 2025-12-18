@@ -9,6 +9,7 @@ import Carousel from "../components/Carousel.astro";
 const section7Images = [{ src: "/voresindsatser/v_sektion7_1.webp" }, { src: "/voresindsatser/v_sektion7_2.webp" }, { src: "/voresindsatser/v_sektion7_3.webp" }, { src: "/voresindsatser/v_sektion7_4.webp" }, { src: "/voresindsatser/v_sektion7_5.webp" }, { src: "/voresindsatser/v_sektion7_6.webp" }, { src: "/voresindsatser/v_sektion7_7.webp" }, { src: "/voresindsatser/v_sektion7_8.webp" }, { src: "/voresindsatser/v_sektion7_9.webp" }, { src: "/voresindsatser/v_sektion7_10.webp" }, { src: "/voresindsatser/v_sektion7_11.webp" }, { src: "/voresindsatser/v_sektion7_12.webp" }];
 ---
 
+<!-- MB ved sektioner der ikke skal have padding + sektioner med bg - p-10 ved smalle sektioner - p-10 md:p-20 ved resten --><!-- Grid bruges til overordnet layout/struktur - flex bruges til indhold og justering inde i layout  -->
 <MainLayout title="Vores indsatser">
   <!-- START på sektion 1 - Titel -->
   <section class="pt-10 md:pt-20">
@@ -82,18 +83,20 @@ const section7Images = [{ src: "/voresindsatser/v_sektion7_1.webp" }, { src: "/v
 
     <!-- START på Ikoner -->
     <section class="bg-primary-300">
-      <div class="text-center pt-10">
+      <div class="text-left md:text-center pt-10 p-10">
         <Heading htmlheading="h2" size="large" font="display"> VORES ARBEJDE - GLOBAL FORANDRING</Heading>
-        <Heading htmlheading="h3" size="small" font="sans" stylingclasses="text-secondary-700 font-light text-right pr-5 md:pr-40 italic flipin_animation opacity-0"> “Care bidrager til humanitære indsatser verden over” </Heading>
+        <Heading htmlheading="h3" size="small" font="sans" stylingclasses="text-secondary-700 font-light text-left md:text-right pl-7 md:pr-40 italic flipin_animation opacity-0"> “Care bidrager til humanitære indsatser verden over” </Heading>
       </div>
-      <div class="flex flex-row justify-center gap-10 md:gap-20 p-10">
+      <div class="flex flex-row justify-center gap-5 md:gap-20 p-10">
         <div class="flex flex-col items-center">
           <div class="relative w-18 h-18">
             <img src="/world.svg" alt="" class="w-18 h-18 absolute inset-0 animate-spin animate-duration-[10000ms]" />
             <img src="/map.svg" alt="" class="w-8 h-8 absolute bottom-15 left-13 -translate-x-1/2" />
           </div>
           <Heading htmlheading="numbers" size="numbers" font="sans">121</Heading>
-          <Text teksttype="brødtekst">Arbejdsområder på tværs af kontinenter</Text>
+          <div class="text-center">
+            <Text teksttype="brødtekst">Arbejdsområder på tværs af kontinenter</Text>
+          </div>
         </div>
 
         <div class="flex flex-col items-center">
@@ -102,7 +105,9 @@ const section7Images = [{ src: "/voresindsatser/v_sektion7_1.webp" }, { src: "/v
             <img src="/heart.svg" alt="" class="w-10 h-10 absolute bottom-12 left-9 -translate-x-1/2 animate-jump animate-infinite animate-duration-[3000ms]" />
           </div>
           <Heading htmlheading="numbers" size="numbers" font="sans">53,4 mio</Heading>
-          <Text teksttype="brødtekst">Mennesker hjulpet verden over</Text>
+          <div class="text-center">
+            <Text teksttype="brødtekst">Mennesker hjulpet verden over</Text>
+          </div>
         </div>
 
         <div class="flex flex-col items-center">
@@ -111,7 +116,9 @@ const section7Images = [{ src: "/voresindsatser/v_sektion7_1.webp" }, { src: "/v
             <img src="/omcare/skrue.svg" alt="" class="w-18 h-18 absolute inset-0" />
           </div>
           <Heading htmlheading="numbers" size="numbers" font="sans">1450</Heading>
-          <Text teksttype="brødtekst">Projekter skabt for forandring</Text>
+          <div class="text-center">
+            <Text teksttype="brødtekst">Projekter skabt for forandring</Text>
+          </div>
         </div>
       </div>
     </section>
